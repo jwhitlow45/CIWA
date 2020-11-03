@@ -1,0 +1,16 @@
+{
+  "name": "fspwa",
+  "version": "1.0.0",
+  "description": "CIMISdata",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mssql": "^5.1.0",
+    "mysql": "^2.16.0",
+    "node-fetch": "^2.3.0"
+  }
+}

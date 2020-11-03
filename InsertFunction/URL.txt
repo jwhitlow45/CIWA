@@ -1,0 +1,252 @@
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=2&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=2&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=2&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=2&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=7&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=7&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=7&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=7&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=39&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=39&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=39&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=39&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=80&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=80&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=80&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=80&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=105&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=105&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=105&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=105&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=124&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=124&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=124&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=124&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=142&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=142&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=142&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=142&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=190&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=190&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=190&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=190&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=205&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=205&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=205&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=205&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=5&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=5&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=5&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=5&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=54&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=54&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=54&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=54&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=125&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=125&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=125&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=125&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=146&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=146&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=146&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=146&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=15&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=15&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=15&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=15&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=188&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=188&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=188&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=188&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=56&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=56&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=56&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=56&startDate=2020-01-14&endDate=2020-01-14&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+TypeError: Cannot read property 'Providers' of undefined 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=2&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+TypeError: Cannot read property 'Providers' of undefined 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=15&startDate=2020-01-14&endDate=2020-01-14&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+TypeError: Cannot read property 'Providers' of undefined 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=2&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=2&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=2&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+TypeError: Cannot read property 'Providers' of undefined 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=7&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+TypeError: Cannot read property 'Providers' of undefined 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=7&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+TypeError: Cannot read property 'Providers' of undefined 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=39&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+TypeError: Cannot read property 'Providers' of undefined 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=39&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+TypeError: Cannot read property 'Providers' of undefined 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=80&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=80&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=80&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+TypeError: Cannot read property 'Providers' of undefined 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=105&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=105&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=105&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=124&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=124&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+TypeError: Cannot read property 'Providers' of undefined 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=124&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+TypeError: Cannot read property 'Providers' of undefined 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=142&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+TypeError: Cannot read property 'Providers' of undefined 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=142&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+TypeError: Cannot read property 'Providers' of undefined 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=190&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=190&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=190&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=205&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=205&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=205&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=205&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=5&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=5&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=5&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=5&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=54&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=54&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=54&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=54&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=125&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=125&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=125&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=125&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=146&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=146&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=146&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=146&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=15&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=15&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+TypeError: Cannot read property 'Providers' of undefined 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=15&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+TypeError: Cannot read property 'Providers' of undefined 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=188&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+TypeError: Cannot read property 'Providers' of undefined 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=188&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+TypeError: Cannot read property 'Providers' of undefined 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=56&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+TypeError: Cannot read property 'Providers' of undefined 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=56&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+TypeError: Cannot read property 'Providers' of undefined 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=92&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+TypeError: Cannot read property 'Providers' of undefined 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=92&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+TypeError: Cannot read property 'Providers' of undefined 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=148&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=148&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=148&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+TypeError: Cannot read property 'Providers' of undefined 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=70&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=70&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=70&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=71&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=71&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=71&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=71&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+TypeError: Cannot read property 'Providers' of undefined 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=194&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=194&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=194&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+TypeError: Cannot read property 'Providers' of undefined 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=206&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+TypeError: Cannot read property 'Providers' of undefined 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=206&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=86&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=86&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=86&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=86&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=169&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=169&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=169&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=169&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=182&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=f26aa7d0-7103-4f8a-9c3f-e24723ebca0a&targets=182&startDate=2020-01-16&endDate=2020-01-16&dataItems=hly-air-tmp,hly-dew-pnt,hly-precip,hly-rel-hum,hly-soil-tmp,hly-wind-dir,hly-wind-spd,hly-sol-rad,hly-eto,hly-asce-eto&unitOfMeasure=M
+
+FetchError: invalid json response body at https://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=182&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M reason: Unexpected token < in JSON at position 0 
+http://et.water.ca.gov/api/data?appKey=c2336dfa-e93a-4024-bdfe-641c9c80e78c&targets=182&startDate=2020-01-16&endDate=2020-01-16&dataItems=day-air-tmp-max,day-air-tmp-min,day-rel-hum-max,day-rel-hum-min,day-wind-spd-avg,day-dew-pnt,day-eto,day-asce-eto,day-precip&unitOfMeasure=M

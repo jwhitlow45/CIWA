@@ -1,0 +1,997 @@
+
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData2'. Cannot insert duplicate key in object 'dbo.rawHourData2'. The duplicate key value is (Jan 13 2020  3:00AM). 2 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData2'. Cannot insert duplicate key in object 'dbo.rawHourData2'. The duplicate key value is (Jan 13 2020  4:00AM). 2 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData2'. Cannot insert duplicate key in object 'dbo.rawHourData2'. The duplicate key value is (Jan 13 2020  5:00AM). 2 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData2'. Cannot insert duplicate key in object 'dbo.rawHourData2'. The duplicate key value is (Jan 13 2020  2:00AM). 2 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData2'. Cannot insert duplicate key in object 'dbo.rawHourData2'. The duplicate key value is (Jan 13 2020  1:00AM). 2 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawData2'. Cannot insert duplicate key in object 'dbo.rawData2'. The duplicate key value is (2020-01-13). 2 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData2'. Cannot insert duplicate key in object 'dbo.rawHourData2'. The duplicate key value is (Jan 13 2020  6:00AM). 2 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData2'. Cannot insert duplicate key in object 'dbo.rawHourData2'. The duplicate key value is (Jan 13 2020  7:00AM). 2 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData2'. Cannot insert duplicate key in object 'dbo.rawHourData2'. The duplicate key value is (Jan 13 2020  8:00AM). 2 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData2'. Cannot insert duplicate key in object 'dbo.rawHourData2'. The duplicate key value is (Jan 13 2020 11:00AM). 2 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData2'. Cannot insert duplicate key in object 'dbo.rawHourData2'. The duplicate key value is (Jan 13 2020  9:00AM). 2 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData2'. Cannot insert duplicate key in object 'dbo.rawHourData2'. The duplicate key value is (Jan 13 2020 10:00AM). 2 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData2'. Cannot insert duplicate key in object 'dbo.rawHourData2'. The duplicate key value is (Jan 13 2020 12:00PM). 2 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData2'. Cannot insert duplicate key in object 'dbo.rawHourData2'. The duplicate key value is (Jan 13 2020  3:00PM). 2 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData2'. Cannot insert duplicate key in object 'dbo.rawHourData2'. The duplicate key value is (Jan 13 2020  2:00PM). 2 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData2'. Cannot insert duplicate key in object 'dbo.rawHourData2'. The duplicate key value is (Jan 13 2020  1:00PM). 2 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData2'. Cannot insert duplicate key in object 'dbo.rawHourData2'. The duplicate key value is (Jan 13 2020  4:00PM). 2 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData2'. Cannot insert duplicate key in object 'dbo.rawHourData2'. The duplicate key value is (Jan 13 2020  5:00PM). 2 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData2'. Cannot insert duplicate key in object 'dbo.rawHourData2'. The duplicate key value is (Jan 13 2020  6:00PM). 2 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData2'. Cannot insert duplicate key in object 'dbo.rawHourData2'. The duplicate key value is (Jan 13 2020  7:00PM). 2 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawData7'. Cannot insert duplicate key in object 'dbo.rawData7'. The duplicate key value is (2020-01-13). 7 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData2'. Cannot insert duplicate key in object 'dbo.rawHourData2'. The duplicate key value is (Jan 13 2020  8:00PM). 2 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData2'. Cannot insert duplicate key in object 'dbo.rawHourData2'. The duplicate key value is (Jan 13 2020  9:00PM). 2 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData2'. Cannot insert duplicate key in object 'dbo.rawHourData2'. The duplicate key value is (Jan 13 2020 10:00PM). 2 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData2'. Cannot insert duplicate key in object 'dbo.rawHourData2'. The duplicate key value is (Jan 13 2020 11:00PM). 2 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData2'. Cannot insert duplicate key in object 'dbo.rawHourData2'. The duplicate key value is (Jan 13 2020 12:00AM). 2 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawData39'. Cannot insert duplicate key in object 'dbo.rawData39'. The duplicate key value is (2020-01-13). 39 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData7'. Cannot insert duplicate key in object 'dbo.rawHourData7'. The duplicate key value is (Jan 13 2020  1:00AM). 7 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData7'. Cannot insert duplicate key in object 'dbo.rawHourData7'. The duplicate key value is (Jan 13 2020  2:00AM). 7 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData7'. Cannot insert duplicate key in object 'dbo.rawHourData7'. The duplicate key value is (Jan 13 2020  3:00AM). 7 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawData80'. Cannot insert duplicate key in object 'dbo.rawData80'. The duplicate key value is (2020-01-13). 80 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData7'. Cannot insert duplicate key in object 'dbo.rawHourData7'. The duplicate key value is (Jan 13 2020  4:00AM). 7 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData7'. Cannot insert duplicate key in object 'dbo.rawHourData7'. The duplicate key value is (Jan 13 2020  5:00AM). 7 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData7'. Cannot insert duplicate key in object 'dbo.rawHourData7'. The duplicate key value is (Jan 13 2020  6:00AM). 7 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData7'. Cannot insert duplicate key in object 'dbo.rawHourData7'. The duplicate key value is (Jan 13 2020  7:00AM). 7 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData7'. Cannot insert duplicate key in object 'dbo.rawHourData7'. The duplicate key value is (Jan 13 2020  8:00AM). 7 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData7'. Cannot insert duplicate key in object 'dbo.rawHourData7'. The duplicate key value is (Jan 13 2020  9:00AM). 7 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawData105'. Cannot insert duplicate key in object 'dbo.rawData105'. The duplicate key value is (2020-01-13). 105 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData7'. Cannot insert duplicate key in object 'dbo.rawHourData7'. The duplicate key value is (Jan 13 2020 11:00AM). 7 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData7'. Cannot insert duplicate key in object 'dbo.rawHourData7'. The duplicate key value is (Jan 13 2020 12:00PM). 7 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData7'. Cannot insert duplicate key in object 'dbo.rawHourData7'. The duplicate key value is (Jan 13 2020 10:00AM). 7 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData7'. Cannot insert duplicate key in object 'dbo.rawHourData7'. The duplicate key value is (Jan 13 2020  2:00PM). 7 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData7'. Cannot insert duplicate key in object 'dbo.rawHourData7'. The duplicate key value is (Jan 13 2020  3:00PM). 7 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData7'. Cannot insert duplicate key in object 'dbo.rawHourData7'. The duplicate key value is (Jan 13 2020  1:00PM). 7 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData7'. Cannot insert duplicate key in object 'dbo.rawHourData7'. The duplicate key value is (Jan 13 2020  4:00PM). 7 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawData124'. Cannot insert duplicate key in object 'dbo.rawData124'. The duplicate key value is (2020-01-13). 124 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData7'. Cannot insert duplicate key in object 'dbo.rawHourData7'. The duplicate key value is (Jan 13 2020  5:00PM). 7 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData7'. Cannot insert duplicate key in object 'dbo.rawHourData7'. The duplicate key value is (Jan 13 2020  7:00PM). 7 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData7'. Cannot insert duplicate key in object 'dbo.rawHourData7'. The duplicate key value is (Jan 13 2020  6:00PM). 7 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData7'. Cannot insert duplicate key in object 'dbo.rawHourData7'. The duplicate key value is (Jan 13 2020  8:00PM). 7 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData7'. Cannot insert duplicate key in object 'dbo.rawHourData7'. The duplicate key value is (Jan 13 2020  9:00PM). 7 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData7'. Cannot insert duplicate key in object 'dbo.rawHourData7'. The duplicate key value is (Jan 13 2020 10:00PM). 7 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData7'. Cannot insert duplicate key in object 'dbo.rawHourData7'. The duplicate key value is (Jan 13 2020 11:00PM). 7 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData7'. Cannot insert duplicate key in object 'dbo.rawHourData7'. The duplicate key value is (Jan 13 2020 12:00AM). 7 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData39'. Cannot insert duplicate key in object 'dbo.rawHourData39'. The duplicate key value is (Jan 13 2020  1:00AM). 39 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawData142'. Cannot insert duplicate key in object 'dbo.rawData142'. The duplicate key value is (2020-01-13). 142 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData39'. Cannot insert duplicate key in object 'dbo.rawHourData39'. The duplicate key value is (Jan 13 2020  2:00AM). 39 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData39'. Cannot insert duplicate key in object 'dbo.rawHourData39'. The duplicate key value is (Jan 13 2020  3:00AM). 39 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData39'. Cannot insert duplicate key in object 'dbo.rawHourData39'. The duplicate key value is (Jan 13 2020  4:00AM). 39 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData39'. Cannot insert duplicate key in object 'dbo.rawHourData39'. The duplicate key value is (Jan 13 2020  5:00AM). 39 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData39'. Cannot insert duplicate key in object 'dbo.rawHourData39'. The duplicate key value is (Jan 13 2020  6:00AM). 39 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData39'. Cannot insert duplicate key in object 'dbo.rawHourData39'. The duplicate key value is (Jan 13 2020  7:00AM). 39 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData39'. Cannot insert duplicate key in object 'dbo.rawHourData39'. The duplicate key value is (Jan 13 2020  8:00AM). 39 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData39'. Cannot insert duplicate key in object 'dbo.rawHourData39'. The duplicate key value is (Jan 13 2020  9:00AM). 39 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData39'. Cannot insert duplicate key in object 'dbo.rawHourData39'. The duplicate key value is (Jan 13 2020 10:00AM). 39 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData39'. Cannot insert duplicate key in object 'dbo.rawHourData39'. The duplicate key value is (Jan 13 2020 11:00AM). 39 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData39'. Cannot insert duplicate key in object 'dbo.rawHourData39'. The duplicate key value is (Jan 13 2020 12:00PM). 39 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawData205'. Cannot insert duplicate key in object 'dbo.rawData205'. The duplicate key value is (2020-01-13). 205 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData39'. Cannot insert duplicate key in object 'dbo.rawHourData39'. The duplicate key value is (Jan 13 2020  1:00PM). 39 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData39'. Cannot insert duplicate key in object 'dbo.rawHourData39'. The duplicate key value is (Jan 13 2020  2:00PM). 39 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData39'. Cannot insert duplicate key in object 'dbo.rawHourData39'. The duplicate key value is (Jan 13 2020  3:00PM). 39 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData39'. Cannot insert duplicate key in object 'dbo.rawHourData39'. The duplicate key value is (Jan 13 2020  5:00PM). 39 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData39'. Cannot insert duplicate key in object 'dbo.rawHourData39'. The duplicate key value is (Jan 13 2020  6:00PM). 39 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData39'. Cannot insert duplicate key in object 'dbo.rawHourData39'. The duplicate key value is (Jan 13 2020  7:00PM). 39 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData39'. Cannot insert duplicate key in object 'dbo.rawHourData39'. The duplicate key value is (Jan 13 2020  8:00PM). 39 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData39'. Cannot insert duplicate key in object 'dbo.rawHourData39'. The duplicate key value is (Jan 13 2020  9:00PM). 39 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData39'. Cannot insert duplicate key in object 'dbo.rawHourData39'. The duplicate key value is (Jan 13 2020 11:00PM). 39 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData39'. Cannot insert duplicate key in object 'dbo.rawHourData39'. The duplicate key value is (Jan 13 2020  4:00PM). 39 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData39'. Cannot insert duplicate key in object 'dbo.rawHourData39'. The duplicate key value is (Jan 13 2020 10:00PM). 39 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData39'. Cannot insert duplicate key in object 'dbo.rawHourData39'. The duplicate key value is (Jan 13 2020 12:00AM). 39 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawData5'. Cannot insert duplicate key in object 'dbo.rawData5'. The duplicate key value is (2020-01-13). 5 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData80'. Cannot insert duplicate key in object 'dbo.rawHourData80'. The duplicate key value is (Jan 13 2020  1:00AM). 80 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData80'. Cannot insert duplicate key in object 'dbo.rawHourData80'. The duplicate key value is (Jan 13 2020  2:00AM). 80 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawData54'. Cannot insert duplicate key in object 'dbo.rawData54'. The duplicate key value is (2020-01-13). 54 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData80'. Cannot insert duplicate key in object 'dbo.rawHourData80'. The duplicate key value is (Jan 13 2020  3:00AM). 80 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData80'. Cannot insert duplicate key in object 'dbo.rawHourData80'. The duplicate key value is (Jan 13 2020  4:00AM). 80 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData80'. Cannot insert duplicate key in object 'dbo.rawHourData80'. The duplicate key value is (Jan 13 2020  5:00AM). 80 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData80'. Cannot insert duplicate key in object 'dbo.rawHourData80'. The duplicate key value is (Jan 13 2020  6:00AM). 80 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData80'. Cannot insert duplicate key in object 'dbo.rawHourData80'. The duplicate key value is (Jan 13 2020  7:00AM). 80 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData80'. Cannot insert duplicate key in object 'dbo.rawHourData80'. The duplicate key value is (Jan 13 2020  8:00AM). 80 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData80'. Cannot insert duplicate key in object 'dbo.rawHourData80'. The duplicate key value is (Jan 13 2020  9:00AM). 80 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData80'. Cannot insert duplicate key in object 'dbo.rawHourData80'. The duplicate key value is (Jan 13 2020 10:00AM). 80 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawData125'. Cannot insert duplicate key in object 'dbo.rawData125'. The duplicate key value is (2020-01-13). 125 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData80'. Cannot insert duplicate key in object 'dbo.rawHourData80'. The duplicate key value is (Jan 13 2020 12:00PM). 80 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData80'. Cannot insert duplicate key in object 'dbo.rawHourData80'. The duplicate key value is (Jan 13 2020 11:00AM). 80 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData80'. Cannot insert duplicate key in object 'dbo.rawHourData80'. The duplicate key value is (Jan 13 2020  1:00PM). 80 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData80'. Cannot insert duplicate key in object 'dbo.rawHourData80'. The duplicate key value is (Jan 13 2020  3:00PM). 80 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData80'. Cannot insert duplicate key in object 'dbo.rawHourData80'. The duplicate key value is (Jan 13 2020  4:00PM). 80 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData80'. Cannot insert duplicate key in object 'dbo.rawHourData80'. The duplicate key value is (Jan 13 2020  5:00PM). 80 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData80'. Cannot insert duplicate key in object 'dbo.rawHourData80'. The duplicate key value is (Jan 13 2020  6:00PM). 80 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData80'. Cannot insert duplicate key in object 'dbo.rawHourData80'. The duplicate key value is (Jan 13 2020  2:00PM). 80 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData80'. Cannot insert duplicate key in object 'dbo.rawHourData80'. The duplicate key value is (Jan 13 2020  8:00PM). 80 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData80'. Cannot insert duplicate key in object 'dbo.rawHourData80'. The duplicate key value is (Jan 13 2020  7:00PM). 80 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawData146'. Cannot insert duplicate key in object 'dbo.rawData146'. The duplicate key value is (2020-01-13). 146 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData80'. Cannot insert duplicate key in object 'dbo.rawHourData80'. The duplicate key value is (Jan 13 2020  9:00PM). 80 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData80'. Cannot insert duplicate key in object 'dbo.rawHourData80'. The duplicate key value is (Jan 13 2020 10:00PM). 80 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData80'. Cannot insert duplicate key in object 'dbo.rawHourData80'. The duplicate key value is (Jan 13 2020 11:00PM). 80 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData80'. Cannot insert duplicate key in object 'dbo.rawHourData80'. The duplicate key value is (Jan 13 2020 12:00AM). 80 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawData15'. Cannot insert duplicate key in object 'dbo.rawData15'. The duplicate key value is (2020-01-13). 15 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData105'. Cannot insert duplicate key in object 'dbo.rawHourData105'. The duplicate key value is (Jan 13 2020  1:00AM). 105 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData105'. Cannot insert duplicate key in object 'dbo.rawHourData105'. The duplicate key value is (Jan 13 2020  2:00AM). 105 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData105'. Cannot insert duplicate key in object 'dbo.rawHourData105'. The duplicate key value is (Jan 13 2020  4:00AM). 105 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData105'. Cannot insert duplicate key in object 'dbo.rawHourData105'. The duplicate key value is (Jan 13 2020  3:00AM). 105 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData105'. Cannot insert duplicate key in object 'dbo.rawHourData105'. The duplicate key value is (Jan 13 2020  5:00AM). 105 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData105'. Cannot insert duplicate key in object 'dbo.rawHourData105'. The duplicate key value is (Jan 13 2020  6:00AM). 105 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData105'. Cannot insert duplicate key in object 'dbo.rawHourData105'. The duplicate key value is (Jan 13 2020  9:00AM). 105 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData105'. Cannot insert duplicate key in object 'dbo.rawHourData105'. The duplicate key value is (Jan 13 2020 10:00AM). 105 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData105'. Cannot insert duplicate key in object 'dbo.rawHourData105'. The duplicate key value is (Jan 13 2020 11:00AM). 105 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData105'. Cannot insert duplicate key in object 'dbo.rawHourData105'. The duplicate key value is (Jan 13 2020 12:00PM). 105 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData105'. Cannot insert duplicate key in object 'dbo.rawHourData105'. The duplicate key value is (Jan 13 2020  8:00AM). 105 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData105'. Cannot insert duplicate key in object 'dbo.rawHourData105'. The duplicate key value is (Jan 13 2020  1:00PM). 105 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData105'. Cannot insert duplicate key in object 'dbo.rawHourData105'. The duplicate key value is (Jan 13 2020  7:00AM). 105 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData105'. Cannot insert duplicate key in object 'dbo.rawHourData105'. The duplicate key value is (Jan 13 2020  2:00PM). 105 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData105'. Cannot insert duplicate key in object 'dbo.rawHourData105'. The duplicate key value is (Jan 13 2020  3:00PM). 105 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData105'. Cannot insert duplicate key in object 'dbo.rawHourData105'. The duplicate key value is (Jan 13 2020  4:00PM). 105 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData105'. Cannot insert duplicate key in object 'dbo.rawHourData105'. The duplicate key value is (Jan 13 2020  5:00PM). 105 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData105'. Cannot insert duplicate key in object 'dbo.rawHourData105'. The duplicate key value is (Jan 13 2020  6:00PM). 105 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData105'. Cannot insert duplicate key in object 'dbo.rawHourData105'. The duplicate key value is (Jan 13 2020  7:00PM). 105 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData105'. Cannot insert duplicate key in object 'dbo.rawHourData105'. The duplicate key value is (Jan 13 2020  8:00PM). 105 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData105'. Cannot insert duplicate key in object 'dbo.rawHourData105'. The duplicate key value is (Jan 13 2020  9:00PM). 105 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData105'. Cannot insert duplicate key in object 'dbo.rawHourData105'. The duplicate key value is (Jan 13 2020 10:00PM). 105 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData105'. Cannot insert duplicate key in object 'dbo.rawHourData105'. The duplicate key value is (Jan 13 2020 11:00PM). 105 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData105'. Cannot insert duplicate key in object 'dbo.rawHourData105'. The duplicate key value is (Jan 13 2020 12:00AM). 105 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawData56'. Cannot insert duplicate key in object 'dbo.rawData56'. The duplicate key value is (2020-01-13). 56 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawData92'. Cannot insert duplicate key in object 'dbo.rawData92'. The duplicate key value is (2020-01-13). 92 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData124'. Cannot insert duplicate key in object 'dbo.rawHourData124'. The duplicate key value is (Jan 13 2020  1:00AM). 124 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData124'. Cannot insert duplicate key in object 'dbo.rawHourData124'. The duplicate key value is (Jan 13 2020  3:00AM). 124 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawData148'. Cannot insert duplicate key in object 'dbo.rawData148'. The duplicate key value is (2020-01-13). 148 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData124'. Cannot insert duplicate key in object 'dbo.rawHourData124'. The duplicate key value is (Jan 13 2020  4:00AM). 124 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData124'. Cannot insert duplicate key in object 'dbo.rawHourData124'. The duplicate key value is (Jan 13 2020  5:00AM). 124 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData124'. Cannot insert duplicate key in object 'dbo.rawHourData124'. The duplicate key value is (Jan 13 2020  6:00AM). 124 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData124'. Cannot insert duplicate key in object 'dbo.rawHourData124'. The duplicate key value is (Jan 13 2020  8:00AM). 124 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData124'. Cannot insert duplicate key in object 'dbo.rawHourData124'. The duplicate key value is (Jan 13 2020  9:00AM). 124 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawData70'. Cannot insert duplicate key in object 'dbo.rawData70'. The duplicate key value is (2020-01-13). 70 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData124'. Cannot insert duplicate key in object 'dbo.rawHourData124'. The duplicate key value is (Jan 13 2020 10:00AM). 124 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData124'. Cannot insert duplicate key in object 'dbo.rawHourData124'. The duplicate key value is (Jan 13 2020  2:00AM). 124 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData124'. Cannot insert duplicate key in object 'dbo.rawHourData124'. The duplicate key value is (Jan 13 2020  7:00AM). 124 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData124'. Cannot insert duplicate key in object 'dbo.rawHourData124'. The duplicate key value is (Jan 13 2020 11:00AM). 124 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData124'. Cannot insert duplicate key in object 'dbo.rawHourData124'. The duplicate key value is (Jan 13 2020 12:00PM). 124 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData124'. Cannot insert duplicate key in object 'dbo.rawHourData124'. The duplicate key value is (Jan 13 2020  2:00PM). 124 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData124'. Cannot insert duplicate key in object 'dbo.rawHourData124'. The duplicate key value is (Jan 13 2020  1:00PM). 124 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData124'. Cannot insert duplicate key in object 'dbo.rawHourData124'. The duplicate key value is (Jan 13 2020  3:00PM). 124 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData124'. Cannot insert duplicate key in object 'dbo.rawHourData124'. The duplicate key value is (Jan 13 2020  4:00PM). 124 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData124'. Cannot insert duplicate key in object 'dbo.rawHourData124'. The duplicate key value is (Jan 13 2020  5:00PM). 124 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData124'. Cannot insert duplicate key in object 'dbo.rawHourData124'. The duplicate key value is (Jan 13 2020  7:00PM). 124 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData124'. Cannot insert duplicate key in object 'dbo.rawHourData124'. The duplicate key value is (Jan 13 2020  8:00PM). 124 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData124'. Cannot insert duplicate key in object 'dbo.rawHourData124'. The duplicate key value is (Jan 13 2020  9:00PM). 124 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData124'. Cannot insert duplicate key in object 'dbo.rawHourData124'. The duplicate key value is (Jan 13 2020 10:00PM). 124 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData124'. Cannot insert duplicate key in object 'dbo.rawHourData124'. The duplicate key value is (Jan 13 2020 11:00PM). 124 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData124'. Cannot insert duplicate key in object 'dbo.rawHourData124'. The duplicate key value is (Jan 13 2020  6:00PM). 124 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData124'. Cannot insert duplicate key in object 'dbo.rawHourData124'. The duplicate key value is (Jan 13 2020 12:00AM). 124 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawData71'. Cannot insert duplicate key in object 'dbo.rawData71'. The duplicate key value is (2020-01-13). 71 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData142'. Cannot insert duplicate key in object 'dbo.rawHourData142'. The duplicate key value is (Jan 13 2020  3:00AM). 142 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData142'. Cannot insert duplicate key in object 'dbo.rawHourData142'. The duplicate key value is (Jan 13 2020  1:00AM). 142 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData142'. Cannot insert duplicate key in object 'dbo.rawHourData142'. The duplicate key value is (Jan 13 2020  5:00AM). 142 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData142'. Cannot insert duplicate key in object 'dbo.rawHourData142'. The duplicate key value is (Jan 13 2020  6:00AM). 142 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData142'. Cannot insert duplicate key in object 'dbo.rawHourData142'. The duplicate key value is (Jan 13 2020  7:00AM). 142 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData142'. Cannot insert duplicate key in object 'dbo.rawHourData142'. The duplicate key value is (Jan 13 2020  8:00AM). 142 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData142'. Cannot insert duplicate key in object 'dbo.rawHourData142'. The duplicate key value is (Jan 13 2020  9:00AM). 142 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawData194'. Cannot insert duplicate key in object 'dbo.rawData194'. The duplicate key value is (2020-01-13). 194 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData142'. Cannot insert duplicate key in object 'dbo.rawHourData142'. The duplicate key value is (Jan 13 2020 10:00AM). 142 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData142'. Cannot insert duplicate key in object 'dbo.rawHourData142'. The duplicate key value is (Jan 13 2020 11:00AM). 142 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData142'. Cannot insert duplicate key in object 'dbo.rawHourData142'. The duplicate key value is (Jan 13 2020 12:00PM). 142 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData142'. Cannot insert duplicate key in object 'dbo.rawHourData142'. The duplicate key value is (Jan 13 2020  2:00AM). 142 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData142'. Cannot insert duplicate key in object 'dbo.rawHourData142'. The duplicate key value is (Jan 13 2020  4:00AM). 142 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData142'. Cannot insert duplicate key in object 'dbo.rawHourData142'. The duplicate key value is (Jan 13 2020  1:00PM). 142 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData142'. Cannot insert duplicate key in object 'dbo.rawHourData142'. The duplicate key value is (Jan 13 2020  3:00PM). 142 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData142'. Cannot insert duplicate key in object 'dbo.rawHourData142'. The duplicate key value is (Jan 13 2020  2:00PM). 142 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData142'. Cannot insert duplicate key in object 'dbo.rawHourData142'. The duplicate key value is (Jan 13 2020  4:00PM). 142 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData142'. Cannot insert duplicate key in object 'dbo.rawHourData142'. The duplicate key value is (Jan 13 2020  5:00PM). 142 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawData206'. Cannot insert duplicate key in object 'dbo.rawData206'. The duplicate key value is (2020-01-13). 206 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawData86'. Cannot insert duplicate key in object 'dbo.rawData86'. The duplicate key value is (2020-01-13). 86 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawData169'. Cannot insert duplicate key in object 'dbo.rawData169'. The duplicate key value is (2020-01-13). 169 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData142'. Cannot insert duplicate key in object 'dbo.rawHourData142'. The duplicate key value is (Jan 13 2020  6:00PM). 142 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData142'. Cannot insert duplicate key in object 'dbo.rawHourData142'. The duplicate key value is (Jan 13 2020  7:00PM). 142 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawData182'. Cannot insert duplicate key in object 'dbo.rawData182'. The duplicate key value is (2020-01-13). 182 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData142'. Cannot insert duplicate key in object 'dbo.rawHourData142'. The duplicate key value is (Jan 13 2020  8:00PM). 142 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData142'. Cannot insert duplicate key in object 'dbo.rawHourData142'. The duplicate key value is (Jan 13 2020  9:00PM). 142 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData142'. Cannot insert duplicate key in object 'dbo.rawHourData142'. The duplicate key value is (Jan 13 2020 10:00PM). 142 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData142'. Cannot insert duplicate key in object 'dbo.rawHourData142'. The duplicate key value is (Jan 13 2020 11:00PM). 142 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData142'. Cannot insert duplicate key in object 'dbo.rawHourData142'. The duplicate key value is (Jan 13 2020 12:00AM). 142 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData205'. Cannot insert duplicate key in object 'dbo.rawHourData205'. The duplicate key value is (Jan 13 2020  1:00AM). 205 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData205'. Cannot insert duplicate key in object 'dbo.rawHourData205'. The duplicate key value is (Jan 13 2020  2:00AM). 205 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData205'. Cannot insert duplicate key in object 'dbo.rawHourData205'. The duplicate key value is (Jan 13 2020  3:00AM). 205 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData205'. Cannot insert duplicate key in object 'dbo.rawHourData205'. The duplicate key value is (Jan 13 2020  4:00AM). 205 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData205'. Cannot insert duplicate key in object 'dbo.rawHourData205'. The duplicate key value is (Jan 13 2020  5:00AM). 205 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData205'. Cannot insert duplicate key in object 'dbo.rawHourData205'. The duplicate key value is (Jan 13 2020  6:00AM). 205 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData205'. Cannot insert duplicate key in object 'dbo.rawHourData205'. The duplicate key value is (Jan 13 2020  7:00AM). 205 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData205'. Cannot insert duplicate key in object 'dbo.rawHourData205'. The duplicate key value is (Jan 13 2020  9:00AM). 205 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData205'. Cannot insert duplicate key in object 'dbo.rawHourData205'. The duplicate key value is (Jan 13 2020  8:00AM). 205 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData205'. Cannot insert duplicate key in object 'dbo.rawHourData205'. The duplicate key value is (Jan 13 2020 10:00AM). 205 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData205'. Cannot insert duplicate key in object 'dbo.rawHourData205'. The duplicate key value is (Jan 13 2020 11:00AM). 205 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData205'. Cannot insert duplicate key in object 'dbo.rawHourData205'. The duplicate key value is (Jan 13 2020 12:00PM). 205 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData205'. Cannot insert duplicate key in object 'dbo.rawHourData205'. The duplicate key value is (Jan 13 2020  1:00PM). 205 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData205'. Cannot insert duplicate key in object 'dbo.rawHourData205'. The duplicate key value is (Jan 13 2020  2:00PM). 205 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData205'. Cannot insert duplicate key in object 'dbo.rawHourData205'. The duplicate key value is (Jan 13 2020  3:00PM). 205 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData205'. Cannot insert duplicate key in object 'dbo.rawHourData205'. The duplicate key value is (Jan 13 2020  4:00PM). 205 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData205'. Cannot insert duplicate key in object 'dbo.rawHourData205'. The duplicate key value is (Jan 13 2020  5:00PM). 205 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData205'. Cannot insert duplicate key in object 'dbo.rawHourData205'. The duplicate key value is (Jan 13 2020  6:00PM). 205 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData205'. Cannot insert duplicate key in object 'dbo.rawHourData205'. The duplicate key value is (Jan 13 2020  7:00PM). 205 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData205'. Cannot insert duplicate key in object 'dbo.rawHourData205'. The duplicate key value is (Jan 13 2020  8:00PM). 205 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData205'. Cannot insert duplicate key in object 'dbo.rawHourData205'. The duplicate key value is (Jan 13 2020  9:00PM). 205 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData205'. Cannot insert duplicate key in object 'dbo.rawHourData205'. The duplicate key value is (Jan 13 2020 10:00PM). 205 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData205'. Cannot insert duplicate key in object 'dbo.rawHourData205'. The duplicate key value is (Jan 13 2020 11:00PM). 205 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData205'. Cannot insert duplicate key in object 'dbo.rawHourData205'. The duplicate key value is (Jan 13 2020 12:00AM). 205 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData5'. Cannot insert duplicate key in object 'dbo.rawHourData5'. The duplicate key value is (Jan 13 2020  1:00AM). 5 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData5'. Cannot insert duplicate key in object 'dbo.rawHourData5'. The duplicate key value is (Jan 13 2020  2:00AM). 5 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData5'. Cannot insert duplicate key in object 'dbo.rawHourData5'. The duplicate key value is (Jan 13 2020  3:00AM). 5 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData5'. Cannot insert duplicate key in object 'dbo.rawHourData5'. The duplicate key value is (Jan 13 2020  4:00AM). 5 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData5'. Cannot insert duplicate key in object 'dbo.rawHourData5'. The duplicate key value is (Jan 13 2020  5:00AM). 5 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData5'. Cannot insert duplicate key in object 'dbo.rawHourData5'. The duplicate key value is (Jan 13 2020  6:00AM). 5 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData5'. Cannot insert duplicate key in object 'dbo.rawHourData5'. The duplicate key value is (Jan 13 2020  7:00AM). 5 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData5'. Cannot insert duplicate key in object 'dbo.rawHourData5'. The duplicate key value is (Jan 13 2020  8:00AM). 5 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData5'. Cannot insert duplicate key in object 'dbo.rawHourData5'. The duplicate key value is (Jan 13 2020  9:00AM). 5 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData5'. Cannot insert duplicate key in object 'dbo.rawHourData5'. The duplicate key value is (Jan 13 2020 10:00AM). 5 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData5'. Cannot insert duplicate key in object 'dbo.rawHourData5'. The duplicate key value is (Jan 13 2020 12:00PM). 5 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData5'. Cannot insert duplicate key in object 'dbo.rawHourData5'. The duplicate key value is (Jan 13 2020 11:00AM). 5 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData5'. Cannot insert duplicate key in object 'dbo.rawHourData5'. The duplicate key value is (Jan 13 2020  1:00PM). 5 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData5'. Cannot insert duplicate key in object 'dbo.rawHourData5'. The duplicate key value is (Jan 13 2020  2:00PM). 5 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData5'. Cannot insert duplicate key in object 'dbo.rawHourData5'. The duplicate key value is (Jan 13 2020  3:00PM). 5 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData5'. Cannot insert duplicate key in object 'dbo.rawHourData5'. The duplicate key value is (Jan 13 2020  4:00PM). 5 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData5'. Cannot insert duplicate key in object 'dbo.rawHourData5'. The duplicate key value is (Jan 13 2020  5:00PM). 5 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData5'. Cannot insert duplicate key in object 'dbo.rawHourData5'. The duplicate key value is (Jan 13 2020  6:00PM). 5 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData5'. Cannot insert duplicate key in object 'dbo.rawHourData5'. The duplicate key value is (Jan 13 2020  7:00PM). 5 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData5'. Cannot insert duplicate key in object 'dbo.rawHourData5'. The duplicate key value is (Jan 13 2020  8:00PM). 5 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData5'. Cannot insert duplicate key in object 'dbo.rawHourData5'. The duplicate key value is (Jan 13 2020  9:00PM). 5 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData5'. Cannot insert duplicate key in object 'dbo.rawHourData5'. The duplicate key value is (Jan 13 2020 11:00PM). 5 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData5'. Cannot insert duplicate key in object 'dbo.rawHourData5'. The duplicate key value is (Jan 13 2020 12:00AM). 5 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData5'. Cannot insert duplicate key in object 'dbo.rawHourData5'. The duplicate key value is (Jan 13 2020 10:00PM). 5 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData54'. Cannot insert duplicate key in object 'dbo.rawHourData54'. The duplicate key value is (Jan 13 2020  3:00AM). 54 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData54'. Cannot insert duplicate key in object 'dbo.rawHourData54'. The duplicate key value is (Jan 13 2020  2:00AM). 54 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData54'. Cannot insert duplicate key in object 'dbo.rawHourData54'. The duplicate key value is (Jan 13 2020  5:00AM). 54 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData54'. Cannot insert duplicate key in object 'dbo.rawHourData54'. The duplicate key value is (Jan 13 2020  4:00AM). 54 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData54'. Cannot insert duplicate key in object 'dbo.rawHourData54'. The duplicate key value is (Jan 13 2020  1:00AM). 54 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData54'. Cannot insert duplicate key in object 'dbo.rawHourData54'. The duplicate key value is (Jan 13 2020  7:00AM). 54 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData54'. Cannot insert duplicate key in object 'dbo.rawHourData54'. The duplicate key value is (Jan 13 2020  6:00AM). 54 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData54'. Cannot insert duplicate key in object 'dbo.rawHourData54'. The duplicate key value is (Jan 13 2020  8:00AM). 54 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData54'. Cannot insert duplicate key in object 'dbo.rawHourData54'. The duplicate key value is (Jan 13 2020  9:00AM). 54 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData54'. Cannot insert duplicate key in object 'dbo.rawHourData54'. The duplicate key value is (Jan 13 2020 10:00AM). 54 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData54'. Cannot insert duplicate key in object 'dbo.rawHourData54'. The duplicate key value is (Jan 13 2020 11:00AM). 54 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData54'. Cannot insert duplicate key in object 'dbo.rawHourData54'. The duplicate key value is (Jan 13 2020 12:00PM). 54 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData54'. Cannot insert duplicate key in object 'dbo.rawHourData54'. The duplicate key value is (Jan 13 2020  1:00PM). 54 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData54'. Cannot insert duplicate key in object 'dbo.rawHourData54'. The duplicate key value is (Jan 13 2020  2:00PM). 54 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData54'. Cannot insert duplicate key in object 'dbo.rawHourData54'. The duplicate key value is (Jan 13 2020  3:00PM). 54 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData54'. Cannot insert duplicate key in object 'dbo.rawHourData54'. The duplicate key value is (Jan 13 2020  4:00PM). 54 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData54'. Cannot insert duplicate key in object 'dbo.rawHourData54'. The duplicate key value is (Jan 13 2020  5:00PM). 54 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData54'. Cannot insert duplicate key in object 'dbo.rawHourData54'. The duplicate key value is (Jan 13 2020  6:00PM). 54 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData54'. Cannot insert duplicate key in object 'dbo.rawHourData54'. The duplicate key value is (Jan 13 2020  7:00PM). 54 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData54'. Cannot insert duplicate key in object 'dbo.rawHourData54'. The duplicate key value is (Jan 13 2020  8:00PM). 54 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData54'. Cannot insert duplicate key in object 'dbo.rawHourData54'. The duplicate key value is (Jan 13 2020  9:00PM). 54 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData54'. Cannot insert duplicate key in object 'dbo.rawHourData54'. The duplicate key value is (Jan 13 2020 10:00PM). 54 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData54'. Cannot insert duplicate key in object 'dbo.rawHourData54'. The duplicate key value is (Jan 13 2020 11:00PM). 54 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData54'. Cannot insert duplicate key in object 'dbo.rawHourData54'. The duplicate key value is (Jan 13 2020 12:00AM). 54 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData125'. Cannot insert duplicate key in object 'dbo.rawHourData125'. The duplicate key value is (Jan 13 2020  1:00AM). 125 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData125'. Cannot insert duplicate key in object 'dbo.rawHourData125'. The duplicate key value is (Jan 13 2020  2:00AM). 125 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData125'. Cannot insert duplicate key in object 'dbo.rawHourData125'. The duplicate key value is (Jan 13 2020  3:00AM). 125 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData125'. Cannot insert duplicate key in object 'dbo.rawHourData125'. The duplicate key value is (Jan 13 2020  4:00AM). 125 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData125'. Cannot insert duplicate key in object 'dbo.rawHourData125'. The duplicate key value is (Jan 13 2020  5:00AM). 125 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData125'. Cannot insert duplicate key in object 'dbo.rawHourData125'. The duplicate key value is (Jan 13 2020  6:00AM). 125 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData125'. Cannot insert duplicate key in object 'dbo.rawHourData125'. The duplicate key value is (Jan 13 2020  7:00AM). 125 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData125'. Cannot insert duplicate key in object 'dbo.rawHourData125'. The duplicate key value is (Jan 13 2020  8:00AM). 125 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData125'. Cannot insert duplicate key in object 'dbo.rawHourData125'. The duplicate key value is (Jan 13 2020  9:00AM). 125 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData125'. Cannot insert duplicate key in object 'dbo.rawHourData125'. The duplicate key value is (Jan 13 2020 10:00AM). 125 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData125'. Cannot insert duplicate key in object 'dbo.rawHourData125'. The duplicate key value is (Jan 13 2020 11:00AM). 125 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData125'. Cannot insert duplicate key in object 'dbo.rawHourData125'. The duplicate key value is (Jan 13 2020 12:00PM). 125 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData125'. Cannot insert duplicate key in object 'dbo.rawHourData125'. The duplicate key value is (Jan 13 2020  1:00PM). 125 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData125'. Cannot insert duplicate key in object 'dbo.rawHourData125'. The duplicate key value is (Jan 13 2020  2:00PM). 125 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData125'. Cannot insert duplicate key in object 'dbo.rawHourData125'. The duplicate key value is (Jan 13 2020  3:00PM). 125 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData125'. Cannot insert duplicate key in object 'dbo.rawHourData125'. The duplicate key value is (Jan 13 2020  4:00PM). 125 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData125'. Cannot insert duplicate key in object 'dbo.rawHourData125'. The duplicate key value is (Jan 13 2020  5:00PM). 125 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData125'. Cannot insert duplicate key in object 'dbo.rawHourData125'. The duplicate key value is (Jan 13 2020  6:00PM). 125 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData125'. Cannot insert duplicate key in object 'dbo.rawHourData125'. The duplicate key value is (Jan 13 2020  7:00PM). 125 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData125'. Cannot insert duplicate key in object 'dbo.rawHourData125'. The duplicate key value is (Jan 13 2020  8:00PM). 125 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData125'. Cannot insert duplicate key in object 'dbo.rawHourData125'. The duplicate key value is (Jan 13 2020 10:00PM). 125 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData125'. Cannot insert duplicate key in object 'dbo.rawHourData125'. The duplicate key value is (Jan 13 2020  9:00PM). 125 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData125'. Cannot insert duplicate key in object 'dbo.rawHourData125'. The duplicate key value is (Jan 13 2020 12:00AM). 125 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData125'. Cannot insert duplicate key in object 'dbo.rawHourData125'. The duplicate key value is (Jan 13 2020 11:00PM). 125 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData146'. Cannot insert duplicate key in object 'dbo.rawHourData146'. The duplicate key value is (Jan 13 2020  1:00AM). 146 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData146'. Cannot insert duplicate key in object 'dbo.rawHourData146'. The duplicate key value is (Jan 13 2020  2:00AM). 146 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData146'. Cannot insert duplicate key in object 'dbo.rawHourData146'. The duplicate key value is (Jan 13 2020  3:00AM). 146 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData146'. Cannot insert duplicate key in object 'dbo.rawHourData146'. The duplicate key value is (Jan 13 2020  5:00AM). 146 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData146'. Cannot insert duplicate key in object 'dbo.rawHourData146'. The duplicate key value is (Jan 13 2020  4:00AM). 146 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData146'. Cannot insert duplicate key in object 'dbo.rawHourData146'. The duplicate key value is (Jan 13 2020  6:00AM). 146 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData146'. Cannot insert duplicate key in object 'dbo.rawHourData146'. The duplicate key value is (Jan 13 2020  7:00AM). 146 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData146'. Cannot insert duplicate key in object 'dbo.rawHourData146'. The duplicate key value is (Jan 13 2020  8:00AM). 146 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData146'. Cannot insert duplicate key in object 'dbo.rawHourData146'. The duplicate key value is (Jan 13 2020  9:00AM). 146 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData146'. Cannot insert duplicate key in object 'dbo.rawHourData146'. The duplicate key value is (Jan 13 2020 10:00AM). 146 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData146'. Cannot insert duplicate key in object 'dbo.rawHourData146'. The duplicate key value is (Jan 13 2020 11:00AM). 146 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData146'. Cannot insert duplicate key in object 'dbo.rawHourData146'. The duplicate key value is (Jan 13 2020 12:00PM). 146 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData146'. Cannot insert duplicate key in object 'dbo.rawHourData146'. The duplicate key value is (Jan 13 2020  1:00PM). 146 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData146'. Cannot insert duplicate key in object 'dbo.rawHourData146'. The duplicate key value is (Jan 13 2020  2:00PM). 146 2020-01-13
+RequestError: Timeout: Request failed to complete in 15000ms 146 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData146'. Cannot insert duplicate key in object 'dbo.rawHourData146'. The duplicate key value is (Jan 13 2020  4:00PM). 146 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData146'. Cannot insert duplicate key in object 'dbo.rawHourData146'. The duplicate key value is (Jan 13 2020  5:00PM). 146 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData146'. Cannot insert duplicate key in object 'dbo.rawHourData146'. The duplicate key value is (Jan 13 2020  6:00PM). 146 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData146'. Cannot insert duplicate key in object 'dbo.rawHourData146'. The duplicate key value is (Jan 13 2020  7:00PM). 146 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData146'. Cannot insert duplicate key in object 'dbo.rawHourData146'. The duplicate key value is (Jan 13 2020  8:00PM). 146 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData146'. Cannot insert duplicate key in object 'dbo.rawHourData146'. The duplicate key value is (Jan 13 2020  9:00PM). 146 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData146'. Cannot insert duplicate key in object 'dbo.rawHourData146'. The duplicate key value is (Jan 13 2020 10:00PM). 146 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData146'. Cannot insert duplicate key in object 'dbo.rawHourData146'. The duplicate key value is (Jan 13 2020 11:00PM). 146 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData146'. Cannot insert duplicate key in object 'dbo.rawHourData146'. The duplicate key value is (Jan 13 2020 12:00AM). 146 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData15'. Cannot insert duplicate key in object 'dbo.rawHourData15'. The duplicate key value is (Jan 13 2020  1:00AM). 15 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData15'. Cannot insert duplicate key in object 'dbo.rawHourData15'. The duplicate key value is (Jan 13 2020  2:00AM). 15 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData15'. Cannot insert duplicate key in object 'dbo.rawHourData15'. The duplicate key value is (Jan 13 2020  3:00AM). 15 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData15'. Cannot insert duplicate key in object 'dbo.rawHourData15'. The duplicate key value is (Jan 13 2020  4:00AM). 15 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData15'. Cannot insert duplicate key in object 'dbo.rawHourData15'. The duplicate key value is (Jan 13 2020  5:00AM). 15 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData15'. Cannot insert duplicate key in object 'dbo.rawHourData15'. The duplicate key value is (Jan 13 2020  6:00AM). 15 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData15'. Cannot insert duplicate key in object 'dbo.rawHourData15'. The duplicate key value is (Jan 13 2020  7:00AM). 15 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData15'. Cannot insert duplicate key in object 'dbo.rawHourData15'. The duplicate key value is (Jan 13 2020  9:00AM). 15 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData15'. Cannot insert duplicate key in object 'dbo.rawHourData15'. The duplicate key value is (Jan 13 2020 10:00AM). 15 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData15'. Cannot insert duplicate key in object 'dbo.rawHourData15'. The duplicate key value is (Jan 13 2020 11:00AM). 15 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData15'. Cannot insert duplicate key in object 'dbo.rawHourData15'. The duplicate key value is (Jan 13 2020 12:00PM). 15 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData15'. Cannot insert duplicate key in object 'dbo.rawHourData15'. The duplicate key value is (Jan 13 2020  2:00PM). 15 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData15'. Cannot insert duplicate key in object 'dbo.rawHourData15'. The duplicate key value is (Jan 13 2020  8:00AM). 15 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData15'. Cannot insert duplicate key in object 'dbo.rawHourData15'. The duplicate key value is (Jan 13 2020  1:00PM). 15 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData15'. Cannot insert duplicate key in object 'dbo.rawHourData15'. The duplicate key value is (Jan 13 2020  3:00PM). 15 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData15'. Cannot insert duplicate key in object 'dbo.rawHourData15'. The duplicate key value is (Jan 13 2020  4:00PM). 15 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData15'. Cannot insert duplicate key in object 'dbo.rawHourData15'. The duplicate key value is (Jan 13 2020  5:00PM). 15 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData15'. Cannot insert duplicate key in object 'dbo.rawHourData15'. The duplicate key value is (Jan 13 2020  6:00PM). 15 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData15'. Cannot insert duplicate key in object 'dbo.rawHourData15'. The duplicate key value is (Jan 13 2020  8:00PM). 15 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData15'. Cannot insert duplicate key in object 'dbo.rawHourData15'. The duplicate key value is (Jan 13 2020  7:00PM). 15 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData15'. Cannot insert duplicate key in object 'dbo.rawHourData15'. The duplicate key value is (Jan 13 2020  9:00PM). 15 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData15'. Cannot insert duplicate key in object 'dbo.rawHourData15'. The duplicate key value is (Jan 13 2020 10:00PM). 15 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData15'. Cannot insert duplicate key in object 'dbo.rawHourData15'. The duplicate key value is (Jan 13 2020 12:00AM). 15 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData15'. Cannot insert duplicate key in object 'dbo.rawHourData15'. The duplicate key value is (Jan 13 2020 11:00PM). 15 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData56'. Cannot insert duplicate key in object 'dbo.rawHourData56'. The duplicate key value is (Jan 13 2020  1:00AM). 56 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData56'. Cannot insert duplicate key in object 'dbo.rawHourData56'. The duplicate key value is (Jan 13 2020  2:00AM). 56 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData56'. Cannot insert duplicate key in object 'dbo.rawHourData56'. The duplicate key value is (Jan 13 2020  3:00AM). 56 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData56'. Cannot insert duplicate key in object 'dbo.rawHourData56'. The duplicate key value is (Jan 13 2020  4:00AM). 56 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData56'. Cannot insert duplicate key in object 'dbo.rawHourData56'. The duplicate key value is (Jan 13 2020  5:00AM). 56 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData56'. Cannot insert duplicate key in object 'dbo.rawHourData56'. The duplicate key value is (Jan 13 2020  6:00AM). 56 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData56'. Cannot insert duplicate key in object 'dbo.rawHourData56'. The duplicate key value is (Jan 13 2020  7:00AM). 56 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData56'. Cannot insert duplicate key in object 'dbo.rawHourData56'. The duplicate key value is (Jan 13 2020  8:00AM). 56 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData56'. Cannot insert duplicate key in object 'dbo.rawHourData56'. The duplicate key value is (Jan 13 2020  9:00AM). 56 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData56'. Cannot insert duplicate key in object 'dbo.rawHourData56'. The duplicate key value is (Jan 13 2020 10:00AM). 56 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData56'. Cannot insert duplicate key in object 'dbo.rawHourData56'. The duplicate key value is (Jan 13 2020 11:00AM). 56 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData56'. Cannot insert duplicate key in object 'dbo.rawHourData56'. The duplicate key value is (Jan 13 2020 12:00PM). 56 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData56'. Cannot insert duplicate key in object 'dbo.rawHourData56'. The duplicate key value is (Jan 13 2020  2:00PM). 56 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData56'. Cannot insert duplicate key in object 'dbo.rawHourData56'. The duplicate key value is (Jan 13 2020  1:00PM). 56 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData56'. Cannot insert duplicate key in object 'dbo.rawHourData56'. The duplicate key value is (Jan 13 2020  3:00PM). 56 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData56'. Cannot insert duplicate key in object 'dbo.rawHourData56'. The duplicate key value is (Jan 13 2020  4:00PM). 56 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData56'. Cannot insert duplicate key in object 'dbo.rawHourData56'. The duplicate key value is (Jan 13 2020  5:00PM). 56 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData56'. Cannot insert duplicate key in object 'dbo.rawHourData56'. The duplicate key value is (Jan 13 2020  6:00PM). 56 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData56'. Cannot insert duplicate key in object 'dbo.rawHourData56'. The duplicate key value is (Jan 13 2020  7:00PM). 56 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData56'. Cannot insert duplicate key in object 'dbo.rawHourData56'. The duplicate key value is (Jan 13 2020  8:00PM). 56 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData56'. Cannot insert duplicate key in object 'dbo.rawHourData56'. The duplicate key value is (Jan 13 2020  9:00PM). 56 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData56'. Cannot insert duplicate key in object 'dbo.rawHourData56'. The duplicate key value is (Jan 13 2020 10:00PM). 56 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData56'. Cannot insert duplicate key in object 'dbo.rawHourData56'. The duplicate key value is (Jan 13 2020 12:00AM). 56 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData56'. Cannot insert duplicate key in object 'dbo.rawHourData56'. The duplicate key value is (Jan 13 2020 11:00PM). 56 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData92'. Cannot insert duplicate key in object 'dbo.rawHourData92'. The duplicate key value is (Jan 13 2020  1:00AM). 92 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData92'. Cannot insert duplicate key in object 'dbo.rawHourData92'. The duplicate key value is (Jan 13 2020  3:00AM). 92 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData92'. Cannot insert duplicate key in object 'dbo.rawHourData92'. The duplicate key value is (Jan 13 2020  4:00AM). 92 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData92'. Cannot insert duplicate key in object 'dbo.rawHourData92'. The duplicate key value is (Jan 13 2020  2:00AM). 92 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData92'. Cannot insert duplicate key in object 'dbo.rawHourData92'. The duplicate key value is (Jan 13 2020  5:00AM). 92 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData92'. Cannot insert duplicate key in object 'dbo.rawHourData92'. The duplicate key value is (Jan 13 2020  6:00AM). 92 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData92'. Cannot insert duplicate key in object 'dbo.rawHourData92'. The duplicate key value is (Jan 13 2020  7:00AM). 92 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData92'. Cannot insert duplicate key in object 'dbo.rawHourData92'. The duplicate key value is (Jan 13 2020  8:00AM). 92 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData92'. Cannot insert duplicate key in object 'dbo.rawHourData92'. The duplicate key value is (Jan 13 2020  9:00AM). 92 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData92'. Cannot insert duplicate key in object 'dbo.rawHourData92'. The duplicate key value is (Jan 13 2020 10:00AM). 92 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData92'. Cannot insert duplicate key in object 'dbo.rawHourData92'. The duplicate key value is (Jan 13 2020 11:00AM). 92 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData92'. Cannot insert duplicate key in object 'dbo.rawHourData92'. The duplicate key value is (Jan 13 2020 12:00PM). 92 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData92'. Cannot insert duplicate key in object 'dbo.rawHourData92'. The duplicate key value is (Jan 13 2020  1:00PM). 92 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData92'. Cannot insert duplicate key in object 'dbo.rawHourData92'. The duplicate key value is (Jan 13 2020  2:00PM). 92 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData92'. Cannot insert duplicate key in object 'dbo.rawHourData92'. The duplicate key value is (Jan 13 2020  3:00PM). 92 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData92'. Cannot insert duplicate key in object 'dbo.rawHourData92'. The duplicate key value is (Jan 13 2020  4:00PM). 92 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData92'. Cannot insert duplicate key in object 'dbo.rawHourData92'. The duplicate key value is (Jan 13 2020  6:00PM). 92 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData92'. Cannot insert duplicate key in object 'dbo.rawHourData92'. The duplicate key value is (Jan 13 2020  5:00PM). 92 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData92'. Cannot insert duplicate key in object 'dbo.rawHourData92'. The duplicate key value is (Jan 13 2020  7:00PM). 92 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData92'. Cannot insert duplicate key in object 'dbo.rawHourData92'. The duplicate key value is (Jan 13 2020  8:00PM). 92 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData92'. Cannot insert duplicate key in object 'dbo.rawHourData92'. The duplicate key value is (Jan 13 2020  9:00PM). 92 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData92'. Cannot insert duplicate key in object 'dbo.rawHourData92'. The duplicate key value is (Jan 13 2020 10:00PM). 92 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData92'. Cannot insert duplicate key in object 'dbo.rawHourData92'. The duplicate key value is (Jan 13 2020 11:00PM). 92 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData92'. Cannot insert duplicate key in object 'dbo.rawHourData92'. The duplicate key value is (Jan 13 2020 12:00AM). 92 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData148'. Cannot insert duplicate key in object 'dbo.rawHourData148'. The duplicate key value is (Jan 13 2020  1:00AM). 148 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData148'. Cannot insert duplicate key in object 'dbo.rawHourData148'. The duplicate key value is (Jan 13 2020  2:00AM). 148 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData148'. Cannot insert duplicate key in object 'dbo.rawHourData148'. The duplicate key value is (Jan 13 2020  3:00AM). 148 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData148'. Cannot insert duplicate key in object 'dbo.rawHourData148'. The duplicate key value is (Jan 13 2020  4:00AM). 148 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData148'. Cannot insert duplicate key in object 'dbo.rawHourData148'. The duplicate key value is (Jan 13 2020  5:00AM). 148 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData148'. Cannot insert duplicate key in object 'dbo.rawHourData148'. The duplicate key value is (Jan 13 2020  6:00AM). 148 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData148'. Cannot insert duplicate key in object 'dbo.rawHourData148'. The duplicate key value is (Jan 13 2020  7:00AM). 148 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData148'. Cannot insert duplicate key in object 'dbo.rawHourData148'. The duplicate key value is (Jan 13 2020  8:00AM). 148 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData148'. Cannot insert duplicate key in object 'dbo.rawHourData148'. The duplicate key value is (Jan 13 2020  9:00AM). 148 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData148'. Cannot insert duplicate key in object 'dbo.rawHourData148'. The duplicate key value is (Jan 13 2020 10:00AM). 148 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData148'. Cannot insert duplicate key in object 'dbo.rawHourData148'. The duplicate key value is (Jan 13 2020 11:00AM). 148 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData148'. Cannot insert duplicate key in object 'dbo.rawHourData148'. The duplicate key value is (Jan 13 2020 12:00PM). 148 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData148'. Cannot insert duplicate key in object 'dbo.rawHourData148'. The duplicate key value is (Jan 13 2020  1:00PM). 148 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData148'. Cannot insert duplicate key in object 'dbo.rawHourData148'. The duplicate key value is (Jan 13 2020  2:00PM). 148 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData148'. Cannot insert duplicate key in object 'dbo.rawHourData148'. The duplicate key value is (Jan 13 2020  3:00PM). 148 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData148'. Cannot insert duplicate key in object 'dbo.rawHourData148'. The duplicate key value is (Jan 13 2020  4:00PM). 148 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData148'. Cannot insert duplicate key in object 'dbo.rawHourData148'. The duplicate key value is (Jan 13 2020  5:00PM). 148 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData148'. Cannot insert duplicate key in object 'dbo.rawHourData148'. The duplicate key value is (Jan 13 2020  7:00PM). 148 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData148'. Cannot insert duplicate key in object 'dbo.rawHourData148'. The duplicate key value is (Jan 13 2020  8:00PM). 148 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData148'. Cannot insert duplicate key in object 'dbo.rawHourData148'. The duplicate key value is (Jan 13 2020  6:00PM). 148 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData148'. Cannot insert duplicate key in object 'dbo.rawHourData148'. The duplicate key value is (Jan 13 2020 11:00PM). 148 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData148'. Cannot insert duplicate key in object 'dbo.rawHourData148'. The duplicate key value is (Jan 13 2020 12:00AM). 148 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData148'. Cannot insert duplicate key in object 'dbo.rawHourData148'. The duplicate key value is (Jan 13 2020  9:00PM). 148 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData148'. Cannot insert duplicate key in object 'dbo.rawHourData148'. The duplicate key value is (Jan 13 2020 10:00PM). 148 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData70'. Cannot insert duplicate key in object 'dbo.rawHourData70'. The duplicate key value is (Jan 13 2020  1:00AM). 70 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData70'. Cannot insert duplicate key in object 'dbo.rawHourData70'. The duplicate key value is (Jan 13 2020  2:00AM). 70 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData70'. Cannot insert duplicate key in object 'dbo.rawHourData70'. The duplicate key value is (Jan 13 2020  3:00AM). 70 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData70'. Cannot insert duplicate key in object 'dbo.rawHourData70'. The duplicate key value is (Jan 13 2020  4:00AM). 70 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData70'. Cannot insert duplicate key in object 'dbo.rawHourData70'. The duplicate key value is (Jan 13 2020  5:00AM). 70 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData70'. Cannot insert duplicate key in object 'dbo.rawHourData70'. The duplicate key value is (Jan 13 2020  6:00AM). 70 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData70'. Cannot insert duplicate key in object 'dbo.rawHourData70'. The duplicate key value is (Jan 13 2020  7:00AM). 70 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData70'. Cannot insert duplicate key in object 'dbo.rawHourData70'. The duplicate key value is (Jan 13 2020  8:00AM). 70 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData70'. Cannot insert duplicate key in object 'dbo.rawHourData70'. The duplicate key value is (Jan 13 2020  9:00AM). 70 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData70'. Cannot insert duplicate key in object 'dbo.rawHourData70'. The duplicate key value is (Jan 13 2020 10:00AM). 70 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData70'. Cannot insert duplicate key in object 'dbo.rawHourData70'. The duplicate key value is (Jan 13 2020 11:00AM). 70 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData70'. Cannot insert duplicate key in object 'dbo.rawHourData70'. The duplicate key value is (Jan 13 2020  3:00PM). 70 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData70'. Cannot insert duplicate key in object 'dbo.rawHourData70'. The duplicate key value is (Jan 13 2020 12:00PM). 70 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData70'. Cannot insert duplicate key in object 'dbo.rawHourData70'. The duplicate key value is (Jan 13 2020  1:00PM). 70 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData70'. Cannot insert duplicate key in object 'dbo.rawHourData70'. The duplicate key value is (Jan 13 2020  2:00PM). 70 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData70'. Cannot insert duplicate key in object 'dbo.rawHourData70'. The duplicate key value is (Jan 13 2020  4:00PM). 70 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData70'. Cannot insert duplicate key in object 'dbo.rawHourData70'. The duplicate key value is (Jan 13 2020  5:00PM). 70 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData70'. Cannot insert duplicate key in object 'dbo.rawHourData70'. The duplicate key value is (Jan 13 2020  6:00PM). 70 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData70'. Cannot insert duplicate key in object 'dbo.rawHourData70'. The duplicate key value is (Jan 13 2020  7:00PM). 70 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData70'. Cannot insert duplicate key in object 'dbo.rawHourData70'. The duplicate key value is (Jan 13 2020  8:00PM). 70 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData70'. Cannot insert duplicate key in object 'dbo.rawHourData70'. The duplicate key value is (Jan 13 2020  9:00PM). 70 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData70'. Cannot insert duplicate key in object 'dbo.rawHourData70'. The duplicate key value is (Jan 13 2020 11:00PM). 70 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData70'. Cannot insert duplicate key in object 'dbo.rawHourData70'. The duplicate key value is (Jan 13 2020 10:00PM). 70 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData70'. Cannot insert duplicate key in object 'dbo.rawHourData70'. The duplicate key value is (Jan 13 2020 12:00AM). 70 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData71'. Cannot insert duplicate key in object 'dbo.rawHourData71'. The duplicate key value is (Jan 13 2020  1:00AM). 71 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData71'. Cannot insert duplicate key in object 'dbo.rawHourData71'. The duplicate key value is (Jan 13 2020  2:00AM). 71 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData71'. Cannot insert duplicate key in object 'dbo.rawHourData71'. The duplicate key value is (Jan 13 2020  3:00AM). 71 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData71'. Cannot insert duplicate key in object 'dbo.rawHourData71'. The duplicate key value is (Jan 13 2020  4:00AM). 71 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData71'. Cannot insert duplicate key in object 'dbo.rawHourData71'. The duplicate key value is (Jan 13 2020  5:00AM). 71 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData71'. Cannot insert duplicate key in object 'dbo.rawHourData71'. The duplicate key value is (Jan 13 2020  6:00AM). 71 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData71'. Cannot insert duplicate key in object 'dbo.rawHourData71'. The duplicate key value is (Jan 13 2020  7:00AM). 71 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData71'. Cannot insert duplicate key in object 'dbo.rawHourData71'. The duplicate key value is (Jan 13 2020  8:00AM). 71 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData71'. Cannot insert duplicate key in object 'dbo.rawHourData71'. The duplicate key value is (Jan 13 2020  9:00AM). 71 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData71'. Cannot insert duplicate key in object 'dbo.rawHourData71'. The duplicate key value is (Jan 13 2020 10:00AM). 71 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData71'. Cannot insert duplicate key in object 'dbo.rawHourData71'. The duplicate key value is (Jan 13 2020 11:00AM). 71 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData71'. Cannot insert duplicate key in object 'dbo.rawHourData71'. The duplicate key value is (Jan 13 2020 12:00PM). 71 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData71'. Cannot insert duplicate key in object 'dbo.rawHourData71'. The duplicate key value is (Jan 13 2020  1:00PM). 71 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData71'. Cannot insert duplicate key in object 'dbo.rawHourData71'. The duplicate key value is (Jan 13 2020  2:00PM). 71 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData71'. Cannot insert duplicate key in object 'dbo.rawHourData71'. The duplicate key value is (Jan 13 2020  3:00PM). 71 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData71'. Cannot insert duplicate key in object 'dbo.rawHourData71'. The duplicate key value is (Jan 13 2020  4:00PM). 71 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData71'. Cannot insert duplicate key in object 'dbo.rawHourData71'. The duplicate key value is (Jan 13 2020  5:00PM). 71 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData71'. Cannot insert duplicate key in object 'dbo.rawHourData71'. The duplicate key value is (Jan 13 2020  7:00PM). 71 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData71'. Cannot insert duplicate key in object 'dbo.rawHourData71'. The duplicate key value is (Jan 13 2020  6:00PM). 71 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData71'. Cannot insert duplicate key in object 'dbo.rawHourData71'. The duplicate key value is (Jan 13 2020  8:00PM). 71 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData71'. Cannot insert duplicate key in object 'dbo.rawHourData71'. The duplicate key value is (Jan 13 2020  9:00PM). 71 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData71'. Cannot insert duplicate key in object 'dbo.rawHourData71'. The duplicate key value is (Jan 13 2020 10:00PM). 71 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData71'. Cannot insert duplicate key in object 'dbo.rawHourData71'. The duplicate key value is (Jan 13 2020 11:00PM). 71 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData71'. Cannot insert duplicate key in object 'dbo.rawHourData71'. The duplicate key value is (Jan 13 2020 12:00AM). 71 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData194'. Cannot insert duplicate key in object 'dbo.rawHourData194'. The duplicate key value is (Jan 13 2020  1:00AM). 194 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData194'. Cannot insert duplicate key in object 'dbo.rawHourData194'. The duplicate key value is (Jan 13 2020  2:00AM). 194 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData194'. Cannot insert duplicate key in object 'dbo.rawHourData194'. The duplicate key value is (Jan 13 2020  3:00AM). 194 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData194'. Cannot insert duplicate key in object 'dbo.rawHourData194'. The duplicate key value is (Jan 13 2020  4:00AM). 194 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData194'. Cannot insert duplicate key in object 'dbo.rawHourData194'. The duplicate key value is (Jan 13 2020  5:00AM). 194 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData194'. Cannot insert duplicate key in object 'dbo.rawHourData194'. The duplicate key value is (Jan 13 2020  6:00AM). 194 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData194'. Cannot insert duplicate key in object 'dbo.rawHourData194'. The duplicate key value is (Jan 13 2020  7:00AM). 194 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData194'. Cannot insert duplicate key in object 'dbo.rawHourData194'. The duplicate key value is (Jan 13 2020  8:00AM). 194 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData194'. Cannot insert duplicate key in object 'dbo.rawHourData194'. The duplicate key value is (Jan 13 2020  9:00AM). 194 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData194'. Cannot insert duplicate key in object 'dbo.rawHourData194'. The duplicate key value is (Jan 13 2020 11:00AM). 194 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData194'. Cannot insert duplicate key in object 'dbo.rawHourData194'. The duplicate key value is (Jan 13 2020 10:00AM). 194 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData194'. Cannot insert duplicate key in object 'dbo.rawHourData194'. The duplicate key value is (Jan 13 2020 12:00PM). 194 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData194'. Cannot insert duplicate key in object 'dbo.rawHourData194'. The duplicate key value is (Jan 13 2020  2:00PM). 194 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData194'. Cannot insert duplicate key in object 'dbo.rawHourData194'. The duplicate key value is (Jan 13 2020  3:00PM). 194 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData194'. Cannot insert duplicate key in object 'dbo.rawHourData194'. The duplicate key value is (Jan 13 2020  1:00PM). 194 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData194'. Cannot insert duplicate key in object 'dbo.rawHourData194'. The duplicate key value is (Jan 13 2020  4:00PM). 194 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData194'. Cannot insert duplicate key in object 'dbo.rawHourData194'. The duplicate key value is (Jan 13 2020  5:00PM). 194 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData194'. Cannot insert duplicate key in object 'dbo.rawHourData194'. The duplicate key value is (Jan 13 2020  6:00PM). 194 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData194'. Cannot insert duplicate key in object 'dbo.rawHourData194'. The duplicate key value is (Jan 13 2020  7:00PM). 194 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData194'. Cannot insert duplicate key in object 'dbo.rawHourData194'. The duplicate key value is (Jan 13 2020  8:00PM). 194 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData194'. Cannot insert duplicate key in object 'dbo.rawHourData194'. The duplicate key value is (Jan 13 2020  9:00PM). 194 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData194'. Cannot insert duplicate key in object 'dbo.rawHourData194'. The duplicate key value is (Jan 13 2020 10:00PM). 194 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData194'. Cannot insert duplicate key in object 'dbo.rawHourData194'. The duplicate key value is (Jan 13 2020 11:00PM). 194 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData194'. Cannot insert duplicate key in object 'dbo.rawHourData194'. The duplicate key value is (Jan 13 2020 12:00AM). 194 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData206'. Cannot insert duplicate key in object 'dbo.rawHourData206'. The duplicate key value is (Jan 13 2020  1:00AM). 206 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData206'. Cannot insert duplicate key in object 'dbo.rawHourData206'. The duplicate key value is (Jan 13 2020  2:00AM). 206 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData206'. Cannot insert duplicate key in object 'dbo.rawHourData206'. The duplicate key value is (Jan 13 2020  3:00AM). 206 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData206'. Cannot insert duplicate key in object 'dbo.rawHourData206'. The duplicate key value is (Jan 13 2020  4:00AM). 206 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData206'. Cannot insert duplicate key in object 'dbo.rawHourData206'. The duplicate key value is (Jan 13 2020  6:00AM). 206 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData206'. Cannot insert duplicate key in object 'dbo.rawHourData206'. The duplicate key value is (Jan 13 2020  7:00AM). 206 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData206'. Cannot insert duplicate key in object 'dbo.rawHourData206'. The duplicate key value is (Jan 13 2020  5:00AM). 206 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData206'. Cannot insert duplicate key in object 'dbo.rawHourData206'. The duplicate key value is (Jan 13 2020  8:00AM). 206 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData206'. Cannot insert duplicate key in object 'dbo.rawHourData206'. The duplicate key value is (Jan 13 2020  9:00AM). 206 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData206'. Cannot insert duplicate key in object 'dbo.rawHourData206'. The duplicate key value is (Jan 13 2020 10:00AM). 206 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData206'. Cannot insert duplicate key in object 'dbo.rawHourData206'. The duplicate key value is (Jan 13 2020 11:00AM). 206 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData206'. Cannot insert duplicate key in object 'dbo.rawHourData206'. The duplicate key value is (Jan 13 2020 12:00PM). 206 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData206'. Cannot insert duplicate key in object 'dbo.rawHourData206'. The duplicate key value is (Jan 13 2020  1:00PM). 206 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData206'. Cannot insert duplicate key in object 'dbo.rawHourData206'. The duplicate key value is (Jan 13 2020  2:00PM). 206 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData206'. Cannot insert duplicate key in object 'dbo.rawHourData206'. The duplicate key value is (Jan 13 2020  3:00PM). 206 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData206'. Cannot insert duplicate key in object 'dbo.rawHourData206'. The duplicate key value is (Jan 13 2020  4:00PM). 206 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData206'. Cannot insert duplicate key in object 'dbo.rawHourData206'. The duplicate key value is (Jan 13 2020  5:00PM). 206 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData206'. Cannot insert duplicate key in object 'dbo.rawHourData206'. The duplicate key value is (Jan 13 2020  6:00PM). 206 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData206'. Cannot insert duplicate key in object 'dbo.rawHourData206'. The duplicate key value is (Jan 13 2020  7:00PM). 206 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData206'. Cannot insert duplicate key in object 'dbo.rawHourData206'. The duplicate key value is (Jan 13 2020  8:00PM). 206 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData206'. Cannot insert duplicate key in object 'dbo.rawHourData206'. The duplicate key value is (Jan 13 2020  9:00PM). 206 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData206'. Cannot insert duplicate key in object 'dbo.rawHourData206'. The duplicate key value is (Jan 13 2020 10:00PM). 206 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData206'. Cannot insert duplicate key in object 'dbo.rawHourData206'. The duplicate key value is (Jan 13 2020 11:00PM). 206 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData206'. Cannot insert duplicate key in object 'dbo.rawHourData206'. The duplicate key value is (Jan 13 2020 12:00AM). 206 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData86'. Cannot insert duplicate key in object 'dbo.rawHourData86'. The duplicate key value is (Jan 13 2020  1:00AM). 86 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData86'. Cannot insert duplicate key in object 'dbo.rawHourData86'. The duplicate key value is (Jan 13 2020  2:00AM). 86 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData86'. Cannot insert duplicate key in object 'dbo.rawHourData86'. The duplicate key value is (Jan 13 2020  3:00AM). 86 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData86'. Cannot insert duplicate key in object 'dbo.rawHourData86'. The duplicate key value is (Jan 13 2020  4:00AM). 86 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData86'. Cannot insert duplicate key in object 'dbo.rawHourData86'. The duplicate key value is (Jan 13 2020  5:00AM). 86 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData86'. Cannot insert duplicate key in object 'dbo.rawHourData86'. The duplicate key value is (Jan 13 2020  6:00AM). 86 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData86'. Cannot insert duplicate key in object 'dbo.rawHourData86'. The duplicate key value is (Jan 13 2020  7:00AM). 86 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData86'. Cannot insert duplicate key in object 'dbo.rawHourData86'. The duplicate key value is (Jan 13 2020  9:00AM). 86 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData86'. Cannot insert duplicate key in object 'dbo.rawHourData86'. The duplicate key value is (Jan 13 2020 10:00AM). 86 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData86'. Cannot insert duplicate key in object 'dbo.rawHourData86'. The duplicate key value is (Jan 13 2020 11:00AM). 86 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData86'. Cannot insert duplicate key in object 'dbo.rawHourData86'. The duplicate key value is (Jan 13 2020 12:00PM). 86 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData86'. Cannot insert duplicate key in object 'dbo.rawHourData86'. The duplicate key value is (Jan 13 2020  8:00AM). 86 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData86'. Cannot insert duplicate key in object 'dbo.rawHourData86'. The duplicate key value is (Jan 13 2020  1:00PM). 86 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData86'. Cannot insert duplicate key in object 'dbo.rawHourData86'. The duplicate key value is (Jan 13 2020  2:00PM). 86 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData86'. Cannot insert duplicate key in object 'dbo.rawHourData86'. The duplicate key value is (Jan 13 2020  3:00PM). 86 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData86'. Cannot insert duplicate key in object 'dbo.rawHourData86'. The duplicate key value is (Jan 13 2020  4:00PM). 86 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData86'. Cannot insert duplicate key in object 'dbo.rawHourData86'. The duplicate key value is (Jan 13 2020  5:00PM). 86 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData86'. Cannot insert duplicate key in object 'dbo.rawHourData86'. The duplicate key value is (Jan 13 2020  6:00PM). 86 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData86'. Cannot insert duplicate key in object 'dbo.rawHourData86'. The duplicate key value is (Jan 13 2020  7:00PM). 86 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData86'. Cannot insert duplicate key in object 'dbo.rawHourData86'. The duplicate key value is (Jan 13 2020  8:00PM). 86 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData86'. Cannot insert duplicate key in object 'dbo.rawHourData86'. The duplicate key value is (Jan 13 2020  9:00PM). 86 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData86'. Cannot insert duplicate key in object 'dbo.rawHourData86'. The duplicate key value is (Jan 13 2020 10:00PM). 86 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData86'. Cannot insert duplicate key in object 'dbo.rawHourData86'. The duplicate key value is (Jan 13 2020 11:00PM). 86 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData86'. Cannot insert duplicate key in object 'dbo.rawHourData86'. The duplicate key value is (Jan 13 2020 12:00AM). 86 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData169'. Cannot insert duplicate key in object 'dbo.rawHourData169'. The duplicate key value is (Jan 13 2020  1:00AM). 169 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData169'. Cannot insert duplicate key in object 'dbo.rawHourData169'. The duplicate key value is (Jan 13 2020  2:00AM). 169 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData169'. Cannot insert duplicate key in object 'dbo.rawHourData169'. The duplicate key value is (Jan 13 2020  3:00AM). 169 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData169'. Cannot insert duplicate key in object 'dbo.rawHourData169'. The duplicate key value is (Jan 13 2020  4:00AM). 169 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData169'. Cannot insert duplicate key in object 'dbo.rawHourData169'. The duplicate key value is (Jan 13 2020  5:00AM). 169 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData169'. Cannot insert duplicate key in object 'dbo.rawHourData169'. The duplicate key value is (Jan 13 2020  6:00AM). 169 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData169'. Cannot insert duplicate key in object 'dbo.rawHourData169'. The duplicate key value is (Jan 13 2020  7:00AM). 169 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData169'. Cannot insert duplicate key in object 'dbo.rawHourData169'. The duplicate key value is (Jan 13 2020  8:00AM). 169 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData169'. Cannot insert duplicate key in object 'dbo.rawHourData169'. The duplicate key value is (Jan 13 2020  9:00AM). 169 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData169'. Cannot insert duplicate key in object 'dbo.rawHourData169'. The duplicate key value is (Jan 13 2020 10:00AM). 169 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData169'. Cannot insert duplicate key in object 'dbo.rawHourData169'. The duplicate key value is (Jan 13 2020 11:00AM). 169 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData169'. Cannot insert duplicate key in object 'dbo.rawHourData169'. The duplicate key value is (Jan 13 2020  1:00PM). 169 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData169'. Cannot insert duplicate key in object 'dbo.rawHourData169'. The duplicate key value is (Jan 13 2020 12:00PM). 169 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData169'. Cannot insert duplicate key in object 'dbo.rawHourData169'. The duplicate key value is (Jan 13 2020  2:00PM). 169 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData169'. Cannot insert duplicate key in object 'dbo.rawHourData169'. The duplicate key value is (Jan 13 2020  3:00PM). 169 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData169'. Cannot insert duplicate key in object 'dbo.rawHourData169'. The duplicate key value is (Jan 13 2020  4:00PM). 169 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData169'. Cannot insert duplicate key in object 'dbo.rawHourData169'. The duplicate key value is (Jan 13 2020  5:00PM). 169 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData169'. Cannot insert duplicate key in object 'dbo.rawHourData169'. The duplicate key value is (Jan 13 2020  6:00PM). 169 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData169'. Cannot insert duplicate key in object 'dbo.rawHourData169'. The duplicate key value is (Jan 13 2020  7:00PM). 169 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData169'. Cannot insert duplicate key in object 'dbo.rawHourData169'. The duplicate key value is (Jan 13 2020  8:00PM). 169 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData169'. Cannot insert duplicate key in object 'dbo.rawHourData169'. The duplicate key value is (Jan 13 2020 10:00PM). 169 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData169'. Cannot insert duplicate key in object 'dbo.rawHourData169'. The duplicate key value is (Jan 13 2020  9:00PM). 169 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData169'. Cannot insert duplicate key in object 'dbo.rawHourData169'. The duplicate key value is (Jan 13 2020 11:00PM). 169 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData169'. Cannot insert duplicate key in object 'dbo.rawHourData169'. The duplicate key value is (Jan 13 2020 12:00AM). 169 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData182'. Cannot insert duplicate key in object 'dbo.rawHourData182'. The duplicate key value is (Jan 13 2020  1:00AM). 182 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData182'. Cannot insert duplicate key in object 'dbo.rawHourData182'. The duplicate key value is (Jan 13 2020  2:00AM). 182 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData182'. Cannot insert duplicate key in object 'dbo.rawHourData182'. The duplicate key value is (Jan 13 2020  3:00AM). 182 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData182'. Cannot insert duplicate key in object 'dbo.rawHourData182'. The duplicate key value is (Jan 13 2020  4:00AM). 182 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData182'. Cannot insert duplicate key in object 'dbo.rawHourData182'. The duplicate key value is (Jan 13 2020  5:00AM). 182 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData182'. Cannot insert duplicate key in object 'dbo.rawHourData182'. The duplicate key value is (Jan 13 2020  6:00AM). 182 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData182'. Cannot insert duplicate key in object 'dbo.rawHourData182'. The duplicate key value is (Jan 13 2020  7:00AM). 182 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData182'. Cannot insert duplicate key in object 'dbo.rawHourData182'. The duplicate key value is (Jan 13 2020  8:00AM). 182 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData182'. Cannot insert duplicate key in object 'dbo.rawHourData182'. The duplicate key value is (Jan 13 2020  9:00AM). 182 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData182'. Cannot insert duplicate key in object 'dbo.rawHourData182'. The duplicate key value is (Jan 13 2020 10:00AM). 182 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData182'. Cannot insert duplicate key in object 'dbo.rawHourData182'. The duplicate key value is (Jan 13 2020 11:00AM). 182 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData182'. Cannot insert duplicate key in object 'dbo.rawHourData182'. The duplicate key value is (Jan 13 2020 12:00PM). 182 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData182'. Cannot insert duplicate key in object 'dbo.rawHourData182'. The duplicate key value is (Jan 13 2020  1:00PM). 182 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData182'. Cannot insert duplicate key in object 'dbo.rawHourData182'. The duplicate key value is (Jan 13 2020  2:00PM). 182 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData182'. Cannot insert duplicate key in object 'dbo.rawHourData182'. The duplicate key value is (Jan 13 2020  3:00PM). 182 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData182'. Cannot insert duplicate key in object 'dbo.rawHourData182'. The duplicate key value is (Jan 13 2020  4:00PM). 182 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData182'. Cannot insert duplicate key in object 'dbo.rawHourData182'. The duplicate key value is (Jan 13 2020  5:00PM). 182 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData182'. Cannot insert duplicate key in object 'dbo.rawHourData182'. The duplicate key value is (Jan 13 2020  6:00PM). 182 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData182'. Cannot insert duplicate key in object 'dbo.rawHourData182'. The duplicate key value is (Jan 13 2020  8:00PM). 182 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData182'. Cannot insert duplicate key in object 'dbo.rawHourData182'. The duplicate key value is (Jan 13 2020  7:00PM). 182 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData182'. Cannot insert duplicate key in object 'dbo.rawHourData182'. The duplicate key value is (Jan 13 2020  9:00PM). 182 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData182'. Cannot insert duplicate key in object 'dbo.rawHourData182'. The duplicate key value is (Jan 13 2020 10:00PM). 182 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData182'. Cannot insert duplicate key in object 'dbo.rawHourData182'. The duplicate key value is (Jan 13 2020 11:00PM). 182 2020-01-13
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawHourData182'. Cannot insert duplicate key in object 'dbo.rawHourData182'. The duplicate key value is (Jan 13 2020 12:00AM). 182 2020-01-13
+TypeError: Cannot read property 'Value' of undefined 2 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 2 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 2 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 2 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 2 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 2 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 2 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 2 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 2 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 2 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 7 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 7 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 7 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 7 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 7 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 7 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 7 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 7 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 7 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 7 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 39 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 39 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 39 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 39 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 39 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 39 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 39 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 39 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 39 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 39 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 80 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 80 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 80 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 80 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 80 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 80 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 80 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 80 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 80 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 80 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 105 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 105 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 105 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 105 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 105 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 105 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 105 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 105 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 105 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 105 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 124 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 124 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 124 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 124 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 124 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 124 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 124 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 124 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 124 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 124 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 142 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 142 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 142 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 142 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 142 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 142 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 142 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 142 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 142 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 142 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 190 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 190 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 190 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 190 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 190 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 190 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 190 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 190 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 190 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 190 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 205 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 205 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 205 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 205 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 205 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 205 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 205 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 205 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 205 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 205 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 5 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 5 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 5 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 5 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 5 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 5 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 5 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 5 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 5 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 5 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 54 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 54 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 54 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 54 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 54 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 54 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 54 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 54 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 54 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 54 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 125 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 125 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 125 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 125 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 125 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 125 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 125 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 125 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 125 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 125 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 146 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 146 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 146 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 146 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 146 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 146 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 146 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 146 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 146 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 146 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 15 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 15 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 15 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 15 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 15 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 15 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 15 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 15 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 15 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 15 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 188 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 188 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 188 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 188 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 188 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 188 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 188 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 188 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 188 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 188 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 56 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 56 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 56 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 56 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 56 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 56 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 56 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 56 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 56 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 56 2020-01-14
+RequestError: Violation of UNIQUE KEY constraint 'IX_rawData2'. Cannot insert duplicate key in object 'dbo.rawData2'. The duplicate key value is (2020-01-14). 2 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 2 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 2 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 2 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 2 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 2 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 15 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 15 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 15 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 15 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 15 2020-01-14
+TypeError: Cannot read property 'Value' of undefined 2 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 2 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 2 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 2 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 2 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 2 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 2 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 2 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 2 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 2 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 7 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 7 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 7 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 7 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 7 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 7 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 7 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 7 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 7 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 7 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 39 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 39 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 39 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 39 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 39 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 39 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 39 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 39 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 39 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 39 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 80 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 80 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 80 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 80 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 80 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 80 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 80 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 80 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 80 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 80 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 105 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 105 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 105 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 105 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 105 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 105 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 105 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 105 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 105 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 105 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 124 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 124 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 124 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 124 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 124 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 124 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 124 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 124 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 124 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 124 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 142 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 142 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 142 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 142 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 142 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 142 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 142 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 142 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 142 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 142 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 190 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 190 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 190 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 190 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 190 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 190 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 190 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 190 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 190 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 190 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 205 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 205 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 205 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 205 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 205 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 205 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 205 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 205 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 205 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 205 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 5 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 5 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 5 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 5 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 5 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 5 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 5 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 5 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 5 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 5 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 54 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 54 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 54 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 54 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 54 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 54 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 54 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 54 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 54 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 54 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 125 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 125 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 125 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 125 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 125 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 125 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 125 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 125 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 125 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 125 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 146 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 146 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 146 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 146 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 146 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 146 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 146 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 146 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 146 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 146 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 15 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 15 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 15 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 15 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 15 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 15 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 15 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 15 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 15 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 15 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 188 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 188 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 188 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 188 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 188 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 188 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 188 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 188 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 188 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 188 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 56 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 56 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 56 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 56 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 56 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 56 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 56 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 56 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 56 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 56 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 92 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 92 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 92 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 92 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 92 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 92 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 92 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 92 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 92 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 92 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 148 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 148 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 148 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 148 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 148 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 148 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 148 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 148 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 148 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 148 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 70 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 70 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 70 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 70 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 70 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 70 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 70 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 70 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 70 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 70 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 71 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 71 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 71 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 71 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 71 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 71 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 71 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 71 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 194 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 71 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 71 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 194 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 194 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 194 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 194 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 194 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 194 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 194 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 194 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 194 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 206 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 206 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 206 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 206 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 206 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 206 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 206 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 206 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 206 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 206 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 86 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 86 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 86 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 86 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 86 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 86 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 86 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 86 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 86 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 86 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 169 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 169 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 169 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 169 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 169 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 169 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 169 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 169 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 169 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 169 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 182 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 182 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 182 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 182 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 182 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 182 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 182 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 182 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 182 2020-01-16
+TypeError: Cannot read property 'Value' of undefined 182 2020-01-16
