@@ -1,7 +1,9 @@
-import urllib3
+import urllib
 import contextlib
 
-import sqlalchemy as sa
+from sqlalchemy import create_engine
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
 
 from shared.core import config
 
@@ -15,12 +17,12 @@ pyodbc_conn_str = (
     f'PWD={config.SQL_SERVER_PASSWORD}'
 )
 
-params = urllib3.parse.quote_plus(pyodbc_conn_str)
+params = urllib.parse.quote_plus(pyodbc_conn_str)
 
 # SQLAlchemy
-engine = sa.create_engine(f'mssql+pyodbc:///?odbc_connect={params}')
-Base = sa.ext.declarative.declarative_base()
-Session = sa.orm.sessionmaker(bind=engine)
+engine = create_engine(f'mssql+pyodbc:///?odbc_connect={params}')
+Base = declarative_base()
+Session = sessionmaker(bind=engine)
 
 @contextlib.contextmanager
 def session_manager():
