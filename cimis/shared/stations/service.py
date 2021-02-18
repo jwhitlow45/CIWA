@@ -12,7 +12,7 @@ from shared.core import db
 
 class StationService:
 
-    __base_url = 'http://et.water.ca.gov/api/station'
+    __base_url = config.CIMIS_API_STATION_BASE_URL
 
     # -------------------------------------------------------------------------
     # Private helper methods

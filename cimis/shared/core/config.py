@@ -8,7 +8,12 @@ load_dotenv(find_dotenv())
 # HTTP Requests
 HTTP_TIMEOUT_SECONDS = 30
 
-# SQL SERVER
+# CIMIS
+CIMIS_API_KEY = os.getenv("CIMIS_API_KEY")
+CIMIS_API_DATA_BASE_URL = "http://et.water.ca.gov/api/data"
+CIMIS_API_STATION_BASE_URL = "http://et.water.ca.gov/api/station"
+
+# SQL Server
 SQL_SERVER_NAME = os.getenv("SQL_SERVER_NAME")
 SQL_SERVER_PORT = os.getenv("SQL_SERVER_PORT")
 SQL_DATABASE_NAME = os.getenv("SQL_DATABASE_NAME")
@@ -21,3 +26,9 @@ SQLALCHEMY_URL = (
     f'@{SQL_SERVER_NAME}:{SQL_SERVER_PORT}/{SQL_DATABASE_NAME}?'
     f'driver={"+".join(SQL_SERVER_DRIVER.strip("{").strip("}").split(" "))}'
 )
+
+# Service Bus
+SERVICE_BUS_CONNECTION_STRING = os.getenv('SERVICE_BUS_CONNECTION_STRING')
+SERVICE_BUS_STATION_QUEUE_NAME = os.getenv('SERVICE_BUS_STATION_QUEUE_NAME')
+SERVICE_BUS_RAW_QUEUE_NAME = os.getenv('SERVICE_BUS_RAW_QUEUE_NAME')
+SERVICE_BUS_MAIN_QUEUE_NAME = os.getenv('SERVICE_BUS_MAIN_QUEUE_NAME')
