@@ -27,7 +27,7 @@ target_metadata = [station_models.Station.metadata]
 # my_important_option = config.get_main_option("my_important_option")
 # ... etc.
 
-config.set_main_option('sqlalchemy.url', conf.ALEMBIC_SQLALCHEMY_URL)
+config.set_main_option('sqlalchemy.url', conf.SQLALCHEMY_URL)
 
 
 def run_migrations_offline():
