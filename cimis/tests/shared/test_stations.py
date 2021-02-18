@@ -4,6 +4,7 @@ from unittest import TestCase
 from unittest.mock import patch
 
 import pydantic
+import requests
 
 from shared.stations import schemas
 from shared.stations import service
@@ -63,6 +64,9 @@ def mocked_requests_get(*args, **kwargs):
         def json(self):
             return self.json_data
 
+        def raise_for_status(self):
+            pass
+
     return MockResponse(mock_station_response, 200)
 
 
@@ -76,6 +80,9 @@ def mocked_request_get_with_error(*args, **kwargs):
         def json(self):
             return self.json_data
 
+        def raise_for_status(self):
+            raise requests.HTTPError
+
     return MockResponse(mock_station_response, 400)
 
 
@@ -88,8 +95,8 @@ class TestStationService(TestCase):
             mock_station_response['Stations']
         )
 
-    @patch('shared.stations.service.requests.get')
-    def test_get_stations_from_cimis_without_targets(self, mocked_requests_get):
+    @patch('shared.stations.service.requests.get', mocked_requests_get)
+    def test_get_stations_from_cimis_without_targets(self):
         stations = StationService.get_stations_from_cimis()
         self.assertListEqual(stations, self.all_stations)
 
