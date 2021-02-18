@@ -1,8 +1,10 @@
 from sqlalchemy import Column, Integer, Float, String, Text, Boolean, Date
-from sqlalchemy.sql import func
 from sqlalchemy.orm import relationship
+from sqlalchemy.sql.expression import null
+from sqlalchemy.sql.schema import ForeignKey
 
 from shared.core.db import Base
+
 
 class Station(Base):
     __tablename__ = 'Station'
@@ -21,3 +23,11 @@ class Station(Base):
     Latitude = Column(Float, nullable=True)
     Longitude = Column(Float, nullable=True)
     SitingDesc = Column(Text, nullable=True, default='')
+
+
+class Sisters(Base):
+    __tablename__ = 'Sisters'
+
+    StationId = Column(Integer, ForeignKey('Station.Id'), primary_key=True, autoincrement=False)
+    SisterOneId = Column(Integer, ForeignKey('Station.Id'), nullable=True)
+    SisterTwoId = Column(Integer, ForeignKey('Station.Id'), nullable=True)
