@@ -4,6 +4,7 @@ import pydantic
 import requests
 
 from shared.stations import schemas
+from shared.core import config
 
 
 class StationService:
@@ -52,7 +53,7 @@ class StationService:
         if targets and len(targets) == 1:
             url = f'{url}/{targets[0]}'
 
-        response = requests.get(url, timeout=30)
+        response = requests.get(url, timeout=config.HTTP_TIMEOUT_SECONDS)
         response.raise_for_status()
         stations = cls.__parse_cimis_response(response)
 
