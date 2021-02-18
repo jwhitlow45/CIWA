@@ -1,4 +1,5 @@
-from typing import List
+import datetime
+from typing import List, Union
 
 import pydantic
 import requests
@@ -12,6 +13,36 @@ from shared.core import db
 class StationService:
 
     __base_url = 'http://et.water.ca.gov/api/station'
+
+    # -------------------------------------------------------------------------
+    # Private helper methods
+    # -------------------------------------------------------------------------
+
+    @staticmethod
+    def __parse_cimis_date_str(date_str: str) -> datetime.date:
+        """Parses the date string format used by CIMIS.
+
+        Args:
+            date_str: Date string in the format mm/dd/yyyy.
+
+        Returns:
+            datetime.date: The date obje as sa
+        """
+        [month, day, year] = date_str.split('/')
+        return datetime.date(int(year), int(month), int(day))
+
+    @staticmethod
+    def __parse_cimis_coordinate_str(coord_str: str) -> float:
+        """Parses the coordinate string format used by CIMIS.
+
+        Args:
+            coord_str: Coordinate string in the format 'HMS / DD'.
+
+        Returns:
+            float: The coordinate in decimal degrees.
+        """
+        [hms, dd] = coord_str.split('/')
+        return float(dd)
 
     @staticmethod
     def __parse_cimis_response(response: requests.Response) -> List[schemas.StationInCimisResponse]:
@@ -28,6 +59,32 @@ class StationService:
         json = response.json()
         stations = json['Stations']
         return pydantic.parse_obj_as(List[schemas.StationInCimisResponse], stations)
+
+    # -------------------------------------------------------------------------
+    # Public API
+    # -------------------------------------------------------------------------
+    @classmethod
+    def to_station_schema(cls, stations: List[schemas.StationInCimisResponse]) -> List[schemas.Station]:
+        """Converts station schema from StationInCimisResponse to Station."""
+        return [
+            schemas.Station(
+                Id=station.StationNbr,
+                Name=station.Name,
+                City=station.City,
+                RegionalOffice=station.RegionalOffice,
+                County=station.County,
+                IsActive=station.IsActive,
+                IsEtoStation=station.IsEtoStation,
+                Elevation=station.Elevation,
+                GroundCover=station.GroundCover,
+                SitingDesc=station.SitingDesc,
+                ConnectDate=cls.__parse_cimis_date_str(station.ConnectDate),
+                DisconnectDate=cls.__parse_cimis_date_str(station.DisconnectDate),
+                Longitude=cls.__parse_cimis_coordinate_str(station.HmsLongitude),
+                Latitude=cls.__parse_cimis_coordinate_str(station.HmsLatitude)
+            )
+            for station in stations
+        ]
 
     @classmethod
     def get_stations_from_cimis(cls, targets: List[int] = None) -> List[schemas.StationInCimisResponse]:
@@ -72,19 +129,12 @@ class StationService:
             return pydantic.parse_obj_as(List[schemas.Station], stations)
 
     @classmethod
-    def update_or_add_station(cls, station: schemas.Station):
-        """Adds or updates a station in the database.
+    def update_or_add_stations(cls, stations: List[schemas.Station]):
+        """Adds or updates stations in the database.
 
         If the station already exists in the database, it will be updated.
         Otherwise, the staiton will be added to the database.
         """
-        with db.session_manager() as session:
-            session.merge(models.Station(**station.dict()))
-            session.commit()
-
-    @classmethod
-    def batch_update_or_add_stations(cls, stations: List[schemas.Station]):
-        """Same as update_or_add_stations but performs a batch operation."""
         with db.session_manager() as session:
             for station in stations:
                 session.merge(models.Station(**station.dict()))

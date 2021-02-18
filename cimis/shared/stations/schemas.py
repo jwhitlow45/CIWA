@@ -44,6 +44,9 @@ class StationInCimisResponse(StationBase):
     HmsLongitude: Optional[str]
     ZipCodes: Optional[List[str]]
 
+    class Config:
+        extra = 'ignore'
+
     def __eq__(self, other: Any) -> bool:
         return all(
             [
@@ -67,6 +70,7 @@ class Station(StationBase):
     Longitude: Optional[float]
 
     class Config:
+        extra = 'ignore'
         orm_mode = True
 
     def __eq__(self, other: Any) -> bool:
