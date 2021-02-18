@@ -2,9 +2,13 @@ from typing import List
 
 import pydantic
 import requests
+import sqlalchemy
+from shared import stations
 
 from shared.stations import schemas
+from shared.stations import models
 from shared.core import config
+from shared.core import db
 
 
 class StationService:
@@ -61,3 +65,29 @@ class StationService:
             return [s for s in stations if s.StationNbr in targets]
         else:
             return stations
+
+    @classmethod
+    def get_stations_from_db(cls) -> List[schemas.Station]:
+        """Retrieves station info from the database."""
+        with db.session_manager() as session:
+            stations = session.query(models.Station).order_by(models.Station.Id).all()
+            return pydantic.parse_obj_as(List[schemas.Station], stations)
+
+    @classmethod
+    def update_or_add_station(cls, station: schemas.Station):
+        """Adds or updates a station in the database.
+
+        If the station already exists in the database, it will be updated.
+        Otherwise, the staiton will be added to the database.
+        """
+        with db.session_manager() as session:
+            session.merge(models.Station(**station.dict()))
+            session.commit()
+
+    @classmethod
+    def batch_update_or_add_stations(cls, stations: List[schemas.Station]):
+        """Same as update_or_add_stations but performs a batch operation."""
+        with db.session_manager() as session:
+            for station in stations:
+                session.merge(models.Station(**station.dict()))
+            session.commit()
