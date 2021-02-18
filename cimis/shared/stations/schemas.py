@@ -1,5 +1,5 @@
 import datetime
-from typing import List, Optional
+from typing import Any, List, Optional
 
 import pydantic
 
@@ -18,6 +18,22 @@ class StationBase(pydantic.BaseModel):
     class Config:
         extra = 'ignore'
 
+    def __eq__(self, other: Any) -> bool:
+        return all(
+            [
+                isinstance(other, StationBase),
+                self.Name == other.Name,
+                self.City == other.City,
+                self.RegionalOffice == other.RegionalOffice,
+                self.County == other.County,
+                self.IsActive == other.IsActive,
+                self.IsEtoStation == other.IsEtoStation,
+                self.Elevation == other.Elevation,
+                self.GroundCover == other.GroundCover,
+                self.SitingDesc == other.SitingDesc
+            ]
+        )
+
 
 class StationInCimisResponse(StationBase):
     """Station info returned from the CIMIS API."""
@@ -28,6 +44,18 @@ class StationInCimisResponse(StationBase):
     HmsLongitude: Optional[str]
     ZipCodes: Optional[List[str]]
 
+    def __eq__(self, other: Any) -> bool:
+        return all(
+            [
+                super().__eq__(other),
+                isinstance(other, StationInCimisResponse),
+                self.StationNbr == other.StationNbr,
+                self.ConnectDate == other.ConnectDate,
+                self.DisconnectDate == other.DisconnectDate,
+                self.HmsLatitude == other.HmsLatitude,
+                self.HmsLongitude == other.HmsLongitude,
+            ]
+        )
 
 class Station(StationBase):
     """Station info stored in the database."""
@@ -39,3 +67,16 @@ class Station(StationBase):
 
     class Config:
         orm_mode = True
+
+    def __eq__(self, other: Any) -> bool:
+        return all(
+            [
+                super().__eq__(other),
+                isinstance(other, Station),
+                self.Id == other.Id,
+                self.ConnectDate == other.ConnectDate,
+                self.DisconnectDate == other.DisconnectDate,
+                self.Latitude == other.Latitude,
+                self.Longitude == other.Longitude
+            ]
+        )
