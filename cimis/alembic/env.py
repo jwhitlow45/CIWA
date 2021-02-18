@@ -5,8 +5,8 @@ from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 from alembic import context
 
-from shared.core import db
 from shared.core import config as conf
+from shared.stations import models as station_models
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
@@ -19,7 +19,7 @@ fileConfig(config.config_file_name)
 # add your model's MetaData object here
 # for 'autogenerate' support
 
-target_metadata = db.Base.metadata
+target_metadata = [station_models.Station.metadata]
 # target_metadata = None
 
 # other values from the config, defined by the needs of env.py,
