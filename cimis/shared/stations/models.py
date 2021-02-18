@@ -1,7 +1,4 @@
-from sqlalchemy import Column, Integer, Float, String, Text, Boolean, Date
-from sqlalchemy.orm import relationship
-from sqlalchemy.sql.expression import null
-from sqlalchemy.sql.schema import ForeignKey
+from sqlalchemy import Column, Integer, Float, String, Text, Boolean, Date, ForeignKey
 
 from shared.core.db import Base
 

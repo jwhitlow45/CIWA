@@ -2,8 +2,6 @@ from typing import List
 
 import pydantic
 import requests
-import sqlalchemy
-from shared import stations
 
 from shared.stations import schemas
 from shared.stations import models

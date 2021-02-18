@@ -1,5 +1,4 @@
-import urllib
-import contextlib
+from contextlib import contextmanager
 
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
@@ -12,7 +11,7 @@ Base = declarative_base()
 Session = sessionmaker(bind=engine)
 
 
-@contextlib.contextmanager
+@contextmanager
 def session_manager():
     """Provide a transactional scope around a series of operations."""
     session = Session()

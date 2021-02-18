@@ -57,6 +57,7 @@ class StationInCimisResponse(StationBase):
             ]
         )
 
+
 class Station(StationBase):
     """Station info stored in the database."""
     Id: int
