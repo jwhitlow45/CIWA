@@ -61,12 +61,4 @@ def main(msg: func.ServiceBusMessage):
         logging.info('HTTP error occured')
     except Timeout:
         logging.info('Request timed out')
-
-"""Use shared.stations.service.StationService to get data for the requested station_ids in the payload from
-CIMIS and update the db. You'll want to use
-StationService.get_stations_from_cimis,
-StationService.to_station_schema, and
-StationService.update_or_add_stations for this"""
-
-"""Read the docstrings for the functions. I list the types of exceptions that can be raised by them.
-You'll want to use "try except" blocks so that you can determine weather to discard a message or abandon it to go back in the queue"""
+        
