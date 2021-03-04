@@ -54,20 +54,29 @@ def main(msg: func.ServiceBusMessage):
             raise KeyError
             
     except (UnicodeDecodeError, ValueError, KeyError) as ERROR:
+        # Treat unrecoverable errors as completed and log them
         logging.info('Unrecoverable error ' + str(ERROR) + f' at time {utils.get_utc_timestamp()}')
 
     except (ConnectionError, HTTPError, Timeout) as ERROR:
         with ServiceBusClient.from_connection_string(config.SERVICE_BUS_CONNECTION_STRING) as client:
             with client.get_queue_sender(config.SERVICE_BUS_STATION_QUEUE_NAME) as sender:
+                # Update payload delivery count
                 action.payload.delivery_count = action.payload.delivery_count + 1
+                # Get current time + exponential backoff based on delivery count to determine enqueue time
                 cur_time = datetime.datetime.utcnow()
                 delta_time = datetime.timedelta(seconds=1*(2**action.payload.delivery_count))
                 enqueue_time = cur_time + delta_time
+                # Create new message with same same payload as old message to allow modification
+                # Schedule enqueue time in new message constructor
                 new_msg = ServiceBusMessage(action.json(), scheduled_enqueue_time_utc=enqueue_time)
+                # Send message to queue
                 sender.send_messages(new_msg)
+                # Log sending message to queue
                 logging.info(f'Action {action} sent to back of queue \
                     {config.SERVICE_BUS_STATION_QUEUE_NAME} at {utils.get_utc_timestamp()}')
 
     except:
+        # Catch any unaccounted errors, log the time they occurred and payload leading
+        # to the unaccounted error
         logging.info(f'Unaccounted error thrown at time {utils.get_utc_timestamp()} from {action.json()}')
         
