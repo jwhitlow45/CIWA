@@ -75,8 +75,8 @@ def main(msg: func.ServiceBusMessage):
                 logging.info(f'Action {action} sent to back of queue \
                     {config.SERVICE_BUS_STATION_QUEUE_NAME} at {utils.get_utc_timestamp()}')
 
-    except:
+    except Exception as e:
         # Catch any unaccounted errors, log the time they occurred and payload leading
         # to the unaccounted error
-        logging.info(f'Unaccounted error thrown at time {utils.get_utc_timestamp()} from {action.json()}')
+        logging.info(f'Unaccounted error {e} thrown at time {utils.get_utc_timestamp()} from {action.json()}')
         
