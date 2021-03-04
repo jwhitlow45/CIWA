@@ -1,5 +1,5 @@
 # Azure functions
-from datetime import datetime
+from datetime import datetime, timedelta
 from os import utime
 from azure.servicebus import ServiceBusClient, ServiceBusMessage
 import azure.functions as func
@@ -11,7 +11,6 @@ from requests import ConnectionError, HTTPError, Timeout
 
 # Type management
 import pydantic
-import json
 
 # Shared objects
 from shared.message import actions
@@ -59,27 +58,15 @@ def main(msg: func.ServiceBusMessage):
             
     except (UnicodeDecodeError, ValueError, KeyError) as ERROR:
         logging.info('Unrecoverable error ' + str(ERROR) + f' at time {utc_timestamp}')
-        pass
 
     except (ConnectionError, HTTPError, Timeout) as ERROR:
         with ServiceBusClient.from_connection_string(config.SERVICE_BUS_CONNECTION_STRING) as client:
             with client.get_queue_sender(config.SERVICE_BUS_STATION_QUEUE_NAME) as sender:
                 action.payload.delivery_count = action.payload.delivery_count + 1
-                new_msg = ServiceBusMessage()
-                new_msg.scheduled_enqueue_time_utc(seconds=1*(2**action.payload.delivery_count))
-                sender.send_messages(action)
-
-
-""" UnicodeDecodeError:
-        logging.info('Message received in unreadable format')
-    except ValueError:
-        logging.info('Response does not contain valid JSON')
-    except KeyError:
-        logging.info('JSON dictionary does not contain expected properties')
-    except ConnectionError:
-        logging.info('Connection error occured')
-    except HTTPError:
-        logging.info('HTTP error occured')
-    except Timeout:
-        logging.info('Request timed out')"""
+                cur_time = datetime.datetime.utcnow()
+                delta_time = datetime.timedelta(seconds=1*(2**action.payload.delivery_count))
+                enqueue_time = cur_time + delta_time
+                new_msg = ServiceBusMessage(action.json(), scheduled_enqueue_time_utc=enqueue_time)
+                sender.send_messages(new_msg)
+                logging.info('')
         
