@@ -62,7 +62,7 @@ def main(msg: func.ServiceBusMessage):
             with client.get_queue_sender(config.SERVICE_BUS_STATION_QUEUE_NAME) as sender:
                 # Update payload delivery count
                 action.payload.delivery_count = action.payload.delivery_count + 1
-                if action.payload.delivery_count > config.MAX_DELIVERY_COUNT:
+                if action.payload.delivery_count < config.MAX_DELIVERY_COUNT:
                     # Get current time + exponential backoff based on delivery count to determine enqueue time
                     cur_time = datetime.datetime.utcnow()
                     delta_time = datetime.timedelta(seconds=1*(2**action.payload.delivery_count))
