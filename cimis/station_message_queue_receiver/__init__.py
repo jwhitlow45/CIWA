@@ -62,18 +62,22 @@ def main(msg: func.ServiceBusMessage):
             with client.get_queue_sender(config.SERVICE_BUS_STATION_QUEUE_NAME) as sender:
                 # Update payload delivery count
                 action.payload.delivery_count = action.payload.delivery_count + 1
-                # Get current time + exponential backoff based on delivery count to determine enqueue time
-                cur_time = datetime.datetime.utcnow()
-                delta_time = datetime.timedelta(seconds=1*(2**action.payload.delivery_count))
-                enqueue_time = cur_time + delta_time
-                # Create new message with same same payload as old message to allow modification
-                # Schedule enqueue time in new message constructor
-                new_msg = ServiceBusMessage(action.json(), scheduled_enqueue_time_utc=enqueue_time)
-                # Send message to queue
-                sender.send_messages(new_msg)
-                # Log sending message to queue
-                logging.info(f'Action {action} sent to back of queue \
-                    {config.SERVICE_BUS_STATION_QUEUE_NAME} at {utils.get_utc_timestamp()}')
+                if action.payload.delivery_count > config.MAX_DELIVERY_COUNT:
+                    # Get current time + exponential backoff based on delivery count to determine enqueue time
+                    cur_time = datetime.datetime.utcnow()
+                    delta_time = datetime.timedelta(seconds=1*(2**action.payload.delivery_count))
+                    enqueue_time = cur_time + delta_time
+                    # Create new message with same same payload as old message to allow modification
+                    # Schedule enqueue time in new message constructor
+                    new_msg = ServiceBusMessage(action.json(), scheduled_enqueue_time_utc=enqueue_time)
+                    # Send message to queue
+                    sender.send_messages(new_msg)
+                    # Log sending message to queue
+                    logging.info(f'Action {action} sent to back of queue \
+                        {config.SERVICE_BUS_STATION_QUEUE_NAME} at {utils.get_utc_timestamp()}')
+                else:
+                    logging.info(f'Action {action} not requeued: max delivery count exceeded \
+                        at {utils.get_utc_timestamp()}')
 
     except Exception as e:
         # Catch any unaccounted errors, log the time they occurred and payload leading
