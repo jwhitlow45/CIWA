@@ -6,7 +6,7 @@
       "type": "serviceBusTrigger",
       "direction": "in",
       "queueName": "station",
-      "connection": "fsciwa_SERVICEBUS"
+      "connection": "fsciwabus_SERVICEBUS"
     }
   ]
 }
