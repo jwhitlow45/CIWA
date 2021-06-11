@@ -1,2 +1,2 @@
 ## CIWA Weather Database Structure
-![img](https://imgur.com/gBRc8eJ)
+![img](https://i.imgur.com/gBRc8eJ.png)
