@@ -8,6 +8,7 @@ from shared.stations import schemas
 from shared.stations import models
 from shared.core import config
 from shared.core import db
+from shared.core import utils
 
 
 class StationService:
@@ -17,19 +18,6 @@ class StationService:
     # -------------------------------------------------------------------------
     # Private helper methods
     # -------------------------------------------------------------------------
-
-    @staticmethod
-    def __parse_cimis_date_str(date_str: str) -> datetime.date:
-        """Parses the date string format used by CIMIS.
-
-        Args:
-            date_str: Date string in the format mm/dd/yyyy.
-
-        Returns:
-            datetime.date: The date obje as sa
-        """
-        [month, day, year] = date_str.split('/')
-        return datetime.date(int(year), int(month), int(day))
 
     @staticmethod
     def __parse_cimis_coordinate_str(coord_str: str) -> float:
@@ -78,10 +66,10 @@ class StationService:
                 Elevation=station.Elevation,
                 GroundCover=station.GroundCover,
                 SitingDesc=station.SitingDesc,
-                ConnectDate=cls.__parse_cimis_date_str(station.ConnectDate),
-                DisconnectDate=cls.__parse_cimis_date_str(station.DisconnectDate),
-                Longitude=cls.__parse_cimis_coordinate_str(station.HmsLongitude),
-                Latitude=cls.__parse_cimis_coordinate_str(station.HmsLatitude)
+                ConnectDate=utils.parse_cimis_date_str(station.ConnectDate),
+                DisconnectDate=utils.parse_cimis_date_str(station.DisconnectDate),
+                Longitude=utils.parse_cimis_coordinate_str(station.HmsLongitude),
+                Latitude=utils.parse_cimis_coordinate_str(station.HmsLatitude)
             )
             for station in stations
         ]
