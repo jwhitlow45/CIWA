@@ -4,6 +4,6 @@ The purpose of this database is to create a clone of the [California Irrigation 
 ## CIWA Weather Database Structure
 The database structure is comprised of a multiple functions which send requests through Azure Data Queues, allowing for thousands of instructions to be sent at once and to be handled over long periods of time. A large SQL database comprised of multiple SQL tables are used throughout the project to allow for efficient data retrieval and storage. This structure creates a single point at which the database is accessed allowing simple interaction through a lightweight API.
 
-![img](https://i.imgur.com/JxH774p.png)
+![img](https://i.imgur.com/ZtgaYWc.png)
 
 
