@@ -5,6 +5,10 @@ from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 from alembic import context
 
+# Include alembic in python path 
+import sys
+sys.path = ['', '..'] + sys.path[1:]
+
 from shared.core import config as conf
 from shared.stations import models as station_models
 from shared.raw_data import models as data_models
