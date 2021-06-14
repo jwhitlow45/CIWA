@@ -5,7 +5,7 @@ from shared.core.db import Base
 class HourlyRawData(Base):
     __tablename__ = 'HourlyRaw'
 
-    Id = Column(String(255), primary_key=True, nullable=False)
+    Id = Column(Integer, primary_key=True, nullable=False)
     Date = Column(Date, nullable=False)
     Hour = Column(Time, nullable=False)
     
