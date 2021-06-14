@@ -7,7 +7,7 @@ from alembic import context
 
 from shared.core import config as conf
 from shared.stations import models as station_models
-from shared.data import models as data_models
+from shared.raw_data import models as data_models
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
