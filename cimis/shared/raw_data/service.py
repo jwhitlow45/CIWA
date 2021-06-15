@@ -1,11 +1,13 @@
+import os
 from typing import List
 from datetime import date
-import pydantic
-import requests
 
-import os
 
 from sqlalchemy.sql.sqltypes import Date
+import pydantic
+import requests
+from requests.models import Response
+
 
 from shared.core import config
 from shared.core import db
@@ -37,7 +39,7 @@ class HourlyRawDataService():
     # Private helper methods
     # -------------------------------------------------------------------------
     @staticmethod
-    def __parse_cimis_response(reponse: requests.Response) -> List[schemas.HourlyRawInCimisResponse]:
+    def __parse_cimis_response(response: requests.Response) -> List[schemas.HourlyRawInCimisResponse]:
         """
         Args:
             reponse: The JSON response provided by the CIMIS API.
@@ -48,8 +50,9 @@ class HourlyRawDataService():
             ValueError: If the response body does not contain valid JSON.
             KeyError: If the JSON dictionary does not contain the expected properties.
         """
-
-        pass
+        json = response.json()
+        raw_data = json['Records'][0]
+        return pydantic.parse_obj_as(List[schemas.DailyRawInCimisResponse]), raw_data
 
     # -------------------------------------------------------------------------
     # Public API
@@ -60,7 +63,7 @@ class HourlyRawDataService():
         pass
 
     @classmethod
-    def get_hourlyraw_data_from_cimis(cls, startDate: date, endDate: date, targets: List[int] = None) -> List[schemas.HourlyRawInCimisResponse]:
+    def get_hourlyraw_data_from_cimis(cls, start_date: date, end_date: date, targets: List[int] = None) -> List[schemas.HourlyRawInCimisResponse]:
         """Retrieves hourly raw data from CIMIS API.
 
         Args:
@@ -73,13 +76,33 @@ class HourlyRawDataService():
                 containing hourly raw data from the target stations
 
         Raises:
-            ValueError: If the response body does not contain valid JSON.
+            ValueError: If the response body does not contain valid JSON, or targets list is empty
             KeyError: If the JSON dictionary does not contain the expected properties.
             requests.ConnectionError: If a Connection error occurred.
             requests.HTTPError: If an HTTP error occurred.
             requests.Timeout: If the request timed out.        
         """
-        pass
+
+        # Throw ValueError if targets is empty
+        if len(targets) == 0:
+            raise ValueError('List[targets] cannot be empty.')
+
+        # Build CIMIS request URL
+        cimis_request_url = utils.build_cimis_request_url(base_url=cls.__base_url, 
+                                                            targets=targets,
+                                                            data_items=cls.__data_items,
+                                                            start_date=start_date,
+                                                            end_date=end_date)
+
+        # Request CIMIS API data with appropriate headers
+        headers = {'accept':'application/json'}
+        response = requests.get(cimis_request_url, headers=headers, timeout=config.HTTP_TIMEOUT_SECONDS)
+        response.raise_for_status()
+        hourly_raw_data = cls.__parse_cimis_response(response)
+
+        return [data for data in hourly_raw_data]
+
+        
 
 
 class DailyRawDataService():
