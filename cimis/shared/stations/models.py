@@ -23,8 +23,8 @@ class Station(Base):
 
 
 class Sisters(Base):
-    __tablename__ = 'Sisters'
+    __tablename__ = 'Sister'
 
     StationId = Column(Integer, ForeignKey('Station.Id'), primary_key=True, autoincrement=False)
-    SisterOneId = Column(Integer, ForeignKey('Station.Id'), nullable=True)
-    SisterTwoId = Column(Integer, ForeignKey('Station.Id'), nullable=True)
+    FirstSisterId = Column(Integer, ForeignKey('Station.Id'), nullable=False)
+    SecondSisterId = Column(Integer, ForeignKey('Station.Id'), nullable=False)
