@@ -17,20 +17,6 @@ class StationService:
     # -------------------------------------------------------------------------
     # Private helper methods
     # -------------------------------------------------------------------------
-
-    @staticmethod
-    def __parse_cimis_coordinate_str(coord_str: str) -> float:
-        """Parses the coordinate string format used by CIMIS.
-
-        Args:
-            coord_str: Coordinate string in the format 'HMS / DD'.
-
-        Returns:
-            float: The coordinate in decimal degrees.
-        """
-        [hms, dd] = coord_str.split('/')
-        return float(dd)
-
     @staticmethod
     def __parse_cimis_response(response: requests.Response) -> List[schemas.StationInCimisResponse]:
         """
