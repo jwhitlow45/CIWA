@@ -1,4 +1,5 @@
 import os
+import logging
 from typing import List
 from datetime import date
 
@@ -51,8 +52,8 @@ class HourlyRawDataService():
             KeyError: If the JSON dictionary does not contain the expected properties.
         """
         json = response.json()
-        raw_data = json['Records'][0]
-        return pydantic.parse_obj_as(List[schemas.DailyRawInCimisResponse]), raw_data
+        records = json['Data']['Providers'][0]['Records']
+        return pydantic.parse_obj_as(List[schemas.HourlyRawInCimisResponse], records)
 
     # -------------------------------------------------------------------------
     # Public API
@@ -82,7 +83,6 @@ class HourlyRawDataService():
             requests.HTTPError: If an HTTP error occurred.
             requests.Timeout: If the request timed out.        
         """
-
         # Throw ValueError if targets is empty
         if len(targets) == 0:
             raise ValueError('List[targets] cannot be empty.')
@@ -94,13 +94,15 @@ class HourlyRawDataService():
                                                             start_date=start_date,
                                                             end_date=end_date)
 
+        print(cimis_request_url)
+
         # Request CIMIS API data with appropriate headers
         headers = {'accept':'application/json'}
         response = requests.get(cimis_request_url, headers=headers, timeout=config.HTTP_TIMEOUT_SECONDS)
         response.raise_for_status()
         hourly_raw_data = cls.__parse_cimis_response(response)
 
-        return [data for data in hourly_raw_data]
+        
 
         
 
