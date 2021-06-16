@@ -1,5 +1,5 @@
 import datetime
-from typing import Any, List, Optional, Dict
+from typing import Any
 
 import pydantic
 
@@ -54,7 +54,7 @@ class HourlyRawInCimisResponse(HourlyRawBase):
     Julian: int
     Station: int
     Standard: str
-    ZipCodes: int
+    ZipCodes: str
     Scope: str
     
     class Config:
@@ -140,7 +140,7 @@ class DailyRawInCimisResponse(DailyRawBase):
     Julian: int
     Station: int
     Standard: str
-    ZipCodes: int
+    ZipCodes: str
     Scope: str
 
     class Config:
