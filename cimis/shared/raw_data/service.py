@@ -59,9 +59,56 @@ class HourlyRawDataService():
     # Public API
     # -------------------------------------------------------------------------
     @classmethod
-    def to_hourlyraw_schema(cls, stations: List[schemas.HourlyRawInCimisResponse]) -> List[schemas.HourlyRaw]:
+    def to_hourlyraw_schema(cls, station_data: List[schemas.HourlyRawInCimisResponse]) -> List[schemas.HourlyRaw]:
         """Converts hourlyraw schema from HourlyRawInCimisResponse to HourlyRaw"""
-        pass
+        return [
+            schemas.HourlyRaw(
+                StationId=data.Station,
+                HlyAirTmp=data.HlyAirTmp['Value'],
+                HlyAirTmpQc=data.HlyAirTmp['Qc'],
+                HlyAirTmpUnits=data.HlyAirTmp['Units'],
+                HlyDewPnt=data.HlyDewPnt['Value'],
+                HlyDewPntQc=data.HlyDewPnt['Qc'],
+                HlyDewPntUnits=data.HlyDewPnt['Units'],
+                HlyEto=data.HlyEto['Value'],
+                HlyEtoQc=data.HlyEto['Qc'],
+                HlyEtoUnits=data.HlyEto['Units'],
+                HlyNetRad=data.HlyNetRad['Value'],
+                HlyNetRadQc=data.HlyNetRad['Qc'],
+                HlyNetRadUnits=data.HlyNetRad['Units'],
+                HlyAsceEto=data.HlyAsceEto['Value'],
+                HlyAsceEtoQc=data.HlyAsceEto['Qc'],
+                HlyAsceEtoUnits=data.HlyAsceEto['Units'],
+                HlyAsceEtr=data.HlyAsceEtr['Value'],
+                HlyAsceEtrQc=data.HlyAsceEtr['Qc'],
+                HlyAsceEtrUnits=data.HlyAsceEtr['Units'],
+                HlyPrecip=data.HlyPrecip['Value'],
+                HlyPrecipQc=data.HlyPrecip['Qc'],
+                HlyPrecipUnits=data.HlyPrecip['Units'],
+                HlyRelHum=data.HlyRelHum['Value'],
+                HlyRelHumQc=data.HlyRelHum['Qc'],
+                HlyRelHumUnits=data.HlyRelHum['Units'],
+                HlyResWind=data.HlyResWind['Value'],
+                HlyResWindQc=data.HlyResWind['Qc'],
+                HlyResWindUnits=data.HlyResWind['Units'],
+                HlySoilTmp=data.HlySoilTmp['Value'],
+                HlySoilTmpQc=data.HlySoilTmp['Qc'],
+                HlySoilTmpUnits=data.HlySoilTmp['Units'],
+                HlySolRad=data.HlySolRad['Value'],
+                HlySolRadQc=data.HlySolRad['Qc'],
+                HlySolRadUnits=data.HlySolRad['Units'],
+                HlyVapPres=data.HlyVapPres['Value'],
+                HlyVapPresQc=data.HlyVapPres['Qc'],
+                HlyVapPresUnits=data.HlyVapPres['Units'],
+                HlyWindDir=data.HlyWindDir['Value'],
+                HlyWindDirQc=data.HlyWindDir['Qc'],
+                HlyWindDirUnits=data.HlyWindDir['Units'],
+                HlyWindSpd=data.HlyWindSpd['Value'],
+                HlyWindSpdQc=data.HlyWindSpd['Qc'],
+                HlyWindSpdUnits=data.HlyWindSpd['Units'],
+            )
+            for data in station_data
+        ]
 
     @classmethod
     def get_hourlyraw_data_from_cimis(cls, start_date: date, end_date: date, targets: List[int] = None) -> List[schemas.HourlyRawInCimisResponse]:
@@ -101,6 +148,7 @@ class HourlyRawDataService():
         response = requests.get(cimis_request_url, headers=headers, timeout=config.HTTP_TIMEOUT_SECONDS)
         response.raise_for_status()
         hourly_raw_data = cls.__parse_cimis_response(response)
+        return [data for data in hourly_raw_data]
 
         
 
