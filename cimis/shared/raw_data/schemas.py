@@ -69,6 +69,7 @@ class HourlyRawInCimisResponse(HourlyRawBase):
 class HourlyRaw(HourlyRawBase):
 
     Id: int
+    StationId: int
 
     class Config:
         extra = 'ignore'
@@ -146,6 +147,7 @@ class DailyRawInCimisResponse(DailyRawBase):
 class DailyRaw(DailyRawBase):
 
     Id: int
+    StationId: int
 
     class Config:
         extra = 'ignore'
