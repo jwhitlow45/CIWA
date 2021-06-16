@@ -6,9 +6,6 @@ import pydantic
 # Hourly Raw Data Schemas
 class HourlyRawBase(pydantic.BaseModel):
     
-    Date: datetime.date
-    Hour: datetime.time
-
 
     class Config:
         extra = 'ignore'
@@ -16,14 +13,14 @@ class HourlyRawBase(pydantic.BaseModel):
     def __eq__(self, other: Any) -> bool:
         return all(
             [
-                isinstance(other, HourlyRawBase),
-                self.Date == other.Date ,
-                self.Hour == other.Hour,
+                isinstance(other, HourlyRawBase)
             ]
         )
 
 class HourlyRawInCimisResponse(HourlyRawBase):
 
+    Date: str
+    Hour: str
     Julian: int
     Station: int
     Standard: str
@@ -52,6 +49,8 @@ class HourlyRawInCimisResponse(HourlyRawBase):
             [
                 super().__eq__(other),
                 isinstance(other, HourlyRawInCimisResponse),
+                    self.Date == other.Date,
+                    self.Hour == other.Hour,
                     self.Julian == other.Julian,
                     self.Station == other.Station,
                     self.Standard == other.Standard,
@@ -77,6 +76,8 @@ class HourlyRawInCimisResponse(HourlyRawBase):
 class HourlyRaw(HourlyRawBase):
 
     StationId: int
+    Date: datetime.date
+    Hour: datetime.time
 
     HlyAirTmp: float
     HlyAirTmpQc: str
@@ -144,6 +145,8 @@ class HourlyRaw(HourlyRawBase):
                 super().__eq__(other),
                 isinstance(other, HourlyRaw),
                 self.StationId == other.StationId,
+                self.Date == other.Date,
+                self.Hour == other.Hour,                
                 self.HlyAirTmp == other.HlyAirTmp,
                 self.HlyAirTmpQc == other.HlyAirTmpQc,
                 self.HlyAirTmpUnits == other.HlyAirTmpUnits,
@@ -192,21 +195,19 @@ class HourlyRaw(HourlyRawBase):
 # Daily Raw Data Schemas
 class DailyRawBase(pydantic.BaseModel):
 
-    Date: datetime.date
-
     class Config:
         extra = 'ignore'
 
     def __eq__(self, other: Any) -> bool:
         return all(
             [
-                isinstance(other, DailyRawBase),
-                self.Date == other.Date
+                isinstance(other, DailyRawBase)
             ]
         )
 
 class DailyRawInCimisResponse(DailyRawBase):
 
+    Date: str
     Julian: int
     Station: int
     Standard: str
@@ -235,6 +236,7 @@ class DailyRawInCimisResponse(DailyRawBase):
             [
                 super().__eq__(other),
                 isinstance(other, DailyRawInCimisResponse),
+                self.Date == other.Date,
                 self.Julian == other.Julian,
                 self.Station == other.Station,
                 self.Standard == other.Standard,
@@ -260,6 +262,7 @@ class DailyRawInCimisResponse(DailyRawBase):
 class DailyRaw(DailyRawBase):
 
     StationId: int
+    Date: datetime.date
     
     DayAirTmpAvg: float
     DayAirTmpAvgQc: str
@@ -327,6 +330,7 @@ class DailyRaw(DailyRawBase):
             [
                 super().__eq__(other),
                 isinstance(other, DailyRaw),
+                self.Date == other.Date,
                 self.StationId == other.StationId,
                 self.DayAirTmpAvg == other.DayAirTmpAvg,
                 self.DayAirTmpAvgQc == other.DayAirTmpAvgQc,
