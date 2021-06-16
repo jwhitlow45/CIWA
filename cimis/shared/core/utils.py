@@ -53,13 +53,17 @@ def build_cimis_request_url(base_url: str, targets: List[int], data_items: List[
     url += '&targets='
     for target in targets:
         url += (str(target) + ',')
+    url = url[:-1] # Remove trailing comma
     # Add all data items to URL request
     url += '&dataItems='
     for item in data_items:
         url += (item + ',')
+    url = url[:-1] # Remove trailing comma
     # Add start date
     url += '&startDate='
-    url += start_date.strftime("%Y-%d-%m")
+    url += start_date.strftime("%Y-%m-%d")
     # Add end date
     url += '&endDate='
-    url += end_date.strftime("%Y-%d-%m")
+    url += end_date.strftime("%Y-%m-%d") 
+
+    return url
