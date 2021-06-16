@@ -1,5 +1,5 @@
 import datetime
-from typing import Any
+from typing import Any, Optional
 
 import pydantic
 
@@ -21,11 +21,11 @@ class HourlyRawInCimisResponse(HourlyRawBase):
 
     Date: str
     Hour: str
-    Julian: int
-    Station: int
-    Standard: str
-    ZipCodes: str
-    Scope: str
+    Julian: Optional[int]
+    Station: Optional[int]
+    Standard: Optional[str]
+    ZipCodes: Optional[str]
+    Scope: Optional[str]
     HlyAirTmp: dict
     HlyDewPnt: dict
     HlyEto: dict
@@ -79,61 +79,61 @@ class HourlyRaw(HourlyRawBase):
     Date: datetime.date
     Hour: datetime.time
 
-    HlyAirTmp: float
-    HlyAirTmpQc: str
-    HlyAirTmpUnits: str
+    HlyAirTmp: Optional[float]
+    HlyAirTmpQc: Optional[str]
+    HlyAirTmpUnits: Optional[str]
 
-    HlyDewPnt: float
-    HlyDewPntQc: str
-    HlyDewPntUnits: str
+    HlyDewPnt: Optional[float]
+    HlyDewPntQc: Optional[str]
+    HlyDewPntUnits: Optional[str]
 
-    HlyEto: float
-    HlyEtoQc: str
-    HlyEtoUnits: str
+    HlyEto: Optional[float]
+    HlyEtoQc: Optional[str]
+    HlyEtoUnits: Optional[str]
 
-    HlyNetRad: float
-    HlyNetRadQc: str
-    HlyNetRadUnits: str
+    HlyNetRad: Optional[float]
+    HlyNetRadQc: Optional[str]
+    HlyNetRadUnits: Optional[str]
 
-    HlyAsceEto: float
-    HlyAsceEtoQc: str
-    HlyAsceEtoUnits: str
+    HlyAsceEto: Optional[float]
+    HlyAsceEtoQc: Optional[str]
+    HlyAsceEtoUnits: Optional[str]
 
-    HlyAsceEtr: float
-    HlyAsceEtrQc: str
-    HlyAsceEtrUnits: str
+    HlyAsceEtr: Optional[float]
+    HlyAsceEtrQc: Optional[str]
+    HlyAsceEtrUnits: Optional[str]
 
-    HlyPrecip: float
-    HlyPrecipQc: str
-    HlyPrecipUnits: str
+    HlyPrecip: Optional[float]
+    HlyPrecipQc: Optional[str]
+    HlyPrecipUnits: Optional[str]
 
-    HlyRelHum: float
-    HlyRelHumQc: str
-    HlyRelHumUnits: str
+    HlyRelHum: Optional[float]
+    HlyRelHumQc: Optional[str]
+    HlyRelHumUnits: Optional[str]
 
-    HlyResWind: float
-    HlyResWindQc: str
-    HlyResWindUnits: str
+    HlyResWind: Optional[float]
+    HlyResWindQc: Optional[str]
+    HlyResWindUnits: Optional[str]
 
-    HlySoilTmp: float
-    HlySoilTmpQc: str
-    HlySoilTmpUnits: str
+    HlySoilTmp: Optional[float]
+    HlySoilTmpQc: Optional[str]
+    HlySoilTmpUnits: Optional[str]
 
-    HlySolRad: float
-    HlySolRadQc: str
-    HlySolRadUnits: str
+    HlySolRad: Optional[float]
+    HlySolRadQc: Optional[str]
+    HlySolRadUnits: Optional[str]
 
-    HlyVapPres: float
-    HlyVapPresQc: str
-    HlyVapPresUnits: str
+    HlyVapPres: Optional[float]
+    HlyVapPresQc: Optional[str]
+    HlyVapPresUnits: Optional[str]
 
-    HlyWindDir: float
-    HlyWindDirQc: str
-    HlyWindDirUnits: str
+    HlyWindDir: Optional[float]
+    HlyWindDirQc: Optional[str]
+    HlyWindDirUnits: Optional[str]
 
-    HlyWindSpd: float
-    HlyWindSpdQc: str
-    HlyWindSpdUnits: str
+    HlyWindSpd: Optional[float]
+    HlyWindSpdQc: Optional[str]
+    HlyWindSpdUnits: Optional[str]
 
     class Config:
         extra = 'ignore'
