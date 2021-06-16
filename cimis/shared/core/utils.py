@@ -14,10 +14,27 @@ def parse_cimis_date_str(date_str: str) -> datetime.date:
         date_str: Date string in the format mm/dd/yyyy.
 
     Returns:
-        datetime.date: The date obje as sa
+        datetime.date: Datetime object date of same date
     """
-    [month, day, year] = date_str.split('/')
-    return datetime.date(int(year), int(month), int(day))
+    if '/' in date_str:
+        [month, day, year] = date_str.split('/')
+        return datetime.date(int(year), int(month), int(day))
+    if '-' in date_str:
+        [year, month, day] = date_str.split('-')
+        return datetime.date(int(year), int(month), int(day))
+
+def parse_cimis_hour_str(hour_str: str) -> datetime.time:
+    """Parses the hour string format used by CIMIS
+
+    Args:
+        hour_str: Hour string in format hhmm.
+
+    Returns:
+        datetime.hour: Datetime object hour of same hour
+    """
+    hr = hour_str[0:2]  # Strip first chars to get hour
+    hr = int(hr) - 1    # Convert hour to range 0-23 from 1-24
+    return datetime.time(hour=hr, minute=0) # Minute is always 0
 
 def parse_cimis_coordinate_str(coord_str: str) -> float:
     """Parses the coordinate string format used by CIMIS.
