@@ -51,7 +51,11 @@ class HourlyRawBase(pydantic.BaseModel):
 
 class HourlyRawInCimisResponse(HourlyRawBase):
 
+    Julian: int
     Station: int
+    Standard: str
+    ZipCodes: int
+    Scope: str
     
     class Config:
         extra = 'ignore'
@@ -61,14 +65,17 @@ class HourlyRawInCimisResponse(HourlyRawBase):
             [
                 super().__eq__(other),
                 isinstance(other, HourlyRawInCimisResponse),
-                self.Station == other.Station
+                    self.Julian == other.Julian,
+                    self.Station == other.Station,
+                    self.Standard == other.Standard,
+                    self.ZipCodes == other.ZipCodes,
+                    self.Scope == other.Scope
             ]
         )
 
 
 class HourlyRaw(HourlyRawBase):
 
-    Id: int
     StationId: int
 
     class Config:
@@ -80,7 +87,7 @@ class HourlyRaw(HourlyRawBase):
             [
                 super().__eq__(other),
                 isinstance(other, HourlyRaw),
-                self.Id == other.Id
+                self.StationId == other.StationId
             ]
         )
 
@@ -130,7 +137,11 @@ class DailyRawBase(pydantic.BaseModel):
 
 class DailyRawInCimisResponse(DailyRawBase):
 
+    Julian: int
     Station: int
+    Standard: str
+    ZipCodes: int
+    Scope: str
 
     class Config:
         extra = 'ignore'
@@ -140,13 +151,16 @@ class DailyRawInCimisResponse(DailyRawBase):
             [
                 super().__eq__(other),
                 isinstance(other, DailyRawInCimisResponse),
-                self.Station == other.Station
+                self.Julian == other.Julian,
+                self.Station == other.Station,
+                self.Standard == other.Standard,
+                self.ZipCodes == other.ZipCodes,
+                self.Scope == other.Scope
             ]
         )
 
 class DailyRaw(DailyRawBase):
 
-    Id: int
     StationId: int
 
     class Config:
@@ -158,6 +172,6 @@ class DailyRaw(DailyRawBase):
             [
                 super().__eq__(other),
                 isinstance(other, DailyRaw),
-                self.Id == other.Id
+                self.StationId == other.StationId
             ]
         )
