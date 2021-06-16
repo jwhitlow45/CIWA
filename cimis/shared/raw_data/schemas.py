@@ -1,5 +1,5 @@
 import datetime
-from typing import Any, List, Optional
+from typing import Any, List, Optional, Dict
 
 import pydantic
 
@@ -8,20 +8,20 @@ class HourlyRawBase(pydantic.BaseModel):
     
     Date: datetime.date
     Hour: datetime.time
-    HlyAirTmp = Optional[dict]
-    HlyDewPnt = Optional[dict]
-    HlyEto = Optional[dict]
-    HlyNetRad = Optional[dict]
-    HlyAsceEto = Optional[dict]
-    HlyAsceEtr = Optional[dict]
-    HlyPrecip = Optional[dict]
-    HlyRelHum = Optional[dict]
-    HlyResWind = Optional[dict]
-    HlySoilTmp = Optional[dict]
-    HlySolRad = Optional[dict]
-    HlyVapPres = Optional[dict]
-    HlyWindDir = Optional[dict]
-    HlyWindSpd = Optional[dict]
+    HlyAirTmp: dict
+    HlyDewPnt: dict
+    HlyEto: dict
+    HlyNetRad: dict
+    HlyAsceEto: dict
+    HlyAsceEtr: dict
+    HlyPrecip: dict
+    HlyRelHum: dict
+    HlyResWind: dict
+    HlySoilTmp: dict
+    HlySolRad: dict
+    HlyVapPres: dict
+    HlyWindDir: dict
+    HlyWindSpd: dict
 
     class Config:
         extra = 'ignore'
@@ -88,20 +88,20 @@ class HourlyRaw(HourlyRawBase):
 class DailyRawBase(pydantic.BaseModel):
 
     Date: datetime.date
-    DayAirTmpAvg: Optional[dict]
-    DayAirTmpMax: Optional[dict]
-    DayAirTmpMin: Optional[dict]
-    DayDewPnt: Optional[dict]
-    DayAsceEto: Optional[dict]
-    DayPrecip: Optional[dict]
-    DayRelHumAvg: Optional[dict]
-    DayRelHumMax: Optional[dict]
-    DayRelHumMin: Optional[dict]
-    DaySoilTmpAvg: Optional[dict]
-    DaySolRadAvg: Optional[dict]
-    DayVapPresAvg: Optional[dict]
-    DayWindRun: Optional[dict]
-    DayWindSpdAvg: Optional[dict]
+    DayAirTmpAvg: dict
+    DayAirTmpMax: dict
+    DayAirTmpMin: dict
+    DayDewPnt: dict
+    DayAsceEto: dict
+    DayPrecip: dict
+    DayRelHumAvg: dict
+    DayRelHumMax: dict
+    DayRelHumMin: dict
+    DaySoilTmpAvg: dict
+    DaySolRadAvg: dict
+    DayVapPresAvg: dict
+    DayWindRun: dict
+    DayWindSpdAvg: dict
 
     class Config:
         extra = 'ignore'
