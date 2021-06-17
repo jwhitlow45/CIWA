@@ -75,7 +75,7 @@ class HourlyRawInCimisResponse(HourlyRawBase):
 
 class HourlyRaw(HourlyRawBase):
 
-    Id: str
+    Id: int
     StationId: int
     Date: datetime.date
     Hour: datetime.time
@@ -287,7 +287,7 @@ class DailyRawInCimisResponse(DailyRawBase):
 
 class DailyRaw(DailyRawBase):
 
-    Id: str
+    Id: int
     StationId: int
     Date: datetime.date
     

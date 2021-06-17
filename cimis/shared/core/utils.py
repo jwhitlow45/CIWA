@@ -85,11 +85,11 @@ def build_cimis_request_url(base_url: str, targets: List[int], data_items: List[
 
     return url
 
-def generate_raw_data_primary_key(station_num: int, date: datetime.date, hour: datetime.time = datetime.time(0, 0)) -> str:
+def generate_raw_data_primary_key(station_num: int, date: datetime.date, hour: datetime.time = datetime.time(0, 0)) -> int:
     """Creates unique key for raw data items in raw data table based on
     station number, date, and Optional[hour] of the data
     """
-    station_key = str(station_num)
-    date_key = str(date.year) + '-' + str(date.month) + '-' + str(date.day)
-    hour_key = str(hour.hour) + '-' + str(hour.minute)
-    return (station_key + '-' + date_key + '-' + hour_key)
+    station_key = str(station_num).zfill(3)
+    date_key = str(date.year).zfill(4) + str(date.month).zfill(2) + str(date.day).zfill(2)
+    hour_key = str(hour.hour).zfill(2) + str(hour.minute).zfill(2)
+    return int(date_key + hour_key + station_key)
