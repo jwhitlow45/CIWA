@@ -288,109 +288,109 @@ class DailyRaw(DailyRawBase):
     StationId: int
     Date: datetime.date
     
-    DayAirTmpAvg: float
-    DayAirTmpAvgQc: str
-    DayAirTmpAvgUnits: str
+    DayAirTmpAvg: Optional[float]
+    DayAirTmpAvgQc: Optional[str]
+    DayAirTmpAvgUnits: Optional[str]
 
-    DayAirTmpMax: float
-    DayAirTmpMaxQc: str
-    DayAirTmpMaxUnits: str
+    DayAirTmpMax: Optional[float]
+    DayAirTmpMaxQc: Optional[str]
+    DayAirTmpMaxUnits: Optional[str]
 
-    DayAirTmpMin: float
-    DayAirTmpMinQc: str
-    DayAirTmpMinUnits: str
+    DayAirTmpMin: Optional[float]
+    DayAirTmpMinQc: Optional[str]
+    DayAirTmpMinUnits: Optional[str]
 
-    DayDewPnt: float
-    DayDewPntQc: str
-    DayDewPntUnits: str
+    DayDewPnt: Optional[float]
+    DayDewPntQc: Optional[str]
+    DayDewPntUnits: Optional[str]
 
-    DayEto: float
-    DayEtoQc: str
-    DayEtoUnits: str
+    DayEto: Optional[float]
+    DayEtoQc: Optional[str]
+    DayEtoUnits: Optional[str]
 
-    DayAsceEto: float
-    DayAsceEtoQc: str
-    DayAsceEtoUnits: str
+    DayAsceEto: Optional[float]
+    DayAsceEtoQc: Optional[str]
+    DayAsceEtoUnits: Optional[str]
 
-    DayAsceEtr: float
-    DayAsceEtrQc: str
-    DayAsceEtrUnits: str
+    DayAsceEtr: Optional[float]
+    DayAsceEtrQc: Optional[str]
+    DayAsceEtrUnits: Optional[str]
 
-    DayPrecip: float
-    DayPrecipQc: str
-    DayPrecipUnits: str
+    DayPrecip: Optional[float]
+    DayPrecipQc: Optional[str]
+    DayPrecipUnits: Optional[str]
 
-    DayRelHumAvg: float
-    DayRelHumAvgQc: str
-    DayRelHumAvgUnits: str
+    DayRelHumAvg: Optional[float]
+    DayRelHumAvgQc: Optional[str]
+    DayRelHumAvgUnits: Optional[str]
 
-    DayRelHumMax: float
-    DayRelHumMaxQc: str
-    DayRelHumMaxUnits: str
+    DayRelHumMax: Optional[float]
+    DayRelHumMaxQc: Optional[str]
+    DayRelHumMaxUnits: Optional[str]
 
-    DayRelHumMin: float
-    DayRelHumMinQc: str
-    DayRelHumMinUnits: str
+    DayRelHumMin: Optional[float]
+    DayRelHumMinQc: Optional[str]
+    DayRelHumMinUnits: Optional[str]
 
-    DaySoilTmpAvg: float
-    DaySoilTmpAvgQc: str
-    DaySoilTmpAvgUnits: str
+    DaySoilTmpAvg: Optional[float]
+    DaySoilTmpAvgQc: Optional[str]
+    DaySoilTmpAvgUnits: Optional[str]
 
-    DaySoilTmpMax: float
-    DaySoilTmpMaxQc: str
-    DaySoilTmpMaxUnits: str
+    DaySoilTmpMax: Optional[float]
+    DaySoilTmpMaxQc: Optional[str]
+    DaySoilTmpMaxUnits: Optional[str]
 
-    DaySoilTmpMin: float
-    DaySoilTmpMinQc: str
-    DaySoilTmpMinUnits: str
+    DaySoilTmpMin: Optional[float]
+    DaySoilTmpMinQc: Optional[str]
+    DaySoilTmpMinUnits: Optional[str]
 
-    DaySolRadAvg: float
-    DaySolRadAvgQc: str
-    DaySolRadAvgUnits: str
+    DaySolRadAvg: Optional[float]
+    DaySolRadAvgQc: Optional[str]
+    DaySolRadAvgUnits: Optional[str]
 
-    DaySolRadNet: float
-    DaySolRadNetQc: str
-    DaySolRadNetUnits: str
+    DaySolRadNet: Optional[float]
+    DaySolRadNetQc: Optional[str]
+    DaySolRadNetUnits: Optional[str]
 
-    DayVapPresAvg: float
-    DayVapPresAvgQc: str
-    DayVapPresAvgUnits: str
+    DayVapPresAvg: Optional[float]
+    DayVapPresAvgQc: Optional[str]
+    DayVapPresAvgUnits: Optional[str]
 
-    DayVapPresMax: float
-    DayVapPresMaxQc: str
-    DayVapPresMaxUnits: str
+    DayVapPresMax: Optional[float]
+    DayVapPresMaxQc: Optional[str]
+    DayVapPresMaxUnits: Optional[str]
 
-    DayWindEne: float
-    DayWindEneQc: str
-    DayWindEneUnits: str
+    DayWindEne: Optional[float]
+    DayWindEneQc: Optional[str]
+    DayWindEneUnits: Optional[str]
 
-    DayWindEse: float
-    DayWindEseQc: str
-    DayWindEseUnits: str
+    DayWindEse: Optional[float]
+    DayWindEseQc: Optional[str]
+    DayWindEseUnits: Optional[str]
 
-    DayWindNne: float
-    DayWindNneQc: str
-    DayWindNneUnits: str
+    DayWindNne: Optional[float]
+    DayWindNneQc: Optional[str]
+    DayWindNneUnits: Optional[str]
 
-    DayWindNnw: float
-    DayWindNnwQc: str
-    DayWindNnwUnits: str
+    DayWindNnw: Optional[float]
+    DayWindNnwQc: Optional[str]
+    DayWindNnwUnits: Optional[str]
 
-    DayWindRun: float
-    DayWindRunQc: str
-    DayWindRunUnits: str
+    DayWindRun: Optional[float]
+    DayWindRunQc: Optional[str]
+    DayWindRunUnits: Optional[str]
 
-    DayWindSsw: float
-    DayWindSswQc: str
-    DayWindSswUnits: str
+    DayWindSsw: Optional[float]
+    DayWindSswQc: Optional[str]
+    DayWindSswUnits: Optional[str]
 
-    DayWindWnw: float
-    DayWindWnwQc: str
-    DayWindWnwUnits: str
-    
-    DayWindWsw: float
-    DayWindWswQc: str
-    DayWindWswUnits: str
+    DayWindWnw: Optional[float]
+    DayWindWnwQc: Optional[str]
+    DayWindWnwUnits: Optional[str]
+
+    DayWindWsw: Optional[float]
+    DayWindWswQc: Optional[str]
+    DayWindWswUnits: Optional[str]
     
 
     class Config:
