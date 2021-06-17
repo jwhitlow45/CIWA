@@ -10,10 +10,8 @@ import requests
 from requests.models import Response
 
 
-from shared.core import config
-from shared.core import db
-from shared.core import utils
-from shared.raw_data import schemas
+from shared.core import config, db, utils
+from shared.raw_data import schemas, models
 
 class HourlyRawDataService():
 
@@ -156,9 +154,12 @@ class HourlyRawDataService():
     @classmethod
     def update_hourlyraw_data(cls, hourly_data: List[schemas.HourlyRaw]):
         """Adds hourly raw data to database
-
-
         """
+
+        with db.session_manager() as session:
+            for data in hourly_data:
+                session.merge(models.HourlyRawData(**data.dict()))
+            session.commit()
 
         
 
