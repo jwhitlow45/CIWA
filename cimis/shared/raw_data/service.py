@@ -63,6 +63,9 @@ class HourlyRawDataService():
         """Converts hourlyraw schema from HourlyRawInCimisResponse to HourlyRaw"""
         return [
             schemas.HourlyRaw(
+                Id=utils.generate_raw_data_primary_key(data.Station,
+                                                    utils.parse_cimis_date_str(data.Date),
+                                                    utils.parse_cimis_hour_str(data.Hour)),
                 StationId=data.Station,
                 Date=utils.parse_cimis_date_str(data.Date),
                 Hour=utils.parse_cimis_hour_str(data.Hour),
@@ -150,6 +153,13 @@ class HourlyRawDataService():
         hourly_raw_data = cls.__parse_cimis_response(response)
         return [data for data in hourly_raw_data]
 
+    @classmethod
+    def update_hourlyraw_data(cls, hourly_data: List[schemas.HourlyRaw]):
+        """Adds hourly raw data to database
+
+
+        """
+
         
 
         
@@ -217,6 +227,8 @@ class DailyRawDataService():
         """Converts dailyraw schema from DailyRawInCimisResponse to DailyRaw"""
         return [
             schemas.DailyRaw(
+                Id=utils.generate_raw_data_primary_key(data.Station,
+                                                    utils.parse_cimis_date_str(data.Date)),
                 StationId=data.Station,
                 Date=utils.parse_cimis_date_str(data.Date),
                 DayAirTmpAvg=data.DayAirTmpAvg['Value'],
