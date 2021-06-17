@@ -5,7 +5,7 @@ from shared.core.db import Base
 class HourlyRawData(Base):
     __tablename__ = 'HourlyRaw'
 
-    Id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
+    Id = Column(Integer, primary_key=True, nullable=False)
     StationId = Column(Integer, nullable=False)
     Date = Column(Date, nullable=False)
     Hour = Column(Time, nullable=False)
@@ -70,7 +70,7 @@ class HourlyRawData(Base):
 class DailyRawData(Base):
     __tablename__ = 'DailyRaw'
 
-    Id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
+    Id = Column(Integer, primary_key=True, nullable=False)
     StationId = Column(Integer, nullable=False)
     Date = Column(Date, nullable=False)
     
