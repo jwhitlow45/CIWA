@@ -217,16 +217,28 @@ class DailyRawInCimisResponse(DailyRawBase):
     DayAirTmpMax: dict
     DayAirTmpMin: dict
     DayDewPnt: dict
+    DayEto: dict
     DayAsceEto: dict
+    DayAsceEtr: dict
     DayPrecip: dict
     DayRelHumAvg: dict
     DayRelHumMax: dict
     DayRelHumMin: dict
     DaySoilTmpAvg: dict
+    DaySoilTmpMax: dict
+    DaySoilTmpMin: dict
     DaySolRadAvg: dict
+    DaySolRadNet: dict
     DayVapPresAvg: dict
+    DayVapPresMax: dict
+    DayWindEne: dict
+    DayWindEse: dict
+    DayWindNne: dict
+    DayWindNnw: dict
     DayWindRun: dict
-    DayWindSpdAvg: dict
+    DayWindSsw: dict
+    DayWindWnw: dict
+    DayWindWsw: dict
 
     class Config:
         extra = 'ignore'
@@ -246,16 +258,28 @@ class DailyRawInCimisResponse(DailyRawBase):
                 self.DayAirTmpMax == other.DayAirTmpMax,
                 self.DayAirTmpMin == other.DayAirTmpMin,
                 self.DayDewPnt == other.DayDewPnt,
+                self.DayEto == other.DayEto,
                 self.DayAsceEto == other.DayAsceEto,
+                self.DayAsceEtr == other.DayAsceEtr,
                 self.DayPrecip == other.DayPrecip,
                 self.DayRelHumAvg == other.DayRelHumAvg,
                 self.DayRelHumMax == other.DayRelHumMax,
                 self.DayRelHumMin == other.DayRelHumMin,
                 self.DaySoilTmpAvg == other.DaySoilTmpAvg,
+                self.DaySoilTmpMax == other.DaySoilTmpMax,
+                self.DaySoilTmpMin == other.DaySoilTmpMin,
                 self.DaySolRadAvg == other.DaySolRadAvg,
+                self.DaySolRadNet == other.DaySolRadNet,
                 self.DayVapPresAvg == other.DayVapPresAvg,
+                self.DayVapPresMax == other.DayVapPresMax,
+                self.DayWindEne == other.DayWindEne,
+                self.DayWindEse == other.DayWindEse,
+                self.DayWindNne == other.DayWindNne,
+                self.DayWindNnw == other.DayWindNnw,
                 self.DayWindRun == other.DayWindRun,
-                self.DayWindSpdAvg == other.DayWindSpdAvg
+                self.DayWindSsw == other.DayWindSsw,
+                self.DayWindWnw == other.DayWindWnw,
+                self.DayWindWsw == other.DayWindWsw
             ]
         )
 
@@ -267,58 +291,106 @@ class DailyRaw(DailyRawBase):
     DayAirTmpAvg: float
     DayAirTmpAvgQc: str
     DayAirTmpAvgUnits: str
-    
+
     DayAirTmpMax: float
     DayAirTmpMaxQc: str
     DayAirTmpMaxUnits: str
-    
+
     DayAirTmpMin: float
     DayAirTmpMinQc: str
     DayAirTmpMinUnits: str
-    
+
     DayDewPnt: float
     DayDewPntQc: str
     DayDewPntUnits: str
-    
+
+    DayEto: float
+    DayEtoQc: str
+    DayEtoUnits: str
+
     DayAsceEto: float
     DayAsceEtoQc: str
     DayAsceEtoUnits: str
-    
+
+    DayAsceEtr: float
+    DayAsceEtrQc: str
+    DayAsceEtrUnits: str
+
     DayPrecip: float
     DayPrecipQc: str
     DayPrecipUnits: str
-    
+
     DayRelHumAvg: float
     DayRelHumAvgQc: str
     DayRelHumAvgUnits: str
-    
+
     DayRelHumMax: float
     DayRelHumMaxQc: str
     DayRelHumMaxUnits: str
-    
+
     DayRelHumMin: float
     DayRelHumMinQc: str
     DayRelHumMinUnits: str
-    
+
     DaySoilTmpAvg: float
     DaySoilTmpAvgQc: str
     DaySoilTmpAvgUnits: str
-    
+
+    DaySoilTmpMax: float
+    DaySoilTmpMaxQc: str
+    DaySoilTmpMaxUnits: str
+
+    DaySoilTmpMin: float
+    DaySoilTmpMinQc: str
+    DaySoilTmpMinUnits: str
+
     DaySolRadAvg: float
     DaySolRadAvgQc: str
     DaySolRadAvgUnits: str
-    
+
+    DaySolRadNet: float
+    DaySolRadNetQc: str
+    DaySolRadNetUnits: str
+
     DayVapPresAvg: float
     DayVapPresAvgQc: str
     DayVapPresAvgUnits: str
-    
+
+    DayVapPresMax: float
+    DayVapPresMaxQc: str
+    DayVapPresMaxUnits: str
+
+    DayWindEne: float
+    DayWindEneQc: str
+    DayWindEneUnits: str
+
+    DayWindEse: float
+    DayWindEseQc: str
+    DayWindEseUnits: str
+
+    DayWindNne: float
+    DayWindNneQc: str
+    DayWindNneUnits: str
+
+    DayWindNnw: float
+    DayWindNnwQc: str
+    DayWindNnwUnits: str
+
     DayWindRun: float
     DayWindRunQc: str
     DayWindRunUnits: str
+
+    DayWindSsw: float
+    DayWindSswQc: str
+    DayWindSswUnits: str
+
+    DayWindWnw: float
+    DayWindWnwQc: str
+    DayWindWnwUnits: str
     
-    DayWindSpdAvg: float
-    DayWindSpdAvgQc: str
-    DayWindSpdAvgUnits: str
+    DayWindWsw: float
+    DayWindWswQc: str
+    DayWindWswUnits: str
     
 
     class Config:
@@ -344,9 +416,15 @@ class DailyRaw(DailyRawBase):
                 self.DayDewPnt == other.DayDewPnt,
                 self.DayDewPntQc == other.DayDewPntQc,
                 self.DayDewPntUnits == other.DayDewPntUnits,
+                self.DayEto == other.DayEto,
+                self.DayEtoQc == other.DayEtoQc,
+                self.DayEtoUnits == other.DayEtoUnits,
                 self.DayAsceEto == other.DayAsceEto,
                 self.DayAsceEtoQc == other.DayAsceEtoQc,
                 self.DayAsceEtoUnits == other.DayAsceEtoUnits,
+                self.DayAsceEtr == other.DayAsceEtr,
+                self.DayAsceEtrQc == other.DayAsceEtrQc,
+                self.DayAsceEtrUnits == other.DayAsceEtrUnits,
                 self.DayPrecip == other.DayPrecip,
                 self.DayPrecipQc == other.DayPrecipQc,
                 self.DayPrecipUnits == other.DayPrecipUnits,
@@ -362,17 +440,47 @@ class DailyRaw(DailyRawBase):
                 self.DaySoilTmpAvg == other.DaySoilTmpAvg,
                 self.DaySoilTmpAvgQc == other.DaySoilTmpAvgQc,
                 self.DaySoilTmpAvgUnits == other.DaySoilTmpAvgUnits,
+                self.DaySoilTmpMax == other.DaySoilTmpMax,
+                self.DaySoilTmpMaxQc == other.DaySoilTmpMaxQc,
+                self.DaySoilTmpMaxUnits == other.DaySoilTmpMaxUnits,
+                self.DaySoilTmpMin == other.DaySoilTmpMin,
+                self.DaySoilTmpMinQc == other.DaySoilTmpMinQc,
+                self.DaySoilTmpMinUnits == other.DaySoilTmpMinUnits,
                 self.DaySolRadAvg == other.DaySolRadAvg,
                 self.DaySolRadAvgQc == other.DaySolRadAvgQc,
                 self.DaySolRadAvgUnits == other.DaySolRadAvgUnits,
+                self.DaySolRadNet == other.DaySolRadNet,
+                self.DaySolRadNetQc == other.DaySolRadNetQc,
+                self.DaySolRadNetUnits == other.DaySolRadNetUnits,
                 self.DayVapPresAvg == other.DayVapPresAvg,
                 self.DayVapPresAvgQc == other.DayVapPresAvgQc,
                 self.DayVapPresAvgUnits == other.DayVapPresAvgUnits,
+                self.DayVapPresMax == other.DayVapPresMax,
+                self.DayVapPresMaxQc == other.DayVapPresMaxQc,
+                self.DayVapPresMaxUnits == other.DayVapPresMaxUnits,
+                self.DayWindEne == other.DayWindEne,
+                self.DayWindEneQc == other.DayWindEneQc,
+                self.DayWindEneUnits == other.DayWindEneUnits,
+                self.DayWindEse == other.DayWindEse,
+                self.DayWindEseQc == other.DayWindEseQc,
+                self.DayWindEseUnits == other.DayWindEseUnits,
+                self.DayWindNne == other.DayWindNne,
+                self.DayWindNneQc == other.DayWindNneQc,
+                self.DayWindNneUnits == other.DayWindNneUnits,
+                self.DayWindNnw == other.DayWindNnw,
+                self.DayWindNnwQc == other.DayWindNnwQc,
+                self.DayWindNnwUnits == other.DayWindNnwUnits,
                 self.DayWindRun == other.DayWindRun,
                 self.DayWindRunQc == other.DayWindRunQc,
                 self.DayWindRunUnits == other.DayWindRunUnits,
-                self.DayWindSpdAvg == other.DayWindSpdAvg,
-                self.DayWindSpdAvgQc == other.DayWindSpdAvgQc,
-                self.DayWindSpdAvgUnits == other.DayWindSpdAvgUnits
+                self.DayWindSsw == other.DayWindSsw,
+                self.DayWindSswQc == other.DayWindSswQc,
+                self.DayWindSswUnits == other.DayWindSswUnits,
+                self.DayWindWnw == other.DayWindWnw,
+                self.DayWindWnwQc == other.DayWindWnwQc,
+                self.DayWindWnwUnits == other.DayWindWnwUnits,
+                self.DayWindWsw == other.DayWindWsw,
+                self.DayWindWswQc == other.DayWindWswQc,
+                self.DayWindWswUnits == other.DayWindWswUnits
             ]
         )
