@@ -90,6 +90,6 @@ def generate_raw_data_primary_key(station_num: int, date: datetime.date, hour: d
     station number, date, and Optional[hour] of the data
     """
     station_key = str(station_num)
-    date_key = str(date.year) + str(date.month) + str(date.day)
-    hour_key = str(hour.hour) + str(hour.minute)
+    date_key = str(date.year) + '-' + str(date.month) + '-' + str(date.day)
+    hour_key = str(hour.hour) + '-' + str(hour.minute)
     return (station_key + '-' + date_key + '-' + hour_key)
