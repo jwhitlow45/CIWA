@@ -143,8 +143,6 @@ class HourlyRawDataService():
                                                             start_date=start_date,
                                                             end_date=end_date)
 
-        print(cimis_request_url)
-
         # Request CIMIS API data with appropriate headers
         headers = {'accept':'application/json'}
         response = requests.get(cimis_request_url, headers=headers, timeout=config.HTTP_TIMEOUT_SECONDS)
@@ -194,10 +192,149 @@ class DailyRawDataService():
     # -------------------------------------------------------------------------
     # Private helper methods
     # -------------------------------------------------------------------------
-
+    @staticmethod
+    def __parse_cimis_response(response: requests.Response) -> List[schemas.DailyRawInCimisResponse]:
+        """
+        Args:
+            reponse: The JSON response provided by the CIMIS API.
+        Returns:
+            List[schemas.HourlyRawInCimisResponse]: A list of DailyRecord objects
+            for each day of each station in the JSON response
+        Raises:
+            ValueError: If the response body does not contain valid JSON.
+            KeyError: If the JSON dictionary does not contain the expected properties.
+        """
+        json = response.json()
+        records = json['Data']['Providers'][0]['Records']
+        return pydantic.parse_obj_as(List[schemas.DailyRawInCimisResponse], records)
 
 
     # -------------------------------------------------------------------------
     # Public API
     # -------------------------------------------------------------------------
+    @classmethod
+    def to_dailyraw_schema(cls, station_data: List[schemas.DailyRawInCimisResponse]) -> List[schemas.DailyRaw]:
+        """Converts dailyraw schema from DailyRawInCimisResponse to DailyRaw"""
+        return [
+            schemas.DailyRaw(
+                StationId=data.Station,
+                Date=utils.parse_cimis_date_str(data.Date),
+                DayAirTmpAvg=data.DayAirTmpAvg['Value'],
+                DayAirTmpAvgQc=data.DayAirTmpAvg['Qc'],
+                DayAirTmpAvgUnits=data.DayAirTmpAvg['Unit'],
+                DayAirTmpMax=data.DayAirTmpMax['Value'],
+                DayAirTmpMaxQc=data.DayAirTmpMax['Qc'],
+                DayAirTmpMaxUnits=data.DayAirTmpMax['Unit'],
+                DayAirTmpMin=data.DayAirTmpMin['Value'],
+                DayAirTmpMinQc=data.DayAirTmpMin['Qc'],
+                DayAirTmpMinUnits=data.DayAirTmpMin['Unit'],
+                DayDewPnt=data.DayDewPnt['Value'],
+                DayDewPntQc=data.DayDewPnt['Qc'],
+                DayDewPntUnits=data.DayDewPnt['Unit'],
+                DayEto=data.DayEto['Value'],
+                DayEtoQc=data.DayEto['Qc'],
+                DayEtoUnits=data.DayEto['Unit'],
+                DayAsceEto=data.DayAsceEto['Value'],
+                DayAsceEtoQc=data.DayAsceEto['Qc'],
+                DayAsceEtoUnits=data.DayAsceEto['Unit'],
+                DayAsceEtr=data.DayAsceEtr['Value'],
+                DayAsceEtrQc=data.DayAsceEtr['Qc'],
+                DayAsceEtrUnits=data.DayAsceEtr['Unit'],
+                DayPrecip=data.DayPrecip['Value'],
+                DayPrecipQc=data.DayPrecip['Qc'],
+                DayPrecipUnits=data.DayPrecip['Unit'],
+                DayRelHumAvg=data.DayRelHumAvg['Value'],
+                DayRelHumAvgQc=data.DayRelHumAvg['Qc'],
+                DayRelHumAvgUnits=data.DayRelHumAvg['Unit'],
+                DayRelHumMax=data.DayRelHumMax['Value'],
+                DayRelHumMaxQc=data.DayRelHumMax['Qc'],
+                DayRelHumMaxUnits=data.DayRelHumMax['Unit'],
+                DayRelHumMin=data.DayRelHumMin['Value'],
+                DayRelHumMinQc=data.DayRelHumMin['Qc'],
+                DayRelHumMinUnits=data.DayRelHumMin['Unit'],
+                DaySoilTmpAvg=data.DaySoilTmpAvg['Value'],
+                DaySoilTmpAvgQc=data.DaySoilTmpAvg['Qc'],
+                DaySoilTmpAvgUnits=data.DaySoilTmpAvg['Unit'],
+                DaySoilTmpMax=data.DaySoilTmpMax['Value'],
+                DaySoilTmpMaxQc=data.DaySoilTmpMax['Qc'],
+                DaySoilTmpMaxUnits=data.DaySoilTmpMax['Unit'],
+                DaySoilTmpMin=data.DaySoilTmpMin['Value'],
+                DaySoilTmpMinQc=data.DaySoilTmpMin['Qc'],
+                DaySoilTmpMinUnits=data.DaySoilTmpMin['Unit'],
+                DaySolRadAvg=data.DaySolRadAvg['Value'],
+                DaySolRadAvgQc=data.DaySolRadAvg['Qc'],
+                DaySolRadAvgUnits=data.DaySolRadAvg['Unit'],
+                DaySolRadNet=data.DaySolRadNet['Value'],
+                DaySolRadNetQc=data.DaySolRadNet['Qc'],
+                DaySolRadNetUnits=data.DaySolRadNet['Unit'],
+                DayVapPresAvg=data.DayVapPresAvg['Value'],
+                DayVapPresAvgQc=data.DayVapPresAvg['Qc'],
+                DayVapPresAvgUnits=data.DayVapPresAvg['Unit'],
+                DayVapPresMax=data.DayVapPresMax['Value'],
+                DayVapPresMaxQc=data.DayVapPresMax['Qc'],
+                DayVapPresMaxUnits=data.DayVapPresMax['Unit'],
+                DayWindEne=data.DayWindEne['Value'],
+                DayWindEneQc=data.DayWindEne['Qc'],
+                DayWindEneUnits=data.DayWindEne['Unit'],
+                DayWindEse=data.DayWindEse['Value'],
+                DayWindEseQc=data.DayWindEse['Qc'],
+                DayWindEseUnits=data.DayWindEse['Unit'],
+                DayWindNne=data.DayWindNne['Value'],
+                DayWindNneQc=data.DayWindNne['Qc'],
+                DayWindNneUnits=data.DayWindNne['Unit'],
+                DayWindNnw=data.DayWindNnw['Value'],
+                DayWindNnwQc=data.DayWindNnw['Qc'],
+                DayWindNnwUnits=data.DayWindNnw['Unit'],
+                DayWindRun=data.DayWindRun['Value'],
+                DayWindRunQc=data.DayWindRun['Qc'],
+                DayWindRunUnits=data.DayWindRun['Unit'],
+                DayWindSsw=data.DayWindSsw['Value'],
+                DayWindSswQc=data.DayWindSsw['Qc'],
+                DayWindSswUnits=data.DayWindSsw['Unit'],
+                DayWindWnw=data.DayWindWnw['Value'],
+                DayWindWnwQc=data.DayWindWnw['Qc'],
+                DayWindWnwUnits=data.DayWindWnw['Unit'],
+                DayWindWsw=data.DayWindWsw['Value'],
+                DayWindWswQc=data.DayWindWsw['Qc'],
+                DayWindWswUnits=data.DayWindWsw['Unit']
+            )
+            for data in station_data
+        ]
 
+    @classmethod
+    def get_dailyraw_data_from_cimis(cls, start_date: date, end_date: date, targets: List[int] = None) -> List[schemas.DailyRawInCimisResponse]:
+        """Retrieves daily raw data from CIMIS API.
+
+        Args:
+            startDate: Date from which data will start to be gathered
+            endDate: Date to which data will stop being gathered
+            targets: If not None, returns daily raw data for only the target station ids.
+                    Otherwise, returns daily raw data for all stations in CIMIS API.
+        Returns:
+            List[schemas.DaillyRawInCimisReponse]: List of DailyRawData objects
+                containing dailly raw data from the target stations
+
+        Raises:
+            ValueError: If the response body does not contain valid JSON, or targets list is empty
+            KeyError: If the JSON dictionary does not contain the expected properties.
+            requests.ConnectionError: If a Connection error occurred.
+            requests.HTTPError: If an HTTP error occurred.
+            requests.Timeout: If the request timed out.        
+        """
+        # Throw ValueError if targets is empty
+        if len(targets) == 0:
+            raise ValueError('List[targets] cannot be empty.')
+
+        # Build CIMIS request URL
+        cimis_request_url = utils.build_cimis_request_url(base_url=cls.__base_url, 
+                                                            targets=targets,
+                                                            data_items=cls.__data_items,
+                                                            start_date=start_date,
+                                                            end_date=end_date)
+
+        # Request CIMIS API data with appropriate headers
+        headers = {'accept':'application/json'}
+        response = requests.get(cimis_request_url, headers=headers, timeout=config.HTTP_TIMEOUT_SECONDS)
+        response.raise_for_status()
+        daily_raw_data = cls.__parse_cimis_response(response)
+        return [data for data in daily_raw_data]
