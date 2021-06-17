@@ -75,6 +75,7 @@ class HourlyRawInCimisResponse(HourlyRawBase):
 
 class HourlyRaw(HourlyRawBase):
 
+    Id: int
     StationId: int
     Date: datetime.date
     Hour: datetime.time
@@ -144,6 +145,7 @@ class HourlyRaw(HourlyRawBase):
             [
                 super().__eq__(other),
                 isinstance(other, HourlyRaw),
+                self.Id == other.Id,
                 self.StationId == other.StationId,
                 self.Date == other.Date,
                 self.Hour == other.Hour,                
@@ -285,6 +287,7 @@ class DailyRawInCimisResponse(DailyRawBase):
 
 class DailyRaw(DailyRawBase):
 
+    Id: int
     StationId: int
     Date: datetime.date
     
@@ -402,6 +405,7 @@ class DailyRaw(DailyRawBase):
             [
                 super().__eq__(other),
                 isinstance(other, DailyRaw),
+                self.Id == other.Id,
                 self.Date == other.Date,
                 self.StationId == other.StationId,
                 self.DayAirTmpAvg == other.DayAirTmpAvg,
