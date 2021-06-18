@@ -351,3 +351,13 @@ class DailyRawDataService():
         response.raise_for_status()
         daily_raw_data = cls.__parse_cimis_response(response)
         return [data for data in daily_raw_data]
+
+    @classmethod
+    def update_dailyraw_data(cls, daily_data: List[schemas.DailyRaw]):
+        """Adds daily raw data to database
+        """
+
+        with db.session_manager() as session:
+            for data in daily_data:
+                session.merge(models.DailyRawData(**data.dict()))
+            session.commit()
