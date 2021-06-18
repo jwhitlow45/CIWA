@@ -85,11 +85,36 @@ def build_cimis_request_url(base_url: str, targets: List[int], data_items: List[
 
     return url
 
+def int_to_binary_string(num: int, num_bits: int) -> str:
+    """Convert integer to binary string of size number of bits
+    
+    Args:
+        num: Integer to be converted to binary string
+
+    Returns:
+        str: Binary string representation of an integer
+
+    Raises:
+        OverflowError: If num_bits is too small to contain num
+    """
+    binary_string = str(bin(num))[2:].zfill(num_bits)
+    if len(binary_string) > num_bits:
+        raise OverflowError
+    return binary_string
+
 def generate_raw_data_primary_key(station_num: int, date: datetime.date, hour: datetime.time = datetime.time(0, 0)) -> int:
     """Creates unique key for raw data items in raw data table based on
     station number, date, and Optional[hour] of the data
+    
+        station_num: station number, range(2^10)
+        date.year: years since 1970, range(2^8)
+        date.month: month of year, range(2^4)
+        date.day: date of the month, range(2^5)
+        hour.hour: hour of the day, range(2^5)
     """
-    station_key = str(station_num).zfill(3)
-    date_key = str(date.year).zfill(4) + str(date.month).zfill(2) + str(date.day).zfill(2)
-    hour_key = str(hour.hour).zfill(2) + str(hour.minute).zfill(2)
-    return int(date_key + hour_key + station_key)
+    station_key = int_to_binary_string(station_num, 10)
+    date_key = (int_to_binary_string(date.year - 1970, 8) +
+                int_to_binary_string(date.month, 4) +
+                int_to_binary_string(date.day, 5))
+    hour_key = int_to_binary_string(hour.hour, 5)
+    return int(station_key + date_key + hour_key, 2)
