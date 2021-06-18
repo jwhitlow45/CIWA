@@ -51,8 +51,8 @@ class StationService:
                 Elevation=station.Elevation,
                 GroundCover=station.GroundCover,
                 SitingDesc=station.SitingDesc,
-                ConnectDate=utils.parse_cimis_date_str(station.ConnectDate),
-                DisconnectDate=utils.parse_cimis_date_str(station.DisconnectDate),
+                ConnectDate=utils.parse_date_str(station.ConnectDate),
+                DisconnectDate=utils.parse_date_str(station.DisconnectDate),
                 Longitude=utils.parse_cimis_coordinate_str(station.HmsLongitude),
                 Latitude=utils.parse_cimis_coordinate_str(station.HmsLatitude)
             )

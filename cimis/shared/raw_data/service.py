@@ -62,11 +62,11 @@ class HourlyRawDataService():
         return [
             schemas.HourlyRaw(
                 Id=utils.generate_raw_data_primary_key(data.Station,
-                                                    utils.parse_cimis_date_str(data.Date),
-                                                    utils.parse_cimis_hour_str(data.Hour)),
+                                                    utils.parse_date_str(data.Date),
+                                                    utils.parse_hour_str(data.Hour)),
                 StationId=data.Station,
-                Date=utils.parse_cimis_date_str(data.Date),
-                Hour=utils.parse_cimis_hour_str(data.Hour),
+                Date=utils.parse_date_str(data.Date),
+                Hour=utils.parse_hour_str(data.Hour),
                 HlyAirTmp=data.HlyAirTmp['Value'],
                 HlyAirTmpQc=data.HlyAirTmp['Qc'],
                 HlyAirTmpUnits=data.HlyAirTmp['Unit'],
@@ -229,9 +229,9 @@ class DailyRawDataService():
         return [
             schemas.DailyRaw(
                 Id=utils.generate_raw_data_primary_key(data.Station,
-                                                    utils.parse_cimis_date_str(data.Date)),
+                                                    utils.parse_date_str(data.Date)),
                 StationId=data.Station,
-                Date=utils.parse_cimis_date_str(data.Date),
+                Date=utils.parse_date_str(data.Date),
                 DayAirTmpAvg=data.DayAirTmpAvg['Value'],
                 DayAirTmpAvgQc=data.DayAirTmpAvg['Qc'],
                 DayAirTmpAvgUnits=data.DayAirTmpAvg['Unit'],

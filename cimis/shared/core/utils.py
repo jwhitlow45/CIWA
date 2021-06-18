@@ -7,8 +7,8 @@ def get_utc_timestamp():
             .replace(tzinfo=datetime.timezone.utc)\
             .isoformat()
 
-def parse_cimis_date_str(date_str: str) -> datetime.date:
-    """Parses the date string format used by CIMIS.
+def parse_date_str(date_str: str) -> datetime.date:
+    """Parses the date string of format YYYY-MM-DD or YYYY/MM/DD
 
     Args:
         date_str: Date string in the format mm/dd/yyyy.
@@ -23,8 +23,8 @@ def parse_cimis_date_str(date_str: str) -> datetime.date:
         [year, month, day] = date_str.split('-')
         return datetime.date(int(year), int(month), int(day))
 
-def parse_cimis_hour_str(hour_str: str) -> datetime.time:
-    """Parses the hour string format used by CIMIS
+def parse_hour_str(hour_str: str) -> datetime.time:
+    """Parses the hour string format of HHMM
 
     Args:
         hour_str: Hour string in format hhmm.
