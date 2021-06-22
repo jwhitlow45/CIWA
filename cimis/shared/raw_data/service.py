@@ -60,8 +60,8 @@ class HourlyRawDataService():
         return [
             schemas.HourlyRaw(
                 Id=utils.generate_raw_data_primary_key(data.Station,
-                                                    utils.parse_date_str(data.Date),
-                                                    utils.parse_hour_str(data.Hour)),
+                                                        utils.parse_date_str(data.Date),
+                                                        utils.parse_hour_str(data.Hour)),
                 StationId=data.Station,
                 Date=utils.parse_date_str(data.Date),
                 Hour=utils.parse_hour_str(data.Hour),
@@ -148,6 +148,20 @@ class HourlyRawDataService():
         response.raise_for_status()
         hourly_raw_data = cls.__parse_cimis_response(response)
         return [data for data in hourly_raw_data]
+
+    @classmethod
+    def get_hourlyraw_data_from_db(cls, targets: List[int], start_date: date, end_date: date) -> List[schemas.HourlyRaw]:
+        """Retrieves hourly raw data from the database"""
+        data_as_list = []
+        with db.engine.connect() as connection:
+            data = connection.execute(f"SELECT Id, StationId, Date, *\
+                                        FROM dbo.HourlyRaw\
+                                        WHERE StationId IN ({str(targets)[1:-1]})\
+                                        AND Date BETWEEN '{start_date.strftime('%Y-%m-%d')}'\
+                                        AND '{end_date.strftime('%Y-%m-%d')}'")
+            for item in data:
+                data_as_list.append(dict(item))
+        return pydantic.parse_obj_as(List[schemas.HourlyRaw], data_as_list)
 
     @classmethod
     def update_hourlyraw_data(cls, hourly_data: List[schemas.HourlyRaw]):
@@ -349,6 +363,20 @@ class DailyRawDataService():
         response.raise_for_status()
         daily_raw_data = cls.__parse_cimis_response(response)
         return [data for data in daily_raw_data]
+
+    @classmethod
+    def get_dailyraw_data_from_db(cls, targets: List[int], start_date: date, end_date: date) -> List[schemas.DailyRaw]:
+        """Retrieves daily raw data from the database"""
+        data_as_list = []
+        with db.engine.connect() as connection:
+            data = connection.execute(f"SELECT Id, StationId, Date, *\
+                                        FROM dbo.DailyRaw\
+                                        WHERE StationId IN ({str(targets)[1:-1]})\
+                                        AND Date BETWEEN '{start_date.strftime('%Y-%m-%d')}'\
+                                        AND '{end_date.strftime('%Y-%m-%d')}'")
+            for item in data:
+                data_as_list.append(dict(item))
+        return pydantic.parse_obj_as(List[schemas.DailyRaw], data_as_list)
 
     @classmethod
     def update_dailyraw_data(cls, daily_data: List[schemas.DailyRaw]):
