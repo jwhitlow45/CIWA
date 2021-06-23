@@ -62,26 +62,19 @@ def build_cimis_request_url(base_url: str, targets: List[int], data_items: List[
         str: String containing CIMIS API request URL
     """
 
-    # Establish url to append to
-    url = base_url
-    # Add app key for accessing CIMIS API
-    url += ('?appKey=' + os.getenv("CIMIS_API_KEY"))
-    # Add targets to URL request
-    url += '&targets='
-    for target in targets:
-        url += (str(target) + ',')
-    url = url[:-1] # Remove trailing comma
-    # Add all data items to URL request
-    url += '&dataItems='
-    for item in data_items:
-        url += (item + ',')
-    url = url[:-1] # Remove trailing comma
-    # Add start date
-    url += '&startDate='
-    url += start_date.strftime("%Y-%m-%d")
-    # Add end date
-    url += '&endDate='
-    url += end_date.strftime("%Y-%m-%d") 
+    # App key for accessing CIMIS API
+    appKey = ('?appKey=' + os.getenv("CIMIS_API_KEY"))
+    # Target stations
+    str_targets = f'&targets={str(targets)[1:-1].replace(" ", "")}'
+    # Data items
+    str_data_items = f'&dataItems={str(data_items)[1:-1].replace(" ", "")}'
+    str_data_items = str_data_items.replace("'", "") # Remove '' from strings 
+    # Start date
+    str_start_date = f'&startDate={start_date.strftime("%Y-%m-%d")}'
+    # End date
+    str_end_date= f'&endDate={end_date.strftime("%Y-%m-%d")}' 
+    # Build URL
+    url = f'{base_url + appKey + str_targets + str_data_items + str_start_date + str_end_date}'
 
     return url
 
