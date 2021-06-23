@@ -111,3 +111,15 @@ def generate_raw_data_primary_key(station_num: int, date: datetime.date, hour: d
                 int_to_binary_string(date.day, 5))
     hour_key = int_to_binary_string(hour.hour, 5)
     return int(station_key + date_key + hour_key, 2)
+
+def is_below_cimis_hourly_record_limit(targets: List[int], start_date: datetime.date, end_date:datetime.date) -> bool:
+    """Check if hourly request is exceeding record limit set by CIMIS"""
+    days_requested = (end_date - start_date).days + 1
+    # Return the result of (days requested * hours per day * number of stations) <= 1750
+    return (days_requested*24*len(targets)) <= 1750
+
+def is_below_cimis_daily_record_limit(targets: List[int], start_date: datetime.date, end_date:datetime.date):
+    """Check if daily request is exceeding record limit set by CIMIS"""
+    days_requested = (end_date - start_date).days + 1
+    # Return the result of (days requested * number of stations) <= 1750
+    return (days_requested*len(targets)) <= 1750
