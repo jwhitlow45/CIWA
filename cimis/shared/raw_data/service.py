@@ -178,7 +178,7 @@ class HourlyRawDataService():
         return pydantic.parse_obj_as(List[schemas.HourlyRaw], data_as_list)
 
     @classmethod
-    def update_hourlyraw_data(cls, hourly_data: List[schemas.HourlyRaw]):
+    def insert_hourlyraw_data(cls, hourly_data: List[schemas.HourlyRaw]):
         """Adds hourly raw data to database"""
         with db.session_manager() as session:
             logging.info('Staging changes for dbo.HourlyRaw')
@@ -401,7 +401,7 @@ class DailyRawDataService():
         return pydantic.parse_obj_as(List[schemas.DailyRaw], data_as_list)
 
     @classmethod
-    def update_dailyraw_data(cls, daily_data: List[schemas.DailyRaw]):
+    def insert_dailyraw_data(cls, daily_data: List[schemas.DailyRaw]):
         """Adds daily raw data to database"""
         with db.session_manager() as session:
             logging.info('Staging changes for dbo.DailyRaw')

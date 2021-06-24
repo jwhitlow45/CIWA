@@ -37,7 +37,7 @@ def main(msg: func.ServiceBusMessage):
                                                                 end_date=utils.parse_date_str(action.payload.end_date))
             logging.info(f'Received CIMIS response at {utils.get_utc_timestamp()}')
             rawdata_schema = HRDS.to_hourlyraw_schema(cimis_response)
-            HRDS.update_hourlyraw_data(rawdata_schema)
+            HRDS.insert_hourlyraw_data(rawdata_schema)
             logging.info(f'Successfully added data to dbo.HourlyRaw at {utils.get_utc_timestamp()}')                                                                   
 
         elif action.action_type == actions.ActionType.DATA_ADD_DAILY_RAW:
@@ -49,7 +49,7 @@ def main(msg: func.ServiceBusMessage):
                                                                 end_date=utils.parse_date_str(action.payload.end_date))
             logging.info(f'Received CIMIS response at {utils.get_utc_timestamp()}')
             rawdata_schema = DRDS.to_dailyraw_schema(cimis_response)
-            DRDS.update_dailyraw_data(rawdata_schema)
+            DRDS.insert_dailyraw_data(rawdata_schema)
             logging.info(f'Successfully added data to dbo.DailyRaw at {utils.get_utc_timestamp()}')                                                                   
 
         else:
