@@ -120,3 +120,36 @@ def is_below_cimis_record_limit(targets: List[int], start_date: datetime.date,
     days_requested = (end_date - start_date).days + 1
     # Return the result of (days requested * records per day * number of stations) <= 1750
     return (days_requested*records_per_day*len(targets)) <= config.CIMIS_API_RECORD_LIMIT
+
+def split_cimis_request(targets: List[int], start_date: datetime.date,
+                        end_date: datetime.date, records_per_day: int) -> List[dict]:
+    """Split requests to fit within cimis record limit"""
+    # Empty list to append requests to
+    cimis_requests = []
+
+    # Check if current request size is within cimis record limit
+    if not is_below_cimis_record_limit(targets, start_date, end_date, records_per_day):
+        # init current start date to start date
+        cur_start_date = start_date
+        # calculate max number of days per request
+        days_per_request = int(1750 / (len(targets) * records_per_day))
+        # create list of requests limited to max number of days per request
+        while cur_start_date <= end_date:
+            # set current end date to day that creates range of days of size days per request
+            cur_end_date = cur_start_date + datetime.timedelta(days=days_per_request-1)
+            # if current end date is later than or equal to end date then set current end date to end date
+            if  cur_end_date >= end_date:
+                cur_end_date = end_date
+            # append request dictionary to cimis requests list
+            cimis_requests.append({'targets':targets,
+                                    'start_date':cur_start_date,
+                                    'end_date':cur_end_date})
+            # set current start date to day after current end date
+            cur_start_date = cur_end_date + datetime.timedelta(days=1)
+
+    # Return cimis requests list if used, else return original request
+    if cimis_requests:
+        return cimis_requests
+    return [{'targets':targets,
+            'start_date':start_date,
+            'end_date':end_date}]
