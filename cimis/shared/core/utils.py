@@ -2,6 +2,8 @@ import os
 from typing import List
 import datetime
 
+import shared.core.config as config
+
 def get_utc_timestamp():
     return datetime.datetime.utcnow()\
             .replace(tzinfo=datetime.timezone.utc)\
@@ -117,4 +119,4 @@ def is_below_cimis_record_limit(targets: List[int], start_date: datetime.date,
     """Check if request is exceeding record limit set by CIMIS"""
     days_requested = (end_date - start_date).days + 1
     # Return the result of (days requested * records per day * number of stations) <= 1750
-    return (days_requested*records_per_day*len(targets)) <= 1750
+    return (days_requested*records_per_day*len(targets)) <= config.CIMIS_API_RECORD_LIMIT
