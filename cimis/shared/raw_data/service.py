@@ -1,6 +1,6 @@
 from typing import List
 from datetime import date
-
+import logging
 
 from sqlalchemy.sql.sqltypes import Date
 import pydantic
@@ -134,19 +134,32 @@ class HourlyRawDataService():
         # Throw ValueError if targets is empty
         if len(targets) == 0:
             raise ValueError('List[targets] cannot be empty.')
-
-        # Build CIMIS request URL
-        cimis_request_url = utils.build_cimis_request_url(base_url=cls.__base_url, 
-                                                            targets=targets,
-                                                            data_items=cls.__data_items,
-                                                            start_date=start_date,
-                                                            end_date=end_date)
-
-        # Request CIMIS API data with appropriate headers
+        # Headers for CIMIS request
         headers = {'accept':'application/json'}
-        response = requests.get(cimis_request_url, headers=headers, timeout=config.HTTP_TIMEOUT_SECONDS)
-        response.raise_for_status()
-        hourly_raw_data = cls.__parse_cimis_response(response)
+        # List containing hourly raw data from CIMIS
+        hourly_raw_data = []
+
+        # Split request into smaller requests
+        requests_dict = utils.split_cimis_request(targets=targets,
+                                                    start_date=start_date,
+                                                    end_date=end_date,
+                                                    records_per_day=config.CIMIS_API_HOURLY_RECORDS_PER_DAY)
+
+        for i, request in enumerate(requests_dict):
+            # Build CIMIS request URL
+            cimis_request_url = utils.build_cimis_request_url(base_url=cls.__base_url, 
+                                                                targets=request['targets'],
+                                                                data_items=cls.__data_items,
+                                                                start_date=request['start_date'],
+                                                                end_date=request['end_date'])
+
+            # Request CIMIS API data with appropriate headers
+            response = requests.get(cimis_request_url, headers=headers, timeout=config.HTTP_TIMEOUT_SECONDS)
+            response.raise_for_status()
+            hourly_raw_data += cls.__parse_cimis_response(response)
+            logging.info(f'Received CIMIS response for request ({i+1}/{len(requests_dict)}).')
+
+        # Return all data in hourly raw data list    
         return [data for data in hourly_raw_data]
 
     @classmethod
