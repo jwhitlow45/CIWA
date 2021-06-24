@@ -143,7 +143,7 @@ def split_cimis_request(targets: List[int], start_date: datetime.date,
         # init current start date to start date
         cur_start_date = start_date
         # calculate max number of days per request
-        days_per_request = int(1750 / (len(targets) * records_per_day))
+        days_per_request = int(config.CIMIS_API_RECORD_LIMIT / (len(targets) * records_per_day))
         # create list of requests limited to max number of days per request
         while cur_start_date <= end_date:
             # set current end date to day that creates range of days of size days per request
