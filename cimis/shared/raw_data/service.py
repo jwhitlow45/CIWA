@@ -1,3 +1,4 @@
+import enum
 from typing import List
 from datetime import date
 import logging
@@ -116,8 +117,8 @@ class HourlyRawDataService():
         """Retrieves hourly raw data from CIMIS API.
 
         Args:
-            startDate: Date from which data will start to be gathered
-            endDate: Date to which data will stop being gathered
+            start_date: Date from which data will start to be gathered
+            end_date: Date to which data will stop being gathered
             targets: If not None, returns hourly raw data for only the target station ids.
                     Otherwise, returns hourly raw data for all stations in CIMIS API.
         Returns:
@@ -145,7 +146,7 @@ class HourlyRawDataService():
                                                     end_date=end_date,
                                                     records_per_day=config.CIMIS_API_HOURLY_RECORDS_PER_DAY)
 
-        for i, request in enumerate(requests_dict):
+        for counter, request in enumerate(requests_dict):
             # Build CIMIS request URL
             cimis_request_url = utils.build_cimis_request_url(base_url=cls.__base_url, 
                                                                 targets=request['targets'],
@@ -157,10 +158,10 @@ class HourlyRawDataService():
             response = requests.get(cimis_request_url, headers=headers, timeout=config.HTTP_TIMEOUT_SECONDS)
             response.raise_for_status()
             hourly_raw_data += cls.__parse_cimis_response(response)
-            logging.info(f'Received CIMIS response for request ({i+1}/{len(requests_dict)}).')
+            logging.info(f'Received CIMIS response for request ({counter+1}/{len(requests_dict)}).')
 
         # Return all data in hourly raw data list    
-        return [data for data in hourly_raw_data]
+        return hourly_raw_data
 
     @classmethod
     def get_hourlyraw_data_from_db(cls, targets: List[int], start_date: date, end_date: date) -> List[schemas.HourlyRaw]:
@@ -178,18 +179,13 @@ class HourlyRawDataService():
 
     @classmethod
     def update_hourlyraw_data(cls, hourly_data: List[schemas.HourlyRaw]):
-        """Adds hourly raw data to database
-        """
-
+        """Adds hourly raw data to database"""
         with db.session_manager() as session:
-            for data in hourly_data:
-                session.merge(models.HourlyRawData(**data.dict()))
+            logging.info('Staging changes for dbo.HourlyRaw')
+            session.add_all([models.HourlyRawData(**data.dict()) for data in hourly_data])        
+            logging.info('Committing changes to dbo.HourlyRaw')
             session.commit()
-
-        
-
-        
-
+            logging.info('All changes have been successfully committed to dbo.HourlyRaw')
 
 class DailyRawDataService():
 
@@ -362,20 +358,33 @@ class DailyRawDataService():
         # Throw ValueError if targets is empty
         if len(targets) == 0:
             raise ValueError('List[targets] cannot be empty.')
-
-        # Build CIMIS request URL
-        cimis_request_url = utils.build_cimis_request_url(base_url=cls.__base_url, 
-                                                            targets=targets,
-                                                            data_items=cls.__data_items,
-                                                            start_date=start_date,
-                                                            end_date=end_date)
-
-        # Request CIMIS API data with appropriate headers
+        # Headers for CIMIS request
         headers = {'accept':'application/json'}
-        response = requests.get(cimis_request_url, headers=headers, timeout=config.HTTP_TIMEOUT_SECONDS)
-        response.raise_for_status()
-        daily_raw_data = cls.__parse_cimis_response(response)
-        return [data for data in daily_raw_data]
+        # List containing daily raw data from CIMIS
+        daily_raw_data = []
+
+        # Split request into smaller requests
+        requests_dict = utils.split_cimis_request(targets=targets,
+                                                    start_date=start_date,
+                                                    end_date=end_date,
+                                                    records_per_day=config.CIMIS_API_DAILY_RECORDS_PER_DAY)
+
+        for counter, request in enumerate(requests_dict):
+            # Build CIMIS request URL
+            cimis_request_url = utils.build_cimis_request_url(base_url=cls.__base_url, 
+                                                                targets=request['targets'],
+                                                                data_items=cls.__data_items,
+                                                                start_date=request['start_date'],
+                                                                end_date=request['end_date'])
+
+            # Request CIMIS API data with appropriate headers
+            response = requests.get(cimis_request_url, headers=headers, timeout=config.HTTP_TIMEOUT_SECONDS)
+            response.raise_for_status()
+            daily_raw_data += cls.__parse_cimis_response(response)
+            logging.info(f'Received CIMIS response for request ({counter+1}/{len(requests_dict)}).')
+        
+        # Return all data in hourly raw data list
+        return daily_raw_data
 
     @classmethod
     def get_dailyraw_data_from_db(cls, targets: List[int], start_date: date, end_date: date) -> List[schemas.DailyRaw]:
@@ -393,10 +402,11 @@ class DailyRawDataService():
 
     @classmethod
     def update_dailyraw_data(cls, daily_data: List[schemas.DailyRaw]):
-        """Adds daily raw data to database
-        """
-
+        """Adds daily raw data to database"""
         with db.session_manager() as session:
-            for data in daily_data:
-                session.merge(models.DailyRawData(**data.dict()))
+            logging.info('Staging changes for dbo.DailyRaw')
+            session.add_all([models.DailyRawData(**data.dict()) for data in daily_data])
+            logging.info('Committing changes to dbo.DailyRaw.')            
             session.commit()
+            logging.info('All changes have been successfully committed to dbo.DailyRaw.')            
+
