@@ -1,6 +1,6 @@
 import enum
 from typing import List
-from datetime import date
+from datetime import date, time
 import logging
 
 from sqlalchemy.sql.sqltypes import Date
@@ -183,7 +183,7 @@ class HourlyRawDataService():
         with db.session_manager() as session:
             logging.info('Staging changes for dbo.HourlyRaw')
             session.add_all([models.HourlyRawData(**data.dict()) for data in hourly_data])        
-            logging.info('Committing changes to dbo.HourlyRaw')
+            logging.info(f'Committing changes to dbo.HourlyRaw. Estimated time: {len(hourly_data)/40/60:.1f} minutes.')            
             session.commit()
             logging.info('All changes have been successfully committed to dbo.HourlyRaw')
 
@@ -406,7 +406,7 @@ class DailyRawDataService():
         with db.session_manager() as session:
             logging.info('Staging changes for dbo.DailyRaw')
             session.add_all([models.DailyRawData(**data.dict()) for data in daily_data])
-            logging.info('Committing changes to dbo.DailyRaw.')            
+            logging.info(f'Committing changes to dbo.DailyRaw. Estimated time: {len(daily_data)/40/60:.1f} minutes.')            
             session.commit()
             logging.info('All changes have been successfully committed to dbo.DailyRaw.')            
 
