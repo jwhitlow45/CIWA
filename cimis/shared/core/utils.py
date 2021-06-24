@@ -123,7 +123,18 @@ def is_below_cimis_record_limit(targets: List[int], start_date: datetime.date,
 
 def split_cimis_request(targets: List[int], start_date: datetime.date,
                         end_date: datetime.date, records_per_day: int) -> List[dict]:
-    """Split requests to fit within cimis record limit"""
+    """Split requests to fit within cimis record limit
+    
+    Args:
+        targets: List of integers containing target stations
+        start_date: datetime.date containing start date for requests
+        end_date: datetime.date containing end date for requests
+        records_per_day: integer containing number of records requested per day
+
+    Returns:
+        List of dictionaries containing 'targets': int, 'start_date': datetime.date,
+        and 'end_date': datetime.date for CIMIS requests
+    """
     # Empty list to append requests to
     cimis_requests = []
 
