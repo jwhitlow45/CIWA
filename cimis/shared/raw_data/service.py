@@ -183,7 +183,8 @@ class HourlyRawDataService():
         with db.session_manager() as session:
             logging.info('Staging changes for dbo.HourlyRaw')
             session.add_all([models.HourlyRawData(**data.dict()) for data in hourly_data])        
-            logging.info(f'Committing changes to dbo.HourlyRaw. Estimated time: {len(hourly_data)/40/60:.1f} minutes.')            
+            logging.info(f'Committing changes to dbo.HourlyRaw. Estimated time: \
+                {len(hourly_data)/config.SQL_AVG_INSERTS_PER_SECOND/60:.1f} minutes.')            
             session.commit()
             logging.info('All changes have been successfully committed to dbo.HourlyRaw')
 
@@ -406,7 +407,8 @@ class DailyRawDataService():
         with db.session_manager() as session:
             logging.info('Staging changes for dbo.DailyRaw')
             session.add_all([models.DailyRawData(**data.dict()) for data in daily_data])
-            logging.info(f'Committing changes to dbo.DailyRaw. Estimated time: {len(daily_data)/40/60:.1f} minutes.')            
+            logging.info(f'Committing changes to dbo.DailyRaw. Estimated time: \
+                {len(daily_data)/config.SQL_AVG_INSERTS_PER_SECOND/60:.1f} minutes.')            
             session.commit()
             logging.info('All changes have been successfully committed to dbo.DailyRaw.')            
 
