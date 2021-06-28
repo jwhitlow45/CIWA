@@ -2,6 +2,9 @@ import os
 from typing import List
 import datetime
 
+import pydantic
+
+from shared.message.actions import Action, ActionType, AddDailyRawDataAction, AddHourlyRawDataAction
 import shared.core.config as config
 
 def get_utc_timestamp():
@@ -164,3 +167,38 @@ def split_cimis_request(targets: List[int], start_date: datetime.date,
     return [{'targets':targets,
             'start_date':start_date,
             'end_date':end_date}]
+
+def split_action(action) -> List:
+    """Split large action into smaller actions
+
+    Args:
+        action: action to split into smaller actions
+
+    Returns:
+        List: list of smaller actions        
+    """
+    action_station_ids = action.payload.station_ids
+    action_start_date = parse_date_str(action.payload.start_date)
+    action_end_date = parse_date_str(action.payload.end_date)
+    # set records per day based on action type
+    records_per_day = config.CIMIS_API_DAILY_RECORDS_PER_DAY if action.action_type == ActionType.DATA_ADD_DAILY_RAW\
+                        else config.CIMIS_API_HOURLY_RECORDS_PER_DAY
+    # break large request into smaller requests
+    requests_as_list = split_cimis_request(targets=action_station_ids,
+                                            start_date=action_start_date,
+                                            end_date=action_end_date,
+                                            records_per_day=records_per_day)
+    # generate payloads from requests
+    raw_actions_as_list = [{
+        'action_type': action.action_type,
+        'payload': {
+            'station_ids': request["targets"],
+            'start_date': request["start_date"].strftime("%Y-%m-%d"),
+            'end_date': request["end_date"].strftime("%Y-%m-%d"),
+            'delivery_count':f'{0}'
+        }
+    } for request in requests_as_list]
+    # convert to action objects
+    actions_as_list = [pydantic.parse_obj_as(type(action), raw_action) for raw_action in raw_actions_as_list]
+    # return actions_as_list
+    return actions_as_list
