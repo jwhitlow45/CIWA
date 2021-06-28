@@ -1,22 +1,21 @@
-from requests.api import request
-from shared.message import payloads
 from typing import List
-from datetime import date, time
+from datetime import date
 import logging
 
-from sqlalchemy.sql.sqltypes import Date
 import pydantic
 import requests
-from requests.models import Response
 
+from shared.message import actions
 from shared.core import config, db, utils
 from shared.raw_data import schemas, models
 
-class HourlyRawDataService():
+class DataService():
+
+    __action: any
 
     __base_url = config.CIMIS_API_DATA_BASE_URL
 
-    __data_items = [
+    __hourly_data_items = [
         "hly-air-tmp",
         "hly-dew-pnt",
         "hly-eto",
@@ -33,154 +32,7 @@ class HourlyRawDataService():
         "hly-wind-spd"
     ]
 
-    # -------------------------------------------------------------------------
-    # Private helper methods
-    # -------------------------------------------------------------------------
-    @staticmethod
-    def __parse_cimis_response(response: requests.Response) -> List[schemas.HourlyRawInCimisResponse]:
-        """
-        Args:
-            reponse: The JSON response provided by the CIMIS API.
-        Returns:
-            List[schemas.HourlyRawInCimisResponse]: A list of HourlyRecord objects
-            for each hour of each station in the JSON response
-        Raises:
-            ValueError: If the response body does not contain valid JSON.
-            KeyError: If the JSON dictionary does not contain the expected properties.
-        """
-        json = response.json()
-        records = json['Data']['Providers'][0]['Records']
-        return pydantic.parse_obj_as(List[schemas.HourlyRawInCimisResponse], records)
-
-    # -------------------------------------------------------------------------
-    # Public API
-    # -------------------------------------------------------------------------
-    @classmethod
-    def to_hourlyraw_schema(cls, station_data: List[schemas.HourlyRawInCimisResponse]) -> List[schemas.HourlyRaw]:
-        """Converts hourlyraw schema from HourlyRawInCimisResponse to HourlyRaw"""
-        return [
-            schemas.HourlyRaw(
-                Id=utils.generate_raw_data_primary_key(data.Station,
-                                                        utils.parse_date_str(data.Date),
-                                                        utils.parse_hour_str(data.Hour)),
-                StationId=data.Station,
-                Date=utils.parse_date_str(data.Date),
-                Hour=utils.parse_hour_str(data.Hour),
-                HlyAirTmp=data.HlyAirTmp['Value'],
-                HlyAirTmpQc=data.HlyAirTmp['Qc'],
-                HlyAirTmpUnits=data.HlyAirTmp['Unit'],
-                HlyDewPnt=data.HlyDewPnt['Value'],
-                HlyDewPntQc=data.HlyDewPnt['Qc'],
-                HlyDewPntUnits=data.HlyDewPnt['Unit'],
-                HlyEto=data.HlyEto['Value'],
-                HlyEtoQc=data.HlyEto['Qc'],
-                HlyEtoUnits=data.HlyEto['Unit'],
-                HlyNetRad=data.HlyNetRad['Value'],
-                HlyNetRadQc=data.HlyNetRad['Qc'],
-                HlyNetRadUnits=data.HlyNetRad['Unit'],
-                HlyAsceEto=data.HlyAsceEto['Value'],
-                HlyAsceEtoQc=data.HlyAsceEto['Qc'],
-                HlyAsceEtoUnits=data.HlyAsceEto['Unit'],
-                HlyAsceEtr=data.HlyAsceEtr['Value'],
-                HlyAsceEtrQc=data.HlyAsceEtr['Qc'],
-                HlyAsceEtrUnits=data.HlyAsceEtr['Unit'],
-                HlyPrecip=data.HlyPrecip['Value'],
-                HlyPrecipQc=data.HlyPrecip['Qc'],
-                HlyPrecipUnits=data.HlyPrecip['Unit'],
-                HlyRelHum=data.HlyRelHum['Value'],
-                HlyRelHumQc=data.HlyRelHum['Qc'],
-                HlyRelHumUnits=data.HlyRelHum['Unit'],
-                HlyResWind=data.HlyResWind['Value'],
-                HlyResWindQc=data.HlyResWind['Qc'],
-                HlyResWindUnits=data.HlyResWind['Unit'],
-                HlySoilTmp=data.HlySoilTmp['Value'],
-                HlySoilTmpQc=data.HlySoilTmp['Qc'],
-                HlySoilTmpUnits=data.HlySoilTmp['Unit'],
-                HlySolRad=data.HlySolRad['Value'],
-                HlySolRadQc=data.HlySolRad['Qc'],
-                HlySolRadUnits=data.HlySolRad['Unit'],
-                HlyVapPres=data.HlyVapPres['Value'],
-                HlyVapPresQc=data.HlyVapPres['Qc'],
-                HlyVapPresUnits=data.HlyVapPres['Unit'],
-                HlyWindDir=data.HlyWindDir['Value'],
-                HlyWindDirQc=data.HlyWindDir['Qc'],
-                HlyWindDirUnits=data.HlyWindDir['Unit'],
-                HlyWindSpd=data.HlyWindSpd['Value'],
-                HlyWindSpdQc=data.HlyWindSpd['Qc'],
-                HlyWindSpdUnits=data.HlyWindSpd['Unit'],
-            )
-            for data in station_data
-        ]
-
-    @classmethod
-    def get_hourlyraw_data_from_cimis(cls, start_date: date, end_date: date, targets: List[int] = None) -> List[schemas.HourlyRawInCimisResponse]:
-        """Retrieves hourly raw data from CIMIS API.
-
-        Args:
-            start_date: Date from which data will start to be gathered
-            end_date: Date to which data will stop being gathered
-            targets: If not None, returns hourly raw data for only the target station ids.
-                    Otherwise, returns hourly raw data for all stations in CIMIS API.
-        Returns:
-            List[schemas.HourlyRawInCimisReponse]: List of HourlyRawData objects
-                containing hourly raw data from the target stations
-
-        Raises:
-            ValueError: If the response body does not contain valid JSON, or targets list is empty
-            KeyError: If the JSON dictionary does not contain the expected properties.
-            requests.ConnectionError: If a Connection error occurred.
-            requests.HTTPError: If an HTTP error occurred.
-            requests.Timeout: If the request timed out.        
-        """
-        # Throw ValueError if targets is empty
-        if len(targets) == 0:
-            raise ValueError('List[targets] cannot be empty.')
-        # Headers for CIMIS request
-        headers = {'accept':'application/json'}
-        # Build request URL
-        cimis_request_url = utils.build_cimis_request_url(base_url=cls.__base_url, 
-                                                            targets=targets,
-                                                            data_items=cls.__data_items,
-                                                            start_date=start_date,
-                                                            end_date=end_date)
-        # Request CIMIS API data with appropriate headers
-        response = requests.get(cimis_request_url, headers=headers, timeout=config.HTTP_TIMEOUT_SECONDS)
-        response.raise_for_status()
-        # Parse hourly raw data
-        hourlyraw_data = cls.__parse_cimis_response(response)
-        # Return hourly raw data    
-        return hourlyraw_data
-
-    @classmethod
-    def get_hourlyraw_data_from_db(cls, targets: List[int], start_date: date, end_date: date) -> List[schemas.HourlyRaw]:
-        """Retrieves hourly raw data from the database"""
-        data_as_list = []
-        with db.engine.connect() as connection:
-            data = connection.execute(f"SELECT Id, StationId, Date, *\
-                                        FROM dbo.HourlyRaw\
-                                        WHERE StationId IN ({str(targets)[1:-1]})\
-                                        AND Date BETWEEN '{start_date.strftime('%Y-%m-%d')}'\
-                                        AND '{end_date.strftime('%Y-%m-%d')}'")
-            for item in data:
-                data_as_list.append(dict(item))
-        return pydantic.parse_obj_as(List[schemas.HourlyRaw], data_as_list)
-
-    @classmethod
-    def insert_hourlyraw_data(cls, hourly_data: List[schemas.HourlyRaw]):
-        """Adds hourly raw data to database"""
-        with db.session_manager() as session:
-            logging.info('Staging changes for dbo.HourlyRaw')
-            session.add_all([models.HourlyRawData(**data.dict()) for data in hourly_data])        
-            logging.info(f'Committing changes to dbo.HourlyRaw. Estimated time:\
-                {len(hourly_data)/config.SQL_AVG_INSERTS_PER_SECOND/60:.1f} minutes.')            
-            session.commit()
-            logging.info('All changes have been successfully committed to dbo.HourlyRaw')
-
-class DailyRawDataService():
-
-    __base_url = config.CIMIS_API_DATA_BASE_URL
-
-    __data_items = [
+    __daily_data_items = [
         "day-air-tmp-avg",
         "day-air-tmp-max",
         "day-air-tmp-min",
@@ -209,133 +61,199 @@ class DailyRawDataService():
         "day-wind-wnw",
         "day-wind-wsw"
     ]
-    
+
+    # Constructor
+    def __init__(cls, action):
+        cls.__action = action
+
     # -------------------------------------------------------------------------
     # Private helper methods
     # -------------------------------------------------------------------------
     @staticmethod
-    def __parse_cimis_response(response: requests.Response) -> List[schemas.DailyRawInCimisResponse]:
+    def __parse_cimis_response(action, response: requests.Response) -> List:
         """
-        Args:
-            reponse: The JSON response provided by the CIMIS API.
-        Returns:
-            List[schemas.HourlyRawInCimisResponse]: A list of DailyRecord objects
-            for each day of each station in the JSON response
-        Raises:
-            ValueError: If the response body does not contain valid JSON.
-            KeyError: If the JSON dictionary does not contain the expected properties.
+            Args:
+                action: action to determine which action type is being parsed
+                response: The JSON response provided by the CIMIS API
+            Returns:
+                List[schemas.*RawInCimisResponse]: List of record objects for
+                each station in the JSON response
+            Raises:
+                ValueError: If the response body does not contain valid JSON.
+                KeyError: If the JSON dictionaryy does not contain expected properties
         """
         json = response.json()
-        records = json['Data']['Providers'][0]['Records']
-        return pydantic.parse_obj_as(List[schemas.DailyRawInCimisResponse], records)
-
+        records = json['Data']['Provides'][0]['Records']
+        objects: any
+        if action.action_type == actions.ActionType.DATA_ADD_DAILY_RAW:
+            objects = pydantic.parse_obj_as(List[schemas.DailyRawInCimisResponse], records)
+        elif action.action_type == actions.ActionType.DATA_ADD_HOURLY_RAW:
+            objects = pydantic.parse_obj_as(List[schemas.HourlyRawInCimisResponse], records)
+        else:
+            raise TypeError('Invalid action type.')
+        return objects
 
     # -------------------------------------------------------------------------
     # Public API
     # -------------------------------------------------------------------------
     @classmethod
-    def to_dailyraw_schema(cls, station_data: List[schemas.DailyRawInCimisResponse]) -> List[schemas.DailyRaw]:
-        """Converts dailyraw schema from DailyRawInCimisResponse to DailyRaw"""
-        return [
-            schemas.DailyRaw(
-                Id=utils.generate_raw_data_primary_key(data.Station,
-                                                    utils.parse_date_str(data.Date)),
-                StationId=data.Station,
-                Date=utils.parse_date_str(data.Date),
-                DayAirTmpAvg=data.DayAirTmpAvg['Value'],
-                DayAirTmpAvgQc=data.DayAirTmpAvg['Qc'],
-                DayAirTmpAvgUnits=data.DayAirTmpAvg['Unit'],
-                DayAirTmpMax=data.DayAirTmpMax['Value'],
-                DayAirTmpMaxQc=data.DayAirTmpMax['Qc'],
-                DayAirTmpMaxUnits=data.DayAirTmpMax['Unit'],
-                DayAirTmpMin=data.DayAirTmpMin['Value'],
-                DayAirTmpMinQc=data.DayAirTmpMin['Qc'],
-                DayAirTmpMinUnits=data.DayAirTmpMin['Unit'],
-                DayDewPnt=data.DayDewPnt['Value'],
-                DayDewPntQc=data.DayDewPnt['Qc'],
-                DayDewPntUnits=data.DayDewPnt['Unit'],
-                DayEto=data.DayEto['Value'],
-                DayEtoQc=data.DayEto['Qc'],
-                DayEtoUnits=data.DayEto['Unit'],
-                DayAsceEto=data.DayAsceEto['Value'],
-                DayAsceEtoQc=data.DayAsceEto['Qc'],
-                DayAsceEtoUnits=data.DayAsceEto['Unit'],
-                DayAsceEtr=data.DayAsceEtr['Value'],
-                DayAsceEtrQc=data.DayAsceEtr['Qc'],
-                DayAsceEtrUnits=data.DayAsceEtr['Unit'],
-                DayPrecip=data.DayPrecip['Value'],
-                DayPrecipQc=data.DayPrecip['Qc'],
-                DayPrecipUnits=data.DayPrecip['Unit'],
-                DayRelHumAvg=data.DayRelHumAvg['Value'],
-                DayRelHumAvgQc=data.DayRelHumAvg['Qc'],
-                DayRelHumAvgUnits=data.DayRelHumAvg['Unit'],
-                DayRelHumMax=data.DayRelHumMax['Value'],
-                DayRelHumMaxQc=data.DayRelHumMax['Qc'],
-                DayRelHumMaxUnits=data.DayRelHumMax['Unit'],
-                DayRelHumMin=data.DayRelHumMin['Value'],
-                DayRelHumMinQc=data.DayRelHumMin['Qc'],
-                DayRelHumMinUnits=data.DayRelHumMin['Unit'],
-                DaySoilTmpAvg=data.DaySoilTmpAvg['Value'],
-                DaySoilTmpAvgQc=data.DaySoilTmpAvg['Qc'],
-                DaySoilTmpAvgUnits=data.DaySoilTmpAvg['Unit'],
-                DaySoilTmpMax=data.DaySoilTmpMax['Value'],
-                DaySoilTmpMaxQc=data.DaySoilTmpMax['Qc'],
-                DaySoilTmpMaxUnits=data.DaySoilTmpMax['Unit'],
-                DaySoilTmpMin=data.DaySoilTmpMin['Value'],
-                DaySoilTmpMinQc=data.DaySoilTmpMin['Qc'],
-                DaySoilTmpMinUnits=data.DaySoilTmpMin['Unit'],
-                DaySolRadAvg=data.DaySolRadAvg['Value'],
-                DaySolRadAvgQc=data.DaySolRadAvg['Qc'],
-                DaySolRadAvgUnits=data.DaySolRadAvg['Unit'],
-                DaySolRadNet=data.DaySolRadNet['Value'],
-                DaySolRadNetQc=data.DaySolRadNet['Qc'],
-                DaySolRadNetUnits=data.DaySolRadNet['Unit'],
-                DayVapPresAvg=data.DayVapPresAvg['Value'],
-                DayVapPresAvgQc=data.DayVapPresAvg['Qc'],
-                DayVapPresAvgUnits=data.DayVapPresAvg['Unit'],
-                DayVapPresMax=data.DayVapPresMax['Value'],
-                DayVapPresMaxQc=data.DayVapPresMax['Qc'],
-                DayVapPresMaxUnits=data.DayVapPresMax['Unit'],
-                DayWindEne=data.DayWindEne['Value'],
-                DayWindEneQc=data.DayWindEne['Qc'],
-                DayWindEneUnits=data.DayWindEne['Unit'],
-                DayWindEse=data.DayWindEse['Value'],
-                DayWindEseQc=data.DayWindEse['Qc'],
-                DayWindEseUnits=data.DayWindEse['Unit'],
-                DayWindNne=data.DayWindNne['Value'],
-                DayWindNneQc=data.DayWindNne['Qc'],
-                DayWindNneUnits=data.DayWindNne['Unit'],
-                DayWindNnw=data.DayWindNnw['Value'],
-                DayWindNnwQc=data.DayWindNnw['Qc'],
-                DayWindNnwUnits=data.DayWindNnw['Unit'],
-                DayWindRun=data.DayWindRun['Value'],
-                DayWindRunQc=data.DayWindRun['Qc'],
-                DayWindRunUnits=data.DayWindRun['Unit'],
-                DayWindSsw=data.DayWindSsw['Value'],
-                DayWindSswQc=data.DayWindSsw['Qc'],
-                DayWindSswUnits=data.DayWindSsw['Unit'],
-                DayWindWnw=data.DayWindWnw['Value'],
-                DayWindWnwQc=data.DayWindWnw['Qc'],
-                DayWindWnwUnits=data.DayWindWnw['Unit'],
-                DayWindWsw=data.DayWindWsw['Value'],
-                DayWindWswQc=data.DayWindWsw['Qc'],
-                DayWindWswUnits=data.DayWindWsw['Unit']
-            )
-            for data in station_data
-        ]
+    def to_raw_schema(cls, station_data: List) -> List:
+        """Converts raw schema from *RawInCimisResponse to *Raw"""
+        if cls.__action.action_type == actions.ActionType.DATA_ADD_DAILY_RAW:
+            return [
+                schemas.DailyRaw(
+                    Id=utils.generate_raw_data_primary_key(data.Station,
+                                                            utils.parse_date_str(data.Date)),
+                    StationId=data.Station,
+                    Date=utils.parse_date_str(data.Date),
+                    DayAirTmpAvg=data.DayAirTmpAvg['Value'],
+                    DayAirTmpAvgQc=data.DayAirTmpAvg['Qc'],
+                    DayAirTmpAvgUnits=data.DayAirTmpAvg['Unit'],
+                    DayAirTmpMax=data.DayAirTmpMax['Value'],
+                    DayAirTmpMaxQc=data.DayAirTmpMax['Qc'],
+                    DayAirTmpMaxUnits=data.DayAirTmpMax['Unit'],
+                    DayAirTmpMin=data.DayAirTmpMin['Value'],
+                    DayAirTmpMinQc=data.DayAirTmpMin['Qc'],
+                    DayAirTmpMinUnits=data.DayAirTmpMin['Unit'],
+                    DayDewPnt=data.DayDewPnt['Value'],
+                    DayDewPntQc=data.DayDewPnt['Qc'],
+                    DayDewPntUnits=data.DayDewPnt['Unit'],
+                    DayEto=data.DayEto['Value'],
+                    DayEtoQc=data.DayEto['Qc'],
+                    DayEtoUnits=data.DayEto['Unit'],
+                    DayAsceEto=data.DayAsceEto['Value'],
+                    DayAsceEtoQc=data.DayAsceEto['Qc'],
+                    DayAsceEtoUnits=data.DayAsceEto['Unit'],
+                    DayAsceEtr=data.DayAsceEtr['Value'],
+                    DayAsceEtrQc=data.DayAsceEtr['Qc'],
+                    DayAsceEtrUnits=data.DayAsceEtr['Unit'],
+                    DayPrecip=data.DayPrecip['Value'],
+                    DayPrecipQc=data.DayPrecip['Qc'],
+                    DayPrecipUnits=data.DayPrecip['Unit'],
+                    DayRelHumAvg=data.DayRelHumAvg['Value'],
+                    DayRelHumAvgQc=data.DayRelHumAvg['Qc'],
+                    DayRelHumAvgUnits=data.DayRelHumAvg['Unit'],
+                    DayRelHumMax=data.DayRelHumMax['Value'],
+                    DayRelHumMaxQc=data.DayRelHumMax['Qc'],
+                    DayRelHumMaxUnits=data.DayRelHumMax['Unit'],
+                    DayRelHumMin=data.DayRelHumMin['Value'],
+                    DayRelHumMinQc=data.DayRelHumMin['Qc'],
+                    DayRelHumMinUnits=data.DayRelHumMin['Unit'],
+                    DaySoilTmpAvg=data.DaySoilTmpAvg['Value'],
+                    DaySoilTmpAvgQc=data.DaySoilTmpAvg['Qc'],
+                    DaySoilTmpAvgUnits=data.DaySoilTmpAvg['Unit'],
+                    DaySoilTmpMax=data.DaySoilTmpMax['Value'],
+                    DaySoilTmpMaxQc=data.DaySoilTmpMax['Qc'],
+                    DaySoilTmpMaxUnits=data.DaySoilTmpMax['Unit'],
+                    DaySoilTmpMin=data.DaySoilTmpMin['Value'],
+                    DaySoilTmpMinQc=data.DaySoilTmpMin['Qc'],
+                    DaySoilTmpMinUnits=data.DaySoilTmpMin['Unit'],
+                    DaySolRadAvg=data.DaySolRadAvg['Value'],
+                    DaySolRadAvgQc=data.DaySolRadAvg['Qc'],
+                    DaySolRadAvgUnits=data.DaySolRadAvg['Unit'],
+                    DaySolRadNet=data.DaySolRadNet['Value'],
+                    DaySolRadNetQc=data.DaySolRadNet['Qc'],
+                    DaySolRadNetUnits=data.DaySolRadNet['Unit'],
+                    DayVapPresAvg=data.DayVapPresAvg['Value'],
+                    DayVapPresAvgQc=data.DayVapPresAvg['Qc'],
+                    DayVapPresAvgUnits=data.DayVapPresAvg['Unit'],
+                    DayVapPresMax=data.DayVapPresMax['Value'],
+                    DayVapPresMaxQc=data.DayVapPresMax['Qc'],
+                    DayVapPresMaxUnits=data.DayVapPresMax['Unit'],
+                    DayWindEne=data.DayWindEne['Value'],
+                    DayWindEneQc=data.DayWindEne['Qc'],
+                    DayWindEneUnits=data.DayWindEne['Unit'],
+                    DayWindEse=data.DayWindEse['Value'],
+                    DayWindEseQc=data.DayWindEse['Qc'],
+                    DayWindEseUnits=data.DayWindEse['Unit'],
+                    DayWindNne=data.DayWindNne['Value'],
+                    DayWindNneQc=data.DayWindNne['Qc'],
+                    DayWindNneUnits=data.DayWindNne['Unit'],
+                    DayWindNnw=data.DayWindNnw['Value'],
+                    DayWindNnwQc=data.DayWindNnw['Qc'],
+                    DayWindNnwUnits=data.DayWindNnw['Unit'],
+                    DayWindRun=data.DayWindRun['Value'],
+                    DayWindRunQc=data.DayWindRun['Qc'],
+                    DayWindRunUnits=data.DayWindRun['Unit'],
+                    DayWindSsw=data.DayWindSsw['Value'],
+                    DayWindSswQc=data.DayWindSsw['Qc'],
+                    DayWindSswUnits=data.DayWindSsw['Unit'],
+                    DayWindWnw=data.DayWindWnw['Value'],
+                    DayWindWnwQc=data.DayWindWnw['Qc'],
+                    DayWindWnwUnits=data.DayWindWnw['Unit'],
+                    DayWindWsw=data.DayWindWsw['Value'],
+                    DayWindWswQc=data.DayWindWsw['Qc'],
+                    DayWindWswUnits=data.DayWindWsw['Unit']
+                )
+                for data in station_data
+            ]
+        elif cls.__action.action_type == actions.ActionType.DATA_ADD_HOURLY_RAW:
+            return [
+                schemas.HourlyRaw(
+                    Id=utils.generate_raw_data_primary_key(data.Station,
+                                                            utils.parse_date_str(data.Date),
+                                                            utils.parse_hour_str(data.Hour)),
+                    StationId=data.Station,
+                    Date=utils.parse_date_str(data.Date),
+                    Hour=utils.parse_hour_str(data.Hour),
+                    HlyAirTmp=data.HlyAirTmp['Value'],
+                    HlyAirTmpQc=data.HlyAirTmp['Qc'],
+                    HlyAirTmpUnits=data.HlyAirTmp['Unit'],
+                    HlyDewPnt=data.HlyDewPnt['Value'],
+                    HlyDewPntQc=data.HlyDewPnt['Qc'],
+                    HlyDewPntUnits=data.HlyDewPnt['Unit'],
+                    HlyEto=data.HlyEto['Value'],
+                    HlyEtoQc=data.HlyEto['Qc'],
+                    HlyEtoUnits=data.HlyEto['Unit'],
+                    HlyNetRad=data.HlyNetRad['Value'],
+                    HlyNetRadQc=data.HlyNetRad['Qc'],
+                    HlyNetRadUnits=data.HlyNetRad['Unit'],
+                    HlyAsceEto=data.HlyAsceEto['Value'],
+                    HlyAsceEtoQc=data.HlyAsceEto['Qc'],
+                    HlyAsceEtoUnits=data.HlyAsceEto['Unit'],
+                    HlyAsceEtr=data.HlyAsceEtr['Value'],
+                    HlyAsceEtrQc=data.HlyAsceEtr['Qc'],
+                    HlyAsceEtrUnits=data.HlyAsceEtr['Unit'],
+                    HlyPrecip=data.HlyPrecip['Value'],
+                    HlyPrecipQc=data.HlyPrecip['Qc'],
+                    HlyPrecipUnits=data.HlyPrecip['Unit'],
+                    HlyRelHum=data.HlyRelHum['Value'],
+                    HlyRelHumQc=data.HlyRelHum['Qc'],
+                    HlyRelHumUnits=data.HlyRelHum['Unit'],
+                    HlyResWind=data.HlyResWind['Value'],
+                    HlyResWindQc=data.HlyResWind['Qc'],
+                    HlyResWindUnits=data.HlyResWind['Unit'],
+                    HlySoilTmp=data.HlySoilTmp['Value'],
+                    HlySoilTmpQc=data.HlySoilTmp['Qc'],
+                    HlySoilTmpUnits=data.HlySoilTmp['Unit'],
+                    HlySolRad=data.HlySolRad['Value'],
+                    HlySolRadQc=data.HlySolRad['Qc'],
+                    HlySolRadUnits=data.HlySolRad['Unit'],
+                    HlyVapPres=data.HlyVapPres['Value'],
+                    HlyVapPresQc=data.HlyVapPres['Qc'],
+                    HlyVapPresUnits=data.HlyVapPres['Unit'],
+                    HlyWindDir=data.HlyWindDir['Value'],
+                    HlyWindDirQc=data.HlyWindDir['Qc'],
+                    HlyWindDirUnits=data.HlyWindDir['Unit'],
+                    HlyWindSpd=data.HlyWindSpd['Value'],
+                    HlyWindSpdQc=data.HlyWindSpd['Qc'],
+                    HlyWindSpdUnits=data.HlyWindSpd['Unit'],
+                )
+                for data in station_data
+            ]
+        else:
+            raise TypeError('Invalid action type.')
 
-    @classmethod
-    def get_dailyraw_data_from_cimis(cls, start_date: date, end_date: date, targets: List[int] = None) -> schemas.DailyRawInCimisResponse:
-        """Retrieves daily raw data from CIMIS API.
+    def get_raw_data_from_cimis(cls, start_date: date, end_date: date, targets: List[int]=None):
+        """Retrieves raw data from CIMIS API.
 
         Args:
             startDate: Date from which data will start to be gathered
             endDate: Date to which data will stop being gathered
-            targets: If not None, returns daily raw data for only the target station ids.
-                    Otherwise, returns daily raw data for all stations in CIMIS API.
+            targets: If not None, returns raw data for only the target station ids.
+                    Otherwise, returns raw data for all stations in CIMIS API.
         Returns:
-            schemas.DaillyRawInCimisReponse: DailyRawData objects
-                containing daily raw data from the target stations
+            schemas.*: *RawData objects containing raw data from the target stations
 
         Raises:
             ValueError: If the response body does not contain valid JSON, or targets list is empty
@@ -350,42 +268,68 @@ class DailyRawDataService():
         # Headers for CIMIS request
         headers = {'accept':'application/json'}
         # Build request URL
+        if cls.__action.action_type == actions.ActionType.DATA_ADD_DAILY_RAW:
+            data_items = cls.__daily_data_items
+        elif cls.__action.action_type == actions.ActionType.DATA_ADD_HOURLY_RAW:
+            data_items = cls.__hourly_data_items
+        else:
+            raise KeyError('Invalid action type.')
         cimis_request_url = utils.build_cimis_request_url(base_url=cls.__base_url, 
                                                             targets=targets,
-                                                            data_items=cls.__data_items,
+                                                            data_items=data_items,
                                                             start_date=start_date,
                                                             end_date=end_date)
+        print(cimis_request_url)
         # Request CIMIS API data with appropriate headers
         response = requests.get(cimis_request_url, headers=headers, timeout=config.HTTP_TIMEOUT_SECONDS)
         response.raise_for_status()
-        # Parse daily raw data
-        dailyraw_data = cls.__parse_cimis_response(response)
-        # Return daily raw data
-        return dailyraw_data
+        # Parse raw data
+        raw_data = cls.__parse_cimis_response(cls.__action, response)
+        # Return raw data
+        return raw_data
 
     @classmethod
-    def get_dailyraw_data_from_db(cls, targets: List[int], start_date: date, end_date: date) -> List[schemas.DailyRaw]:
-        """Retrieves daily raw data from the database"""
+    def get_data_from_db(cls, targets: List[int], start_date: date, end_date: date) -> List:
+        """Retrieves raw data from the database"""
+        # Determine type to parse as
         data_as_list = []
+        schema: any
+        table: str
+        if cls.__action.action_type == actions.ActionType.DATA_ADD_DAILY_RAW:
+            schema = type(schemas.DailyRaw)
+            table = config.SQL_DAILYRAW_TABLE
+        elif cls.__action.action_type == actions.ActionType.DATA_ADD_HOURLY_RAW:
+            schema = type(schemas.HourlyRaw)
+            table = config.SQL_HOURLYRAW_TABLE
+        else:
+            raise TypeError('Invalid action type.')
+
+        # Connect to database and retrieve data
         with db.engine.connect() as connection:
+            # SQL Query
             data = connection.execute(f"SELECT Id, StationId, Date, *\
-                                        FROM dbo.DailyRaw\
+                                        FROM {table}\
                                         WHERE StationId IN ({str(targets)[1:-1]})\
                                         AND Date BETWEEN '{start_date.strftime('%Y-%m-%d')}'\
                                         AND '{end_date.strftime('%Y-%m-%d')}'")
             for item in data:
                 data_as_list.append(dict(item))
-        return pydantic.parse_obj_as(List[schemas.DailyRaw], data_as_list)
+        return pydantic.parse_obj_as(List[schema], data_as_list)
 
     @classmethod
-    def insert_dailyraw_data(cls, daily_data: List[schemas.DailyRaw]):
-        """Adds daily raw data to database"""
-        with db.session_manager() as session:
-            logging.info('Staging changes for dbo.DailyRaw')
-            session.add_all([models.DailyRawData(**data.dict()) for data in daily_data])
-            logging.info(f'Committing changes to dbo.DailyRaw. Estimated time:\
-                {len(daily_data)/config.SQL_AVG_INSERTS_PER_SECOND/60:.1f} minutes.')            
-            session.commit()
-            logging.info('All changes have been successfully committed to dbo.DailyRaw.')            
+    def insert_raw_data(cls, data_list: List):
+        """Adds raw data to database"""
+        if cls.__action.action_type == actions.ActionType.DATA_ADD_DAILY_RAW:
+            table = config.SQL_DAILYRAW_TABLE
+            model = type(models.DailyRawData)
+        elif cls.__action.action_type == actions.ActionType.DATA_ADD_DAILY_RAW:
+            table = config.SQL_HOURLYRAW_TABLE
+            model = type(models.HourlyRawData)
 
-        
+        with db.session_manager() as session:
+            logging.info(f'Staging changes for {table}')
+            session.add_all([model(**data.dict()) for data in data_list])
+            logging.info(f'Committing changes to {table}. Estimated time:\
+                {len(data_list)/config.SQL_AVG_INSERTS_PER_SECOND:.1f} minutes.')  
+            session.commit()
+            logging.info(f'All changes have been successfully commited to {table}.')
