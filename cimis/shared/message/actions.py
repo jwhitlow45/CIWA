@@ -13,6 +13,10 @@ class ActionType(str, Enum):
 
 
 class Action(pydantic.BaseModel):
+    def __init__(self, action_type=None, payload=None):
+        self.action_type = action_type
+        self.payload = payload
+
     action_type: ActionType
     payload: Optional[payloads.Payload]
 
