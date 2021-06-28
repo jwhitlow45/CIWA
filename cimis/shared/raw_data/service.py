@@ -1,4 +1,5 @@
-import enum
+from requests.api import request
+from shared.message import payloads
 from typing import List
 from datetime import date, time
 import logging
@@ -7,7 +8,6 @@ from sqlalchemy.sql.sqltypes import Date
 import pydantic
 import requests
 from requests.models import Response
-
 
 from shared.core import config, db, utils
 from shared.raw_data import schemas, models
@@ -183,7 +183,7 @@ class HourlyRawDataService():
         with db.session_manager() as session:
             logging.info('Staging changes for dbo.HourlyRaw')
             session.add_all([models.HourlyRawData(**data.dict()) for data in hourly_data])        
-            logging.info(f'Committing changes to dbo.HourlyRaw. Estimated time: \
+            logging.info(f'Committing changes to dbo.HourlyRaw. Estimated time:\
                 {len(hourly_data)/config.SQL_AVG_INSERTS_PER_SECOND/60:.1f} minutes.')            
             session.commit()
             logging.info('All changes have been successfully committed to dbo.HourlyRaw')
@@ -337,7 +337,7 @@ class DailyRawDataService():
         ]
 
     @classmethod
-    def get_dailyraw_data_from_cimis(cls, start_date: date, end_date: date, targets: List[int] = None) -> List[schemas.DailyRawInCimisResponse]:
+    def get_dailyraw_data_from_cimis(cls, start_date: date, end_date: date, targets: List[int] = None) -> schemas.DailyRawInCimisResponse:
         """Retrieves daily raw data from CIMIS API.
 
         Args:
@@ -346,8 +346,8 @@ class DailyRawDataService():
             targets: If not None, returns daily raw data for only the target station ids.
                     Otherwise, returns daily raw data for all stations in CIMIS API.
         Returns:
-            List[schemas.DaillyRawInCimisReponse]: List of DailyRawData objects
-                containing dailly raw data from the target stations
+            schemas.DaillyRawInCimisReponse: DailyRawData objects
+                containing daily raw data from the target stations
 
         Raises:
             ValueError: If the response body does not contain valid JSON, or targets list is empty
@@ -361,31 +361,19 @@ class DailyRawDataService():
             raise ValueError('List[targets] cannot be empty.')
         # Headers for CIMIS request
         headers = {'accept':'application/json'}
-        # List containing daily raw data from CIMIS
-        daily_raw_data = []
-
-        # Split request into smaller requests
-        requests_dict = utils.split_cimis_request(targets=targets,
-                                                    start_date=start_date,
-                                                    end_date=end_date,
-                                                    records_per_day=config.CIMIS_API_DAILY_RECORDS_PER_DAY)
-
-        for counter, request in enumerate(requests_dict):
-            # Build CIMIS request URL
-            cimis_request_url = utils.build_cimis_request_url(base_url=cls.__base_url, 
-                                                                targets=request['targets'],
-                                                                data_items=cls.__data_items,
-                                                                start_date=request['start_date'],
-                                                                end_date=request['end_date'])
-
-            # Request CIMIS API data with appropriate headers
-            response = requests.get(cimis_request_url, headers=headers, timeout=config.HTTP_TIMEOUT_SECONDS)
-            response.raise_for_status()
-            daily_raw_data += cls.__parse_cimis_response(response)
-            logging.info(f'Received CIMIS response for request ({counter+1}/{len(requests_dict)}).')
-        
-        # Return all data in hourly raw data list
-        return daily_raw_data
+        # Build request URL
+        cimis_request_url = utils.build_cimis_request_url(base_url=cls.__base_url, 
+                                                            targets=targets,
+                                                            data_items=cls.__data_items,
+                                                            start_date=start_date,
+                                                            end_date=end_date)
+        # Request CIMIS API data with appropriate headers
+        response = requests.get(cimis_request_url, headers=headers, timeout=config.HTTP_TIMEOUT_SECONDS)
+        response.raise_for_status()
+        # Parse daily raw data
+        dailyraw_data = cls.__parse_cimis_response(response)
+        # Return daily raw data
+        return dailyraw_data
 
     @classmethod
     def get_dailyraw_data_from_db(cls, targets: List[int], start_date: date, end_date: date) -> List[schemas.DailyRaw]:
@@ -407,8 +395,9 @@ class DailyRawDataService():
         with db.session_manager() as session:
             logging.info('Staging changes for dbo.DailyRaw')
             session.add_all([models.DailyRawData(**data.dict()) for data in daily_data])
-            logging.info(f'Committing changes to dbo.DailyRaw. Estimated time: \
+            logging.info(f'Committing changes to dbo.DailyRaw. Estimated time:\
                 {len(daily_data)/config.SQL_AVG_INSERTS_PER_SECOND/60:.1f} minutes.')            
             session.commit()
             logging.info('All changes have been successfully committed to dbo.DailyRaw.')            
 
+        
