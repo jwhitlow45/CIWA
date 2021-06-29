@@ -9,9 +9,10 @@ from shared.message import actions
 from shared.core import config, db, utils
 from shared.raw_data import schemas, models
 
-class DataService():
+class DataService:
 
-    __action: any
+    def __init__(self, action):
+        self.__action = action
 
     __base_url = config.CIMIS_API_DATA_BASE_URL
 
@@ -62,9 +63,6 @@ class DataService():
         "day-wind-wsw"
     ]
 
-    # Constructor
-    def __init__(cls, action):
-        cls.__action = action
 
     # -------------------------------------------------------------------------
     # Private helper methods
@@ -83,7 +81,7 @@ class DataService():
                 KeyError: If the JSON dictionaryy does not contain expected properties
         """
         json = response.json()
-        records = json['Data']['Provides'][0]['Records']
+        records = json['Data']['Providers'][0]['Records']
         objects: any
         if action.action_type == actions.ActionType.DATA_ADD_DAILY_RAW:
             objects = pydantic.parse_obj_as(List[schemas.DailyRawInCimisResponse], records)
@@ -96,10 +94,9 @@ class DataService():
     # -------------------------------------------------------------------------
     # Public API
     # -------------------------------------------------------------------------
-    @classmethod
-    def to_raw_schema(cls, station_data: List) -> List:
+    def to_raw_schema(self, station_data: List) -> List:
         """Converts raw schema from *RawInCimisResponse to *Raw"""
-        if cls.__action.action_type == actions.ActionType.DATA_ADD_DAILY_RAW:
+        if self.__action.action_type == actions.ActionType.DATA_ADD_DAILY_RAW:
             return [
                 schemas.DailyRaw(
                     Id=utils.generate_raw_data_primary_key(data.Station,
@@ -187,7 +184,7 @@ class DataService():
                 )
                 for data in station_data
             ]
-        elif cls.__action.action_type == actions.ActionType.DATA_ADD_HOURLY_RAW:
+        elif self.__action.action_type == actions.ActionType.DATA_ADD_HOURLY_RAW:
             return [
                 schemas.HourlyRaw(
                     Id=utils.generate_raw_data_primary_key(data.Station,
@@ -244,13 +241,13 @@ class DataService():
         else:
             raise TypeError('Invalid action type.')
 
-    def get_raw_data_from_cimis(cls, start_date: date, end_date: date, targets: List[int]=None):
+    def get_raw_data_from_cimis(self, start_date: date, end_date: date, targets: List[int]=None):
         """Retrieves raw data from CIMIS API.
 
         Args:
             startDate: Date from which data will start to be gathered
             endDate: Date to which data will stop being gathered
-            targets: If not None, returns raw data for only the target station ids.
+            targets: If not None, returns raw data for only the  target station ids.
                     Otherwise, returns raw data for all stations in CIMIS API.
         Returns:
             schemas.*: *RawData objects containing raw data from the target stations
@@ -268,37 +265,35 @@ class DataService():
         # Headers for CIMIS request
         headers = {'accept':'application/json'}
         # Build request URL
-        if cls.__action.action_type == actions.ActionType.DATA_ADD_DAILY_RAW:
-            data_items = cls.__daily_data_items
-        elif cls.__action.action_type == actions.ActionType.DATA_ADD_HOURLY_RAW:
-            data_items = cls.__hourly_data_items
+        if self.__action.action_type == actions.ActionType.DATA_ADD_DAILY_RAW:
+            data_items = self.__daily_data_items
+        elif self.__action.action_type == actions.ActionType.DATA_ADD_HOURLY_RAW:
+            data_items = self.__hourly_data_items
         else:
             raise KeyError('Invalid action type.')
-        cimis_request_url = utils.build_cimis_request_url(base_url=cls.__base_url, 
+        cimis_request_url = utils.build_cimis_request_url(base_url=self.__base_url, 
                                                             targets=targets,
                                                             data_items=data_items,
                                                             start_date=start_date,
                                                             end_date=end_date)
-        print(cimis_request_url)
         # Request CIMIS API data with appropriate headers
         response = requests.get(cimis_request_url, headers=headers, timeout=config.HTTP_TIMEOUT_SECONDS)
         response.raise_for_status()
         # Parse raw data
-        raw_data = cls.__parse_cimis_response(cls.__action, response)
+        raw_data = self.__parse_cimis_response(self.__action, response)
         # Return raw data
         return raw_data
 
-    @classmethod
-    def get_data_from_db(cls, targets: List[int], start_date: date, end_date: date) -> List:
+    def get_data_from_db(self, targets: List[int], start_date: date, end_date: date) -> List:
         """Retrieves raw data from the database"""
         # Determine type to parse as
         data_as_list = []
         schema: any
         table: str
-        if cls.__action.action_type == actions.ActionType.DATA_ADD_DAILY_RAW:
+        if self.__action.action_type == actions.ActionType.DATA_ADD_DAILY_RAW:
             schema = type(schemas.DailyRaw)
             table = config.SQL_DAILYRAW_TABLE
-        elif cls.__action.action_type == actions.ActionType.DATA_ADD_HOURLY_RAW:
+        elif self.__action.action_type == actions.ActionType.DATA_ADD_HOURLY_RAW:
             schema = type(schemas.HourlyRaw)
             table = config.SQL_HOURLYRAW_TABLE
         else:
@@ -316,20 +311,18 @@ class DataService():
                 data_as_list.append(dict(item))
         return pydantic.parse_obj_as(List[schema], data_as_list)
 
-    @classmethod
-    def insert_raw_data(cls, data_list: List):
+    def insert_raw_data(self, data_list: List):
         """Adds raw data to database"""
-        if cls.__action.action_type == actions.ActionType.DATA_ADD_DAILY_RAW:
+        if self.__action.action_type == actions.ActionType.DATA_ADD_DAILY_RAW:
             table = config.SQL_DAILYRAW_TABLE
-            model = type(models.DailyRawData)
-        elif cls.__action.action_type == actions.ActionType.DATA_ADD_DAILY_RAW:
+            model = models.DailyRawData
+        elif self.__action.action_type == actions.ActionType.DATA_ADD_HOURLY_RAW:
             table = config.SQL_HOURLYRAW_TABLE
-            model = type(models.HourlyRawData)
+            model = models.HourlyRawData
 
         with db.session_manager() as session:
             logging.info(f'Staging changes for {table}')
             session.add_all([model(**data.dict()) for data in data_list])
-            logging.info(f'Committing changes to {table}. Estimated time:\
-                {len(data_list)/config.SQL_AVG_INSERTS_PER_SECOND:.1f} minutes.')  
+            logging.info(f'Committing changes to {table}. Estimated time: {len(data_list)/config.SQL_AVG_INSERTS_PER_SECOND:.1f} seconds.')  
             session.commit()
             logging.info(f'All changes have been successfully commited to {table}.')
