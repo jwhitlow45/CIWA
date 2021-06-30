@@ -13,6 +13,7 @@ from shared.core import config as conf
 from shared.core.db import Base
 from shared.stations.models import Station, Sisters
 from shared.raw_data.models import DailyRawData, HourlyRawData
+from shared.main_data.models import DailyMainData, HourlyMainData
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
