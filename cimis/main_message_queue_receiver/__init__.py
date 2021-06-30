@@ -10,6 +10,7 @@ import pydantic
 
 # Shared objects
 from shared.message import actions
+from shared.raw_data.service import RawDataService
 from shared.main_data.service import MainDataService
 from shared.core import config, utils
 
@@ -33,6 +34,11 @@ def main(msg: func.ServiceBusMessage):
         else:
             # Discard message as it is the incorrect action type
             raise TypeError('Invalid action type.')
+
+        # Create DataServices with action
+        RDS = RawDataService(action)
+        MDS = MainDataService()
+        logging.info(f'Created DataService with ActionType: {action.action_type}')
 
     except Exception as e:
       # Catch any unaccounted errors, log the time they occurred and payload leading
