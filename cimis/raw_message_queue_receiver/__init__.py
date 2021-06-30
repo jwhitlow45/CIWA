@@ -12,7 +12,7 @@ import pydantic
 
 # Shared objects
 from shared.message import actions
-from shared.raw_data.service import DataService
+from shared.raw_data.service import RawDataService
 from shared.core import config, utils
 
 
@@ -42,7 +42,7 @@ def main(msg: func.ServiceBusMessage):
             raise TypeError('Invalid action type.')
 
         # Create DataService with action
-        DS = DataService(action)
+        DS = RawDataService(action)
         logging.info(f'Created DataService with ActionType: {action.action_type}')
 
         # If CIMIS record limit is exceeded break up requests into smaller requests

@@ -9,7 +9,7 @@ from shared.message import actions
 from shared.core import config, db, utils
 from shared.raw_data import schemas, models
 
-class DataService:
+class RawDataService:
 
     def __init__(self, action):
         self.__action = action
