@@ -247,8 +247,7 @@ class DataService:
         Args:
             startDate: Date from which data will start to be gathered
             endDate: Date to which data will stop being gathered
-            targets: If not None, returns raw data for only the  target station ids.
-                    Otherwise, returns raw data for all stations in CIMIS API.
+            targets: If not None, returns raw data for only the target station ids.
         Returns:
             schemas.*: *RawData objects containing raw data from the target stations
 
