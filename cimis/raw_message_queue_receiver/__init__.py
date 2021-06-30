@@ -1,5 +1,4 @@
 # Azure functions
-from datetime import datetime
 from azure.servicebus import ServiceBusClient, ServiceBusMessage
 import azure.functions as func
 
@@ -8,7 +7,7 @@ import logging
 import datetime
 from requests import ConnectionError, HTTPError, Timeout
 
-# Type management
+# Object parsing
 import pydantic
 
 # Shared objects
