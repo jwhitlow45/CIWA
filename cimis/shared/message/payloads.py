@@ -17,13 +17,25 @@ class UpdateStationsPayload(Payload):
     station_ids: List[int]
 
 
-class GetHourlyRawPayload(Payload):
+class AddHourlyRawPayload(Payload):
     station_ids: List[int]
     start_date: str
     end_date: str
 
 
-class GetDailyRawPayload(Payload):
+class AddDailyRawPayload(Payload):
     station_ids: List[int]
     start_date: str
     end_date: str
+
+
+class CleanHourlyRawPayload(Payload):
+    station_ids: List[int]
+    start_date: str
+    end_date:str
+
+
+class CleanDailyRawPayload(Payload):
+    station_ids: List[int]
+    start_date: str
+    end_date:str

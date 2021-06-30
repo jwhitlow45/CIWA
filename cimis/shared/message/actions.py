@@ -10,6 +10,8 @@ class ActionType(str, Enum):
     STATIONS_UPDATE = 'stations/update'
     DATA_ADD_HOURLY_RAW = 'data/add_hourly_raw'
     DATA_ADD_DAILY_RAW = 'data/add_daily_raw'
+    DATA_CLEAN_HOURLY_RAW = 'data/clean_hourly_raw'
+    DATA_CLEAN_DAILY_RAW = 'data/clean_daily_raw'
 
 
 class Action(pydantic.BaseModel):
@@ -29,9 +31,19 @@ class UpdateStationsAction(Action):
 
 class AddHourlyRawDataAction(Action):
     action_type = ActionType.DATA_ADD_HOURLY_RAW
-    payload: payloads.GetHourlyRawPayload
+    payload: payloads.AddHourlyRawPayload
 
 
 class AddDailyRawDataAction(Action):
     action_type = ActionType.DATA_ADD_DAILY_RAW
-    payload: payloads.GetDailyRawPayload
+    payload: payloads.AddDailyRawPayload
+
+
+class CleanHourlyRawDataAction(Action):
+    action_type = ActionType.DATA_ADD_HOURLY_RAW
+    payload: payloads.CleanHourlyRawPayload
+
+
+class CleanDailyRawDataAction(Action):
+    action_type = ActionType.DATA_CLEAN_DAILY_RAW
+    payload: payloads.CleanDailyRawPayload
