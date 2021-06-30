@@ -5,8 +5,14 @@ from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 from alembic import context
 
+# Include alembic in python path 
+import sys
+sys.path = ['', '..'] + sys.path[1:]
+
 from shared.core import config as conf
-from shared.stations import models as station_models
+from shared.core.db import Base
+from shared.stations.models import Station, Sisters
+from shared.raw_data.models import DailyRawData, HourlyRawData
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
@@ -19,7 +25,7 @@ fileConfig(config.config_file_name)
 # add your model's MetaData object here
 # for 'autogenerate' support
 
-target_metadata = [station_models.Station.metadata]
+target_metadata = Base.metadata
 # target_metadata = None
 
 # other values from the config, defined by the needs of env.py,
@@ -48,6 +54,7 @@ def run_migrations_offline():
         target_metadata=target_metadata,
         literal_binds=True,
         dialect_opts={"paramstyle": "named"},
+        compare_type=True
     )
 
     with context.begin_transaction():
@@ -69,7 +76,8 @@ def run_migrations_online():
 
     with connectable.connect() as connection:
         context.configure(
-            connection=connection, target_metadata=target_metadata
+            connection=connection, target_metadata=target_metadata,
+            compare_type=True
         )
 
         with context.begin_transaction():
