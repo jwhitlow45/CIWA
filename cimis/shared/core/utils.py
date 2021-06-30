@@ -77,9 +77,11 @@ def build_cimis_request_url(base_url: str, targets: List[int], data_items: List[
     # Start date
     str_start_date = f'&startDate={start_date.strftime("%Y-%m-%d")}'
     # End date
-    str_end_date= f'&endDate={end_date.strftime("%Y-%m-%d")}' 
+    str_end_date= f'&endDate={end_date.strftime("%Y-%m-%d")}'
+    # Unit of measure
+    units = '&unitOfMeasure=M'
     # Build URL
-    url = f'{base_url + appKey + str_targets + str_data_items + str_start_date + str_end_date}'
+    url = f'{base_url + appKey + str_targets + str_data_items + str_start_date + str_end_date + units}'
 
     return url
 
