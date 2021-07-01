@@ -6,6 +6,7 @@ import azure.functions as func
 
 # Debugging and logging
 import logging
+import traceback
 import datetime
 from requests import ConnectionError, HTTPError, Timeout
 
@@ -56,6 +57,7 @@ def main(msg: func.ServiceBusMessage):
     except (UnicodeDecodeError, ValueError, KeyError) as ERROR:
         # Treat unrecoverable errors as completed and log them
         logging.info('Unrecoverable error ' + str(ERROR) + f' at time {utils.get_utc_timestamp()}')
+        logging.info('Trace:\n' + traceback.format_exc())
 
     except (ConnectionError, HTTPError, Timeout) as ERROR:
         with ServiceBusClient.from_connection_string(config.SERVICE_BUS_CONNECTION_STRING) as client:
@@ -83,4 +85,4 @@ def main(msg: func.ServiceBusMessage):
         # Catch any unaccounted errors, log the time they occurred and payload leading
         # to the unaccounted error
         logging.info(f'Unaccounted error {e} thrown at time {utils.get_utc_timestamp()} from {action.json()}')
-        
+        logging.info('Trace:\n' + traceback.format_exc())

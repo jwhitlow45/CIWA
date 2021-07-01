@@ -4,6 +4,7 @@ import azure.functions as func
 
 # Debugging and logging
 import logging
+import traceback
 
 # Object parsing
 import pydantic
@@ -41,6 +42,7 @@ def main(msg: func.ServiceBusMessage):
         logging.info(f'Created DataService with ActionType: {action.action_type}')
 
     except Exception as e:
-      # Catch any unaccounted errors, log the time they occurred and payload leading
-      # to the unaccounted error
-      logging.info(f'Unaccounted error {e} thrown at time {utils.get_utc_timestamp()} from {action.json()}')
+        # Catch any unaccounted errors, log the time they occurred and payload leading
+        # to the unaccounted error
+        logging.info(f'Unaccounted error {e} thrown at time {utils.get_utc_timestamp()} from {action.json()}')
+        logging.info('Trace:\n' + traceback.format_exc())

@@ -4,6 +4,7 @@ import azure.functions as func
 
 # Debugging and logging
 import logging
+import traceback
 import datetime
 from requests import ConnectionError, HTTPError, Timeout
 
@@ -69,32 +70,34 @@ def main(msg: func.ServiceBusMessage):
             logging.info(f'Successfully added data to dbo.DailyRaw at {utils.get_utc_timestamp()}')
                 
     except (UnicodeDecodeError, ValueError, KeyError, OverflowError) as ERROR:
-      # Treat unrecoverable errors as completed and log them
-      logging.info('Unrecoverable error ' + str(ERROR) + f' at time {utils.get_utc_timestamp()}')
+        # Treat unrecoverable errors as completed and log them
+        logging.info('Unrecoverable error ' + str(ERROR) + f' at time {utils.get_utc_timestamp()}')
+        logging.info('Trace:\n' + traceback.format_exc())
 
     except (ConnectionError, HTTPError, Timeout) as ERROR:
-      with ServiceBusClient.from_connection_string(config.SERVICE_BUS_CONNECTION_STRING) as client:
-          with client.get_queue_sender(config.SERVICE_BUS_RAW_QUEUE_NAME) as sender:
-              # Update payload delivery count
-              action.payload.delivery_count = action.payload.delivery_count + 1
-              if action.payload.delivery_count < config.MAX_DELIVERY_COUNT:
-                  # Get current time + exponential backoff based on delivery count to determine enqueue time
-                  cur_time = datetime.datetime.utcnow()
-                  delta_time = datetime.timedelta(seconds=1*(2**action.payload.delivery_count))
-                  enqueue_time = cur_time + delta_time
-                  # Create new message with same same payload as old message to allow modification
-                  # Schedule enqueue time in new message constructor
-                  new_msg = ServiceBusMessage(action.json(), scheduled_enqueue_time_utc=enqueue_time)
-                  # Send message to queue
-                  sender.send_messages(new_msg)
-                  # Log sending message to queue
-                  logging.info(f'ActionType: {action.action_type} sent to back of queue \
-                      {config.SERVICE_BUS_RAW_QUEUE_NAME} at {utils.get_utc_timestamp()}')
-              else:
-                  logging.info(f'Action {action} not requeued: max delivery count exceeded \
-                      at {utils.get_utc_timestamp()}')
+        with ServiceBusClient.from_connection_string(config.SERVICE_BUS_CONNECTION_STRING) as client:
+            with client.get_queue_sender(config.SERVICE_BUS_RAW_QUEUE_NAME) as sender:
+                # Update payload delivery count
+                action.payload.delivery_count = action.payload.delivery_count + 1
+                if action.payload.delivery_count < config.MAX_DELIVERY_COUNT:
+                    # Get current time + exponential backoff based on delivery count to determine enqueue time
+                    cur_time = datetime.datetime.utcnow()
+                    delta_time = datetime.timedelta(seconds=1*(2**action.payload.delivery_count))
+                    enqueue_time = cur_time + delta_time
+                    # Create new message with same same payload as old message to allow modification
+                    # Schedule enqueue time in new message constructor
+                    new_msg = ServiceBusMessage(action.json(), scheduled_enqueue_time_utc=enqueue_time)
+                    # Send message to queue
+                    sender.send_messages(new_msg)
+                    # Log sending message to queue
+                    logging.info(f'ActionType: {action.action_type} sent to back of queue \
+                        {config.SERVICE_BUS_RAW_QUEUE_NAME} at {utils.get_utc_timestamp()}')
+                else:
+                    logging.info(f'Action {action} not requeued: max delivery count exceeded \
+                        at {utils.get_utc_timestamp()}')
 
     except Exception as e:
-      # Catch any unaccounted errors, log the time they occurred and payload leading
-      # to the unaccounted error
-      logging.info(f'Unaccounted error {e} thrown at time {utils.get_utc_timestamp()} from {action.json()}')
+        # Catch any unaccounted errors, log the time they occurred and payload leading
+        # to the unaccounted error
+        logging.info(f'Unaccounted error {e} thrown at time {utils.get_utc_timestamp()} from {action.json()}')
+        logging.info('Trace:\n' + traceback.format_exc())
