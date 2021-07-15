@@ -26,9 +26,11 @@ def main(msg: func.ServiceBusMessage):
         logging.info(
             f'Received message from {config.SERVICE_BUS_MAIN_QUEUE_NAME}.')
         # Parse json message into Action object
-        action = pydantic.parse_raw_as(actions.action, message)
+        action = pydantic.parse_raw_as(actions.Action, message)
         logging.info(
             f'Message has been parsed successfully. ActionType: {action.action_type}')
+
+        print(action.payload)
 
         if action.action_type == actions.ActionType.DATA_CLEAN_DAILY_RAW:
 
