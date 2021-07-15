@@ -99,7 +99,7 @@ class RawDataService:
         if self.__action.action_type == actions.ActionType.DATA_ADD_DAILY_RAW:
             return [
                 schemas.DailyRaw(
-                    Id=utils.generate_raw_data_primary_key(data.Station,
+                    Id=utils.generate_data_primary_key(data.Station,
                                                             utils.parse_date_str(data.Date)),
                     StationId=data.Station,
                     Date=utils.parse_date_str(data.Date),
@@ -187,7 +187,7 @@ class RawDataService:
         elif self.__action.action_type == actions.ActionType.DATA_ADD_HOURLY_RAW:
             return [
                 schemas.HourlyRaw(
-                    Id=utils.generate_raw_data_primary_key(data.Station,
+                    Id=utils.generate_data_primary_key(data.Station,
                                                             utils.parse_date_str(data.Date),
                                                             utils.parse_hour_str(data.Hour)),
                     StationId=data.Station,

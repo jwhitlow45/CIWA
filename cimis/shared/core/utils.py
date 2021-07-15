@@ -102,7 +102,7 @@ def int_to_binary_string(num: int, num_bits: int) -> str:
         raise OverflowError
     return binary_string
 
-def generate_raw_data_primary_key(station_num: int, date: datetime.date, hour: datetime.time = datetime.time(0, 0)) -> int:
+def generate_data_primary_key(station_num: int, date: datetime.date, hour: datetime.time = datetime.time(0, 0)) -> int:
     """Creates unique key for raw data items in raw data table based on
     station number, date, and Optional[hour] of the data
     
