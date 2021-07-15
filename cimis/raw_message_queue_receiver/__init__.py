@@ -86,12 +86,11 @@ def main(msg: func.ServiceBusMessage):
 
                     # Set new action type
                     if action.action_type == actions.ActionType.DATA_ADD_DAILY_RAW:
-                        new_action = actions.CleanDailyRawDataAction
+                        new_action = pydantic.parse_raw_as(actions.CleanDailyRawDataAction, message)
+                        new_action.action_type = actions.ActionType.DATA_CLEAN_DAILY_RAW
                     elif action.action_type == actions.ActionType.DATA_ADD_HOURLY_RAW:
-                        new_action = actions.CleanHourlyRawDataAction
-
-                    # Set new action payload
-                    new_action.payload = action.payload
+                        new_action = pydantic.parse_raw_as(actions.CleanHourlyRawDataAction, message)
+                        new_action.action_type = actions.ActionType.DATA_CLEAN_HOURLY_RAW
 
                     # Send message to queue
                     new_msg = ServiceBusMessage(new_action.json())

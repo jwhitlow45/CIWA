@@ -30,21 +30,20 @@ def main(msg: func.ServiceBusMessage):
         logging.info(
             f'Message has been parsed successfully. ActionType: {action.action_type}')
 
-        print(action.payload)
-
+        # Determine action type
         if action.action_type == actions.ActionType.DATA_CLEAN_DAILY_RAW:
-
-            pass
+            action = pydantic.parse_raw_as(actions.CleanDailyRawDataAction,
+                                           message)
         elif action.action_type == actions.ActionType.DATA_CLEAN_HOURLY_RAW:
-
-            pass
+            action = pydantic.parse_raw_as(actions.CleanHourlyRawDataAction,
+                                           message)
         else:
             # Discard message as it is the incorrect action type
             raise TypeError('Invalid action type.')
 
         # Create DataServices with action
         RDS = RawDataService(action)
-        MDS = MainDataService(action)
+        MDS = MainDataService()
         logging.info(
             f'Created DataService with ActionType: {action.action_type}')
 
