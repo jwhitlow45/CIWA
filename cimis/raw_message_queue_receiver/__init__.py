@@ -80,6 +80,25 @@ def main(msg: func.ServiceBusMessage):
             logging.info(
                 f'Successfully added data to dbo.DailyRaw at {utils.get_utc_timestamp()}')
 
+            with ServiceBusClient.from_connection_string(config.SERVICE_BUS_CONNECTION_STRING) as client:
+                with client.get_queue_sender(config.SERVICE_BUS_MAIN_QUEUE_NAME) as sender:
+                    new_action: actions.Action
+
+                    # Set new action type
+                    if action.action_type == actions.ActionType.DATA_ADD_DAILY_RAW:
+                        new_action = actions.CleanDailyRawDataAction
+                    elif action.action_type == actions.ActionType.DATA_ADD_HOURLY_RAW:
+                        new_action = actions.CleanHourlyRawDataAction
+
+                    # Set new action payload
+                    new_action.payload = action.payload
+
+                    # Send message to queue
+                    new_msg = ServiceBusMessage(new_action.json())
+                    sender.send_messages(new_msg)
+                    logging.info(f'ActionType: {action.action_type} sent to back of queue \
+                        {config.SERVICE_BUS_MAIN_QUEUE_NAME} at {utils.get_utc_timestamp()}')
+
     except (UnicodeDecodeError, ValueError, KeyError, OverflowError) as ERROR:
         # Treat unrecoverable errors as completed and log them
         logging.info('Unrecoverable error ' + str(ERROR) +
