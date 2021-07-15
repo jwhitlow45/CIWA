@@ -41,12 +41,14 @@ class AddDailyRawDataAction(Action):
 
 
 class CleanHourlyRawDataAction(Action):
-    data_id: int
-    action_type = ActionType.DATA_ADD_HOURLY_RAW
+    data_id_start: int
+    data_id_end: int
+    action_type = ActionType.DATA_CLEAN_HOURLY_RAW
     payload: payloads.CleanHourlyRawPayload
 
 
 class CleanDailyRawDataAction(Action):
-    data_id: int
+    data_id_start: int
+    data_id_end: int
     action_type = ActionType.DATA_CLEAN_DAILY_RAW
     payload: payloads.CleanDailyRawPayload
