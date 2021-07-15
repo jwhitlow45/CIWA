@@ -25,6 +25,7 @@ class Station(Base):
 class Sisters(Base):
     __tablename__ = 'Sister'
 
-    StationId = Column(Integer, ForeignKey('Station.Id'), primary_key=True, autoincrement=False)
+    StationId = Column(Integer, ForeignKey('Station.Id'),
+                       primary_key=True, autoincrement=False)
     FirstSisterId = Column(Integer, ForeignKey('Station.Id'), nullable=False)
     SecondSisterId = Column(Integer, ForeignKey('Station.Id'), nullable=False)

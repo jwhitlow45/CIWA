@@ -53,7 +53,8 @@ class StationService:
                 SitingDesc=station.SitingDesc,
                 ConnectDate=utils.parse_date_str(station.ConnectDate),
                 DisconnectDate=utils.parse_date_str(station.DisconnectDate),
-                Longitude=utils.parse_cimis_coordinate_str(station.HmsLongitude),
+                Longitude=utils.parse_cimis_coordinate_str(
+                    station.HmsLongitude),
                 Latitude=utils.parse_cimis_coordinate_str(station.HmsLatitude)
             )
             for station in stations
@@ -98,7 +99,8 @@ class StationService:
     def get_stations_from_db(cls) -> List[schemas.Station]:
         """Retrieves station info from the database."""
         with db.session_manager() as session:
-            stations = session.query(models.Station).order_by(models.Station.Id).all()
+            stations = session.query(models.Station).order_by(
+                models.Station.Id).all()
             return pydantic.parse_obj_as(List[schemas.Station], stations)
 
     @classmethod

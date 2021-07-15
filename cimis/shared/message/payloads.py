@@ -6,7 +6,7 @@ import pydantic
 class Payload(pydantic.BaseModel):
     class Config:
         extra = 'ignore'
-    delivery_count: int    
+    delivery_count: int
 
 
 class AddStationsPayload(Payload):
@@ -32,10 +32,10 @@ class AddDailyRawPayload(Payload):
 class CleanHourlyRawPayload(Payload):
     station_ids: List[int]
     start_date: str
-    end_date:str
+    end_date: str
 
 
 class CleanDailyRawPayload(Payload):
     station_ids: List[int]
     start_date: str
-    end_date:str
+    end_date: str

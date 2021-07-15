@@ -4,8 +4,9 @@ from typing import Any, Optional
 import pydantic
 
 # Hourly Raw Data Schemas
+
+
 class HourlyRawBase(pydantic.BaseModel):
-    
 
     class Config:
         extra = 'ignore'
@@ -16,6 +17,7 @@ class HourlyRawBase(pydantic.BaseModel):
                 isinstance(other, HourlyRawBase)
             ]
         )
+
 
 class HourlyRawInCimisResponse(HourlyRawBase):
 
@@ -40,7 +42,7 @@ class HourlyRawInCimisResponse(HourlyRawBase):
     HlyVapPres: dict
     HlyWindDir: dict
     HlyWindSpd: dict
-    
+
     class Config:
         extra = 'ignore'
 
@@ -49,29 +51,30 @@ class HourlyRawInCimisResponse(HourlyRawBase):
             [
                 super().__eq__(other),
                 isinstance(other, HourlyRawInCimisResponse),
-                    self.Date == other.Date,
-                    self.Hour == other.Hour,
-                    self.Julian == other.Julian,
-                    self.Station == other.Station,
-                    self.Standard == other.Standard,
-                    self.ZipCodes == other.ZipCodes,
-                    self.Scope == other.Scope,
-                    self.HlyAirTmp == other.HlyAirTmp,
-                    self.HlyDewPnt == other.HlyDewPnt,
-                    self.HlyEto == other.HlyEto,
-                    self.HlyNetRad == other.HlyNetRad,
-                    self.HlyAsceEto == other.HlyAsceEto,
-                    self.HlyAsceEtr == other.HlyAsceEtr,
-                    self.HlyPrecip == other.HlyPrecip,
-                    self.HlyRelHum == other.HlyRelHum,
-                    self.HlyResWind == other.HlyResWind,
-                    self.HlySoilTmp == other.HlySoilTmp,
-                    self.HlySolRad == other.HlySolRad,
-                    self.HlyVapPres == other.HlyVapPres,
-                    self.HlyWindDir == other.HlyWindDir,
-                    self.HlyWindSpd == other.HlyWindSpd
+                self.Date == other.Date,
+                self.Hour == other.Hour,
+                self.Julian == other.Julian,
+                self.Station == other.Station,
+                self.Standard == other.Standard,
+                self.ZipCodes == other.ZipCodes,
+                self.Scope == other.Scope,
+                self.HlyAirTmp == other.HlyAirTmp,
+                self.HlyDewPnt == other.HlyDewPnt,
+                self.HlyEto == other.HlyEto,
+                self.HlyNetRad == other.HlyNetRad,
+                self.HlyAsceEto == other.HlyAsceEto,
+                self.HlyAsceEtr == other.HlyAsceEtr,
+                self.HlyPrecip == other.HlyPrecip,
+                self.HlyRelHum == other.HlyRelHum,
+                self.HlyResWind == other.HlyResWind,
+                self.HlySoilTmp == other.HlySoilTmp,
+                self.HlySolRad == other.HlySolRad,
+                self.HlyVapPres == other.HlyVapPres,
+                self.HlyWindDir == other.HlyWindDir,
+                self.HlyWindSpd == other.HlyWindSpd
             ]
         )
+
 
 class HourlyRaw(HourlyRawBase):
 
@@ -148,7 +151,7 @@ class HourlyRaw(HourlyRawBase):
                 self.Id == other.Id,
                 self.StationId == other.StationId,
                 self.Date == other.Date,
-                self.Hour == other.Hour,                
+                self.Hour == other.Hour,
                 self.HlyAirTmp == other.HlyAirTmp,
                 self.HlyAirTmpQc == other.HlyAirTmpQc,
                 self.HlyAirTmpUnits == other.HlyAirTmpUnits,
@@ -195,6 +198,8 @@ class HourlyRaw(HourlyRawBase):
         )
 
 # Daily Raw Data Schemas
+
+
 class DailyRawBase(pydantic.BaseModel):
 
     class Config:
@@ -206,6 +211,7 @@ class DailyRawBase(pydantic.BaseModel):
                 isinstance(other, DailyRawBase)
             ]
         )
+
 
 class DailyRawInCimisResponse(DailyRawBase):
 
@@ -285,12 +291,13 @@ class DailyRawInCimisResponse(DailyRawBase):
             ]
         )
 
+
 class DailyRaw(DailyRawBase):
 
     Id: int
     StationId: int
     Date: datetime.date
-    
+
     DayAirTmpAvg: Optional[float]
     DayAirTmpAvgQc: Optional[str]
     DayAirTmpAvgUnits: Optional[str]
@@ -394,7 +401,6 @@ class DailyRaw(DailyRawBase):
     DayWindWsw: Optional[float]
     DayWindWswQc: Optional[str]
     DayWindWswUnits: Optional[str]
-    
 
     class Config:
         extra = 'ignore'

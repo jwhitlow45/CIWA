@@ -13,8 +13,8 @@ from shared.stations.service import StationService
 def main(timer: func.TimerRequest) -> None:
     # Use UTC timestamp for logs
     utc_timestamp = datetime.datetime.utcnow()\
-                        .replace(tzinfo=datetime.timezone.utc)\
-                        .isoformat()
+        .replace(tzinfo=datetime.timezone.utc)\
+        .isoformat()
 
     # Log time to keep tabs on when each function ran.
     logging.info(f'daily_tick ran at {utc_timestamp}')
