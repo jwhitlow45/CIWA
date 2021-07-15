@@ -5,6 +5,7 @@ import pydantic
 
 from shared.message import payloads
 
+
 class ActionType(str, Enum):
     STATIONS_ADD = 'stations/add'
     STATIONS_UPDATE = 'stations/update'

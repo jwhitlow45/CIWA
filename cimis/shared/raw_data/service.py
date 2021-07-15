@@ -9,6 +9,7 @@ from shared.message import actions
 from shared.core import config, db, utils
 from shared.raw_data import schemas, models
 
+
 class RawDataService:
 
     def __init__(self, action):
@@ -63,10 +64,10 @@ class RawDataService:
         "day-wind-wsw"
     ]
 
-
     # -------------------------------------------------------------------------
     # Private helper methods
     # -------------------------------------------------------------------------
+
     @staticmethod
     def __parse_cimis_response(action, response: requests.Response) -> List:
         """
@@ -84,9 +85,11 @@ class RawDataService:
         records = json['Data']['Providers'][0]['Records']
         objects: any
         if action.action_type == actions.ActionType.DATA_ADD_DAILY_RAW:
-            objects = pydantic.parse_obj_as(List[schemas.DailyRawInCimisResponse], records)
+            objects = pydantic.parse_obj_as(
+                List[schemas.DailyRawInCimisResponse], records)
         elif action.action_type == actions.ActionType.DATA_ADD_HOURLY_RAW:
-            objects = pydantic.parse_obj_as(List[schemas.HourlyRawInCimisResponse], records)
+            objects = pydantic.parse_obj_as(
+                List[schemas.HourlyRawInCimisResponse], records)
         else:
             raise TypeError('Invalid action type.')
         return objects
@@ -100,7 +103,7 @@ class RawDataService:
             return [
                 schemas.DailyRaw(
                     Id=utils.generate_data_primary_key(data.Station,
-                                                            utils.parse_date_str(data.Date)),
+                                                       utils.parse_date_str(data.Date)),
                     StationId=data.Station,
                     Date=utils.parse_date_str(data.Date),
                     DayAirTmpAvg=data.DayAirTmpAvg['Value'],
@@ -188,8 +191,9 @@ class RawDataService:
             return [
                 schemas.HourlyRaw(
                     Id=utils.generate_data_primary_key(data.Station,
-                                                            utils.parse_date_str(data.Date),
-                                                            utils.parse_hour_str(data.Hour)),
+                                                       utils.parse_date_str(
+                                                           data.Date),
+                                                       utils.parse_hour_str(data.Hour)),
                     StationId=data.Station,
                     Date=utils.parse_date_str(data.Date),
                     Hour=utils.parse_hour_str(data.Hour),
@@ -241,7 +245,7 @@ class RawDataService:
         else:
             raise TypeError('Invalid action type.')
 
-    def get_raw_data_from_cimis(self, start_date: date, end_date: date, targets: List[int]=None):
+    def get_raw_data_from_cimis(self, start_date: date, end_date: date, targets: List[int] = None):
         """Retrieves raw data from CIMIS API.
 
         Args:
@@ -262,7 +266,7 @@ class RawDataService:
         if len(targets) == 0:
             raise ValueError('List[targets] cannot be empty.')
         # Headers for CIMIS request
-        headers = {'accept':'application/json'}
+        headers = {'accept': 'application/json'}
         # Build request URL
         if self.__action.action_type == actions.ActionType.DATA_ADD_DAILY_RAW:
             data_items = self.__daily_data_items
@@ -270,13 +274,14 @@ class RawDataService:
             data_items = self.__hourly_data_items
         else:
             raise KeyError('Invalid action type.')
-        cimis_request_url = utils.build_cimis_request_url(base_url=self.__base_url, 
-                                                            targets=targets,
-                                                            data_items=data_items,
-                                                            start_date=start_date,
-                                                            end_date=end_date)
+        cimis_request_url = utils.build_cimis_request_url(base_url=self.__base_url,
+                                                          targets=targets,
+                                                          data_items=data_items,
+                                                          start_date=start_date,
+                                                          end_date=end_date)
         # Request CIMIS API data with appropriate headers
-        response = requests.get(cimis_request_url, headers=headers, timeout=config.HTTP_TIMEOUT_SECONDS)
+        response = requests.get(
+            cimis_request_url, headers=headers, timeout=config.HTTP_TIMEOUT_SECONDS)
         response.raise_for_status()
         # Parse raw data
         raw_data = self.__parse_cimis_response(self.__action, response)
@@ -322,6 +327,8 @@ class RawDataService:
         with db.session_manager() as session:
             logging.info(f'Staging changes for {table}')
             session.add_all([model(**data.dict()) for data in data_list])
-            logging.info(f'Committing changes to {table}. Estimated time: {len(data_list)/config.SQL_AVG_INSERTS_PER_SECOND:.1f} seconds.')  
+            logging.info(
+                f'Committing changes to {table}. Estimated time: {len(data_list)/config.SQL_AVG_INSERTS_PER_SECOND:.1f} seconds.')
             session.commit()
-            logging.info(f'All changes have been successfully commited to {table}.')
+            logging.info(
+                f'All changes have been successfully commited to {table}.')
