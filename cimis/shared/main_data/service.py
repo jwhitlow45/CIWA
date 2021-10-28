@@ -7,14 +7,14 @@ import requests
 
 from shared.message import actions
 from shared.core import config, db, utils
-from shared.raw_data import schemas, models
+from shared.main_data import schemas, models
 
 class MainDataService:
 
     def __init__(self, action):
-        self.__action == action
+        self.__action = action
 
-    __base_url = config.CIMIS_APIT_DATA_BASE_URL
+    __base_url = config.CIMIS_API_DATA_BASE_URL
 
     __hourly_data_items = [
         "hly-air-tmp",
@@ -67,9 +67,36 @@ class MainDataService:
     # Private helper methods
     # -------------------------------------------------------------------------
     def __get_sister_station(self, station_id: int) -> Tuple[int, int]:
-        pass
+        """Retrieves raw data from CIMIS API.
 
-    def __get_historical_data(self, targets: List[int], start_date: date, end_date: date) -> List:
+        Args:
+            station_id: Id of station to get sister stations for
+        
+        Returns:
+            sister_stations: Sister stations of station_id
+
+        Raises:
+            requests.ConnectionError: If a Connection error occurred.
+            requests.HTTPError: If an HTTP error occurred.
+            requests.Timeout: If the request timed out.        
+        """
+        data_as_list = []
+        table = config.SQL_SISTERSTATION_TABLE
+        schema = schemas.Sister
+
+        with db.engine.connect() as connection:
+            # SQL Query
+            data = connection.execute(f"SELECT StationId, FirstSisterId, SecondSisterId\
+                                        FROM {table}\
+                                        WHERE StationId = {station_id}")
+            for item in data:
+                data_as_list.append(dict(item))
+
+        sister_stations = pydantic.parse_obj_as(List[schema], data_as_list)
+        return (sister_stations[0].FirstSisterId, sister_stations[0].SecondSisterId)
+
+    def get_historical_data(self, targets: List[int], start_date: date, end_date: date) -> List:
+        """Retrieves historical data from the database"""
         pass
 
     # -------------------------------------------------------------------------
