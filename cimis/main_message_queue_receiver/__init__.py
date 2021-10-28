@@ -42,7 +42,7 @@ def main(msg: func.ServiceBusMessage):
             raise TypeError('Invalid action type.')
 
         # Create DataServices with action
-        MDS = MainDataService()
+        MDS = MainDataService(action)
         logging.info(
             f'Created DataService with ActionType: {action.action_type}')
 
