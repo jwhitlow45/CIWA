@@ -37,9 +37,7 @@ class DailyHistorical(HistoricalBase):
 
     Id: int
     StationId: int
-    Month: int
-    Day: int
-    Date: str
+    Date: datetime.date
     Tmax: float
     Tmin: float
     AsceETo: float
@@ -54,8 +52,6 @@ class DailyHistorical(HistoricalBase):
             [
                 super().__eq__(other),
                 isinstance(other, DailyHistorical),
-                self.Month == other.Month,
-                self.Day == other.Day,
                 self.Id == other.Id,
                 self.StationId == other.StationId,
                 self.Date == other.Date,
@@ -74,10 +70,7 @@ class HourlyHistorical(HistoricalBase):
 
     Id: int 
     StationId: int 
-    Month: int 
-    Day: int 
-    Time: datetime.time
-    Date: str
+    Date: datetime.date
     HlyAirTmp: float 
     HlyDewPnt: float 
     HlyPrecip: float 
@@ -96,9 +89,6 @@ class HourlyHistorical(HistoricalBase):
                 isinstance(other, HourlyHistorical),
                 self.Id == other.Id,
                 self.StationId == other.StationId,
-                self.Month == other.Month,
-                self.Day == other.Day,
-                self.Time == other.Time,
                 self.Date == other.Date,
                 self.HlyAirTmp == other.HlyAirTmp,
                 self.HlyDewPnt == other.HlyDewPnt,
