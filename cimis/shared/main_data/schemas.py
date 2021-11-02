@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import Any, Optional
 
 import pydantic
@@ -70,4 +71,44 @@ class DailyHistorical(HistoricalBase):
         )
 
 class HourlyHistorical(HistoricalBase):
-    pass
+
+    Id: int 
+    StationId: int 
+    Month: int 
+    Day: int 
+    Time: datetime.time
+    Date: str
+    HlyAirTmp: float 
+    HlyDewPnt: float 
+    HlyPrecip: float 
+    HlyRelHum: float 
+    HlySoilTmp: float 
+    HlyWindDir: float 
+    HlyWindSpd: float 
+    HlySolRad: float 
+    HlyEto: float 
+    HlyAsceEto: float
+
+    def __eq__(self, other: Any) -> bool:
+        return all(
+            [
+                super().__eq__(other),
+                isinstance(other, HourlyHistorical),
+                self.Id == other.Id,
+                self.StationId == other.StationId,
+                self.Month == other.Month,
+                self.Day == other.Day,
+                self.Time == other.Time,
+                self.Date == other.Date,
+                self.HlyAirTmp == other.HlyAirTmp,
+                self.HlyDewPnt == other.HlyDewPnt,
+                self.HlyPrecip == other.HlyPrecip,
+                self.HlyRelHum == other.HlyRelHum,
+                self.HlySoilTmp == other.HlySoilTmp,
+                self.HlyWindDir == other.HlyWindDir,
+                self.HlyWindSpd == other.HlyWindSpd,
+                self.HlySolRad == other.HlySolRad,
+                self.HlyEto == other.HlyEto,
+                self.HlyAsceEto == other.HlyAsceEto              
+            ]
+        )
