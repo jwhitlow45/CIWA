@@ -1,4 +1,3 @@
-import datetime
 from typing import Any, Optional
 
 import pydantic
@@ -39,7 +38,7 @@ class DailyHistorical(HistoricalBase):
     StationId: int
     Month: int
     Day: int
-    Date: datetime.date
+    Date: str
     Tmax: float
     Tmin: float
     AsceETo: float
