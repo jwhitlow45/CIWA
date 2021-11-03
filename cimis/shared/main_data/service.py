@@ -68,7 +68,7 @@ class MainDataService:
     # Private helper methods
     # -------------------------------------------------------------------------
     def __get_sister_station(self, station_id: int) -> Tuple[int, int]:
-        """Retrieves raw data from CIMIS API.
+        """Retrieves sister stations from sister station table.
 
         Args:
             station_id: Id of station to get sister stations for
