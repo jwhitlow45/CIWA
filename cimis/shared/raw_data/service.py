@@ -288,17 +288,14 @@ class RawDataService:
         # Return raw data
         return raw_data
 
-    def get_data_from_db(self, targets: List[int], start_date: date, end_date: date) -> List:
+    def get_data_from_db(self, targets: List[int], start_date: date, end_date: date) -> dict:
         """Retrieves raw data from the database"""
         # Determine type to parse as
-        data_as_list = []
-        schema: any
+        data_dict = {}
         table: str
         if self.__action.action_type == actions.ActionType.DATA_ADD_DAILY_RAW:
-            schema = type(schemas.DailyRaw)
             table = config.SQL_DAILYRAW_TABLE
         elif self.__action.action_type == actions.ActionType.DATA_ADD_HOURLY_RAW:
-            schema = type(schemas.HourlyRaw)
             table = config.SQL_HOURLYRAW_TABLE
         else:
             raise TypeError('Invalid action type.')
@@ -312,8 +309,8 @@ class RawDataService:
                                         AND Date BETWEEN '{start_date.strftime('%Y-%m-%d')}'\
                                         AND '{end_date.strftime('%Y-%m-%d')}'")
             for item in data:
-                data_as_list.append(dict(item))
-        return pydantic.parse_obj_as(List[schema], data_as_list)
+                data_dict[dict(item)['Id']] = dict(item)
+        return data_dict
 
     def insert_raw_data(self, data_list: List):
         """Adds raw data to database"""
