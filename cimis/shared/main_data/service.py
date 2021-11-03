@@ -8,6 +8,7 @@ import requests
 from shared.message import actions
 from shared.core import config, db, utils
 from shared.main_data import schemas, models
+from shared.raw_data.service import RawDataService
 
 class MainDataService:
 
@@ -95,7 +96,11 @@ class MainDataService:
         sister_stations = pydantic.parse_obj_as(List[schema], data_as_list)
         return (sister_stations[0].FirstSisterId, sister_stations[0].SecondSisterId)
 
-    def __get_historical_data(self, targets: List[int], start_date: date, end_date: date) -> List:
+    # -------------------------------------------------------------------------
+    # Public API
+    # -------------------------------------------------------------------------
+
+    def get_historical_data(self, targets: List[int], start_date: date, end_date: date) -> List:
         """Retrieves historical data from the database"""
         data_as_list = []
         table: any
@@ -123,13 +128,9 @@ class MainDataService:
 
         return pydantic.parse_obj_as(List[schema], data_as_list)
 
-    # -------------------------------------------------------------------------
-    # Public API
-    # -------------------------------------------------------------------------
+   
+    def clean_data_from_db(self, raw_data, historical_data) -> None:
+        """Cleans raw data and stores in main data tables"""
 
-    def get_data_from_db(self):
-        pass
-
-    def clean_data_from_db(self):
         pass
 
