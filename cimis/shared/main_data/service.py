@@ -95,9 +95,33 @@ class MainDataService:
         sister_stations = pydantic.parse_obj_as(List[schema], data_as_list)
         return (sister_stations[0].FirstSisterId, sister_stations[0].SecondSisterId)
 
-    def get_historical_data(self, targets: List[int], start_date: date, end_date: date) -> List:
+    def __get_historical_data(self, targets: List[int], start_date: date, end_date: date) -> List:
         """Retrieves historical data from the database"""
-        pass
+        data_as_list = []
+        table: any
+        schema: any
+
+        # Select proper SQL table and schema
+        if self.__action.action_type == actions.ActionType.DATA_CLEAN_DAILY_RAW:
+            table = config.SQL_DAILYHISTORY_TABLE
+            schema = schemas.DailyHistorical
+        elif self.__action.action_type == actions.ActionType.DATA_CLEAN_HOURLY_RAW:
+            table = config.SQL_HOURLYHISTORY_TABLE
+            schema = schemas.HourlyHistorical
+        else:
+            raise TypeError('Invalid action type.')
+
+        with db.engine.connect() as connection:
+            # SQL Query
+            data = connection.execute(f"SELECT *\
+                                        FROM {table}\
+                                        WHERE StationId IN ({str(targets)[1:-1]})\
+                                        AND Date BETWEEN '2000-{start_date.strftime('%m-%d')}'\
+                                        AND '2000-{end_date.strftime('%m-%d')}'")
+            for item in data:
+                data_as_list.append(dict(item))
+
+        return pydantic.parse_obj_as(List[schema], data_as_list)
 
     # -------------------------------------------------------------------------
     # Public API
