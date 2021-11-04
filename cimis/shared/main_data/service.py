@@ -1,5 +1,5 @@
 from typing import List, Tuple
-from datetime import date
+from datetime import date, time
 import logging
 
 import pydantic
@@ -9,6 +9,7 @@ from shared.message import actions
 from shared.core import config, db, utils
 from shared.main_data import schemas, models
 from shared.raw_data.service import RawDataService
+
 
 class MainDataService:
 
@@ -72,7 +73,7 @@ class MainDataService:
 
         Args:
             station_id: Id of station to get sister stations for
-        
+
         Returns:
             sister_stations: Sister stations of station_id
 
@@ -121,17 +122,21 @@ class MainDataService:
                                         AND Date >= '2000-{start_date.strftime('%m-%d')}'\
                                         AND Date <= '2000-{end_date.strftime('%m-%d')}'")
             for item in data:
-                data_dict[dict(item)['Id']] = dict(item)
+                data_primary_key: int
+                item = dict(item)
+                if self.__action.action_type == actions.ActionType.DATA_CLEAN_DAILY_RAW:
+                    data_primary_key = utils.generate_data_primary_key(
+                        item['StationId'], item['Date'])
+                elif self.__action.action_type == actions.ActionType.DATA_CLEAN_HOURLY_RAW:
+                    data_primary_key = utils.generate_data_primary_key(
+                        item['StationId'], date=item['Date'], hour=item['Hour'])
+                else:
+                    raise TypeError('Invalid action type.')
+                data_dict[data_primary_key] = item
+
         return data_dict
 
-   
     def clean_data_from_db(self, raw_data: dict, historical_data: dict) -> None:
         """Cleans raw data and stores in main data tables"""
-        for key, value in raw_data.items():
-            print(key, value)
-        for key, value in historical_data:
-            print(key, value)
-        # use unique id function to generate values to allow for indexing of historical data
 
         pass
-
