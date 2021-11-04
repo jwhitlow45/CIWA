@@ -306,8 +306,8 @@ class RawDataService:
             data = connection.execute(f"SELECT Id, StationId, Date, *\
                                         FROM {table}\
                                         WHERE StationId IN ({str(targets)[1:-1]})\
-                                        AND Date BETWEEN '{start_date.strftime('%Y-%m-%d')}'\
-                                        AND '{end_date.strftime('%Y-%m-%d')}'")
+                                        AND Date >= '{start_date.strftime('%Y-%m-%d')}'\
+                                        AND Date <= '{end_date.strftime('%Y-%m-%d')}'")
             for item in data:
                 data_dict[dict(item)['Id']] = dict(item)
         return data_dict

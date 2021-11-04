@@ -118,15 +118,20 @@ class MainDataService:
             data = connection.execute(f"SELECT *\
                                         FROM {table}\
                                         WHERE StationId IN ({str(targets)[1:-1]})\
-                                        AND Date BETWEEN '2000-{start_date.strftime('%m-%d')}'\
-                                        AND '2000-{end_date.strftime('%m-%d')}'")
+                                        AND Date >= '2000-{start_date.strftime('%m-%d')}'\
+                                        AND Date <= '2000-{end_date.strftime('%m-%d')}'")
             for item in data:
                 data_dict[dict(item)['Id']] = dict(item)
         return data_dict
 
    
-    def clean_data_from_db(self, raw_data, historical_data) -> None:
+    def clean_data_from_db(self, raw_data: dict, historical_data: dict) -> None:
         """Cleans raw data and stores in main data tables"""
+        for key, value in raw_data.items():
+            print(key, value)
+        for key, value in historical_data:
+            print(key, value)
+        # use unique id function to generate values to allow for indexing of historical data
 
         pass
 
