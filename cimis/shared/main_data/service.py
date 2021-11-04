@@ -4,6 +4,7 @@ import logging
 
 import pydantic
 import requests
+import copy
 
 from shared.message import actions
 from shared.core import config, db, utils
@@ -16,54 +17,29 @@ class MainDataService:
     def __init__(self, action):
         self.__action = action
 
-    __base_url = config.CIMIS_API_DATA_BASE_URL
-
-    __hourly_data_items = [
-        "hly-air-tmp",
-        "hly-dew-pnt",
-        "hly-eto",
-        "hly-net-rad",
-        "hly-asce-eto",
-        "hly-asce-etr",
-        "hly-precip",
-        "hly-rel-hum",
-        "hly-res-wind",
-        "hly-soil-tmp",
-        "hly-sol-rad",
-        "hly-vap-pres",
-        "hly-wind-dir",
-        "hly-wind-spd"
+    __hourly_hist_data_items = [
+        "HlyAirTmp",
+        "HlyDewPnt",
+        "HlyEto",
+        "HlyAsceEto",
+        "HlyPrecip",
+        "HlyRelHum",
+        "HlySoilTmp",
+        "HlySolRad",
+        "HlyWindDir",
+        "HlyWindSpd"
     ]
 
-    __daily_data_items = [
-        "day-air-tmp-avg",
-        "day-air-tmp-max",
-        "day-air-tmp-min",
-        "day-dew-pnt",
-        "day-eto",
-        "day-asce-eto",
-        "day-asce-etr",
-        "day-precip",
-        "day-rel-hum-avg",
-        "day-rel-hum-max",
-        "day-rel-hum-min",
-        "day-soil-tmp-avg",
-        "day-soil-tmp-max",
-        "day-soil-tmp-min",
-        "day-sol-rad-avg",
-        "day-sol-rad-net",
-        "day-vap-pres-max",
-        "day-vap-pres-avg",
-        "day-wind-ene",
-        "day-wind-ese",
-        "day-wind-nne",
-        "day-wind-nnw",
-        "day-wind-run",
-        "day-wind-spd-avg",
-        "day-wind-ssw",
-        "day-wind-wnw",
-        "day-wind-wsw"
-    ]
+    __daily_hist_data_map = {
+        "DayAirTmpMax": "Tmax",
+        "DayAirTmpMin": "Tmin",
+        "DayEto": "Eto",
+        "DayAsceEto": "AsceETo",
+        "DayPrecip": "Precip",
+        "DayRelHumMax": "Rhmax",
+        "DayRelHumMin": "Rhmin",
+        "DayWindSpdAvg": "Wind"
+    }
 
     # -------------------------------------------------------------------------
     # Private helper methods
@@ -136,7 +112,48 @@ class MainDataService:
 
         return data_dict
 
-    def clean_data_from_db(self, raw_data: dict, historical_data: dict) -> None:
+    def clean_data_from_db(self, raw_data: dict,
+                           historical_data: dict,
+                           RDS: RawDataService) -> None:
         """Cleans raw data and stores in main data tables"""
+        flags_to_clean = ['N', 'M', 'Q']
 
-        pass
+        HIST_FLAG = 'RH'
+        SIST_FLAG = 'RS'
+
+        if self.__action.action_type == actions.ActionType.DATA_CLEAN_DAILY_RAW:
+            for id, row in raw_data.items():
+                for data_member in self.__daily_hist_data_map:
+                    if row[str(data_member+'Qc')] in flags_to_clean:
+                        data_member_qc = str(data_member + 'Qc')
+                        hist_data_member = self.__daily_hist_data_map[data_member]
+
+                        # Get sister station data
+                        sister_stations = self.__get_sister_station(
+                            row['StationId'])
+                        sister_data_one = RDS.get_data_from_db([sister_stations[0]],
+                                                               row['Date'],
+                                                               row['Date'])
+                        sister_data_two = RDS.get_data_from_db([sister_stations[1]],
+                                                               row['Date'],
+                                                               row['Date'])
+
+                        if sister_data_one != {} and sister_data_one[data_member_qc] not in flags_to_clean:
+                            row[data_member] = sister_data_one[data_member]
+                            row[data_member_qc] = SIST_FLAG
+                        elif sister_data_two != {} and sister_data_two[data_member_qc] not in flags_to_clean:
+                            row[data_member] = sister_data_two[data_member]
+                            row[data_member_qc] = SIST_FLAG
+                        else:
+                            hist_date = date(year=2000,
+                                             month=row['Date'].month,
+                                             day=row['Date'].day)
+                            hist_id = utils.generate_data_primary_key(row['StationId'],
+                                                                      hist_date)
+                            row[data_member] = historical_data[hist_id][hist_data_member]
+                            row[data_member_qc] = HIST_FLAG
+
+        elif self.__action.action_type == actions.ActionType.DATA_CLEAN_HOURLY_RAW:
+            pass
+        else:
+            raise TypeError('Invalid action type.')
