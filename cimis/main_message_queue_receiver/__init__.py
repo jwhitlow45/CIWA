@@ -34,15 +34,15 @@ def main(msg: func.ServiceBusMessage):
         # Determine action type
         if action.action_type == actions.ActionType.DATA_CLEAN_DAILY_RAW:
             action = pydantic.parse_raw_as(actions.CleanDailyRawDataAction,
-                                            message)
+                                           message)
             raw_action = pydantic.parse_raw_as(actions.CleanDailyRawDataAction,
-                                            message)
+                                               message)
             raw_action.action_type = actions.ActionType.DATA_ADD_DAILY_RAW
         elif action.action_type == actions.ActionType.DATA_CLEAN_HOURLY_RAW:
             action = pydantic.parse_raw_as(actions.CleanHourlyRawDataAction,
-                                            message)
+                                           message)
             raw_action = pydantic.parse_raw_as(actions.CleanHourlyRawDataAction,
-                                            message)
+                                               message)
             raw_action.action_type = actions.ActionType.DATA_ADD_HOURLY_RAW
         else:
             # Discard message as it is the incorrect action type
@@ -58,16 +58,19 @@ def main(msg: func.ServiceBusMessage):
         targets = action.payload.station_ids
         start_date = utils.parse_date_str(action.payload.start_date)
         end_date = utils.parse_date_str(action.payload.end_date)
-        
+
         # Get raw and historical data
         raw_data = RDS.get_data_from_db(targets, start_date, end_date)
-        historical_data = MDS.get_historical_data(targets, start_date, end_date)
-        
+        historical_data = MDS.get_historical_data(
+            targets, start_date, end_date)
+
         logging.info(f'Cleaning data for stations {targets}\
             from {start_date.strftime("%m/%d/%Y")}\
             to {end_date.strftime("%m/%d/%Y")}')
-        MDS.clean_data_from_db(raw_data, historical_data)
+        cleaned_data = list(MDS.clean_data_from_db(
+            raw_data, historical_data, RDS).values())
         logging.info(f'Cleaning data completed')
+        MDS.insert_clean_data(cleaned_data)
 
     except Exception as e:
         # Catch any unaccounted errors, log the time they occurred and payload leading

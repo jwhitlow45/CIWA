@@ -173,3 +173,24 @@ class MainDataService:
                             row[data_member_qc] = HIST_FLAG
             
         return raw_data
+
+    def insert_clean_data(self, data: List):
+        """Adds clean data to main database"""
+        table: any
+        model: any
+        
+        if self.__action.action_type == actions.ActionType.DATA_CLEAN_DAILY_RAW:
+            table = config.SQL_DAILYMAIN_TABLE
+            model = models.DailyMainData
+        elif self.__action.action_type == actions.ActionType.DATA_CLEAN_HOURLY_RAW:
+            table = config.SQL_HOURLYMAIN_TABLE
+            model = models.HourlyMainData
+
+        with db.session_manager() as session:
+            logging.info(f'Staging changes for {table}')
+            session.add_all([model(**row) for row in data])
+            logging.info(
+                f'Committing changes to {table}. Estimated time: {len(data)/config.SQL_AVG_INSERTS_PER_SECOND:.1f} seconds.')
+            session.commit()
+            logging.info(
+                f'All changes have been successfully commited to {table}.')
