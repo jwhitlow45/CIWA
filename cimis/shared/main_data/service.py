@@ -92,11 +92,31 @@ class MainDataService:
 
         with db.engine.connect() as connection:
             # SQL Query
-            data = connection.execute(f"SELECT *\
-                                        FROM {table}\
-                                        WHERE StationId IN ({str(targets)[1:-1]})\
-                                        AND Date >= '2000-{start_date.strftime('%m-%d')}'\
-                                        AND Date <= '2000-{end_date.strftime('%m-%d')}'")
+            # Prevent year truncationg from causing issues
+            sql_query: str
+
+            if start_date.year == end_date.year:
+                sql_query = f"SELECT *\
+                            FROM {table}\
+                            WHERE StationId IN ({str(targets)[1:-1]})\
+                            AND Date >= '2000-{start_date.strftime('%m-%d')}'\
+                            AND Date <= '2000-{end_date.strftime('%m-%d')}'"
+            else:
+                trunc_start = date(2000, start_date.month, start_date.day)
+                trunc_end = date(2000, end_date.month, end_date.day)
+
+                if trunc_start > trunc_end:
+                    sql_query = f"SELECT *\
+                                FROM {table}\
+                                WHERE StationId IN ({str(targets)[1:-1]})\
+                                AND (Date <= '2000-{start_date.strftime('%m-%d')}'\
+                                OR Date >= '2000-{end_date.strftime('%m-%d')}')"
+                else:
+                    sql_query = f"SELECT *\
+                                FROM {table}\
+                                WHERE StationId IN ({str(targets)[1:-1]})"
+
+            data = connection.execute(sql_query)
             for item in data:
                 data_primary_key: int
                 item = dict(item)
@@ -132,19 +152,18 @@ class MainDataService:
             sister_stations = self.__get_sister_station(
                 row['StationId'])
             sister_data_one = RDS.get_data_from_db([sister_stations[0]],
-                                                    row['Date'],
-                                                    row['Date'])
+                                                   row['Date'],
+                                                   row['Date'])
             sister_data_two = RDS.get_data_from_db([sister_stations[1]],
-                                                    row['Date'],
-                                                    row['Date'])
-                                                    
+                                                   row['Date'],
+                                                   row['Date'])
+
             for data_member in data_members:
                 data_member_qc = str(data_member + 'Qc')
                 if row[data_member_qc] in flags_to_clean:
                     hist_data_member: dict
                     if self.__action.action_type == actions.ActionType.DATA_CLEAN_DAILY_RAW:
                         hist_data_member = self.__daily_hist_data_map[data_member]
-
 
                     if sister_data_one != {} and sister_data_one[data_member_qc] not in flags_to_clean:
                         row[data_member] = sister_data_one[data_member]
@@ -172,14 +191,14 @@ class MainDataService:
                                                                       hist_hour)
                             row[data_member] = historical_data[hist_id][data_member]
                             row[data_member_qc] = HIST_FLAG
-            
+
         return raw_data
 
     def insert_clean_data(self, data: List):
         """Adds clean data to main database"""
         table: any
         model: any
-        
+
         if self.__action.action_type == actions.ActionType.DATA_CLEAN_DAILY_RAW:
             table = config.SQL_DAILYMAIN_TABLE
             model = models.DailyMainData
