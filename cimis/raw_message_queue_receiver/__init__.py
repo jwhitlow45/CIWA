@@ -105,7 +105,7 @@ def main(msg: func.ServiceBusMessage):
         logging.info('Trace:\n' + traceback.format_exc())
 
     except (ConnectionError, HTTPError, Timeout) as ERROR:
-        logging.info('Connection error occured...pushing message to back of queue.')
+        logging.info(f'Connection error occured: {ERROR}\nPushing message to back of queue.')
         with ServiceBusClient.from_connection_string(config.SERVICE_BUS_CONNECTION_STRING) as client:
             with client.get_queue_sender(config.SERVICE_BUS_RAW_QUEUE_NAME) as sender:
                 # Update payload delivery count
