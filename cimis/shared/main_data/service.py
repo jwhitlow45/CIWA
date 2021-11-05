@@ -172,4 +172,3 @@ class MainDataService:
                             row[data_member] = historical_data[hist_id][data_member]
                             row[data_member_qc] = HIST_FLAG
             
-        print(raw_data)
