@@ -114,7 +114,7 @@ class MainDataService:
 
     def clean_data_from_db(self, raw_data: dict,
                            historical_data: dict,
-                           RDS: RawDataService) -> None:
+                           RDS: RawDataService) -> dict:
         """Cleans raw data and stores in main data tables"""
         flags_to_clean = ['N', 'M', 'Q']
 
@@ -172,3 +172,4 @@ class MainDataService:
                             row[data_member] = historical_data[hist_id][data_member]
                             row[data_member_qc] = HIST_FLAG
             
+        return raw_data
