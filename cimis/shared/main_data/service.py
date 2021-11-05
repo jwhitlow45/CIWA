@@ -128,6 +128,16 @@ class MainDataService:
             data_members = self.__hourly_hist_data_items
 
         for row in raw_data.values():
+            # Get sister station data
+            sister_stations = self.__get_sister_station(
+                row['StationId'])
+            sister_data_one = RDS.get_data_from_db([sister_stations[0]],
+                                                    row['Date'],
+                                                    row['Date'])
+            sister_data_two = RDS.get_data_from_db([sister_stations[1]],
+                                                    row['Date'],
+                                                    row['Date'])
+                                                    
             for data_member in data_members:
                 data_member_qc = str(data_member + 'Qc')
                 if row[data_member_qc] in flags_to_clean:
@@ -135,15 +145,6 @@ class MainDataService:
                     if self.__action.action_type == actions.ActionType.DATA_CLEAN_DAILY_RAW:
                         hist_data_member = self.__daily_hist_data_map[data_member]
 
-                    # Get sister station data
-                    sister_stations = self.__get_sister_station(
-                        row['StationId'])
-                    sister_data_one = RDS.get_data_from_db([sister_stations[0]],
-                                                           row['Date'],
-                                                           row['Date'])
-                    sister_data_two = RDS.get_data_from_db([sister_stations[1]],
-                                                           row['Date'],
-                                                           row['Date'])
 
                     if sister_data_one != {} and sister_data_one[data_member_qc] not in flags_to_clean:
                         row[data_member] = sister_data_one[data_member]
