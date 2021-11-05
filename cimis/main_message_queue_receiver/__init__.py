@@ -59,14 +59,16 @@ def main(msg: func.ServiceBusMessage):
         start_date = utils.parse_date_str(action.payload.start_date)
         end_date = utils.parse_date_str(action.payload.end_date)
 
+        logging.info('Requesting data to clean...')
         # Get raw and historical data
         raw_data = RDS.get_data_from_db(targets, start_date, end_date)
         historical_data = MDS.get_historical_data(
             targets, start_date, end_date)
+        logging.info('Received data to clean.')
 
         logging.info(f'Cleaning data for stations {targets}\
-            from {start_date.strftime("%m/%d/%Y")}\
-            to {end_date.strftime("%m/%d/%Y")}')
+            from {start_date.strftime("%Y-%m-%d")}\
+            to {end_date.strftime("%Y-%m-%d")}')
         cleaned_data = list(MDS.clean_data_from_db(
             raw_data, historical_data, RDS).values())
         logging.info(f'Cleaning data completed')

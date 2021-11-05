@@ -68,6 +68,7 @@ def main(msg: func.ServiceBusMessage):
             logging.info(
                 f'Messages sent to back of queue {config.SERVICE_BUS_RAW_QUEUE_NAME} at time {utils.get_utc_timestamp()}')
         else:
+            logging.info('Requesting CIMIS Data...')
             # Get cimis response
             cimis_response = DS.get_raw_data_from_cimis(targets=action.payload.station_ids,
                                                         start_date=utils.parse_date_str(
