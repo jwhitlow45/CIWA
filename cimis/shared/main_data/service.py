@@ -121,30 +121,38 @@ class MainDataService:
         HIST_FLAG = 'RH'
         SIST_FLAG = 'RS'
 
+        data_members: any
         if self.__action.action_type == actions.ActionType.DATA_CLEAN_DAILY_RAW:
-            for id, row in raw_data.items():
-                for data_member in self.__daily_hist_data_map:
-                    if row[str(data_member+'Qc')] in flags_to_clean:
-                        data_member_qc = str(data_member + 'Qc')
+            data_members = self.__daily_hist_data_map
+        elif self.__action.action_type == actions.ActionType.DATA_CLEAN_HOURLY_RAW:
+            data_members = self.__hourly_hist_data_items
+
+        for row in raw_data.values():
+            for data_member in data_members:
+                data_member_qc = str(data_member + 'Qc')
+                if row[data_member_qc] in flags_to_clean:
+                    hist_data_member: dict
+                    if self.__action.action_type == actions.ActionType.DATA_CLEAN_DAILY_RAW:
                         hist_data_member = self.__daily_hist_data_map[data_member]
 
-                        # Get sister station data
-                        sister_stations = self.__get_sister_station(
-                            row['StationId'])
-                        sister_data_one = RDS.get_data_from_db([sister_stations[0]],
-                                                               row['Date'],
-                                                               row['Date'])
-                        sister_data_two = RDS.get_data_from_db([sister_stations[1]],
-                                                               row['Date'],
-                                                               row['Date'])
+                    # Get sister station data
+                    sister_stations = self.__get_sister_station(
+                        row['StationId'])
+                    sister_data_one = RDS.get_data_from_db([sister_stations[0]],
+                                                           row['Date'],
+                                                           row['Date'])
+                    sister_data_two = RDS.get_data_from_db([sister_stations[1]],
+                                                           row['Date'],
+                                                           row['Date'])
 
-                        if sister_data_one != {} and sister_data_one[data_member_qc] not in flags_to_clean:
-                            row[data_member] = sister_data_one[data_member]
-                            row[data_member_qc] = SIST_FLAG
-                        elif sister_data_two != {} and sister_data_two[data_member_qc] not in flags_to_clean:
-                            row[data_member] = sister_data_two[data_member]
-                            row[data_member_qc] = SIST_FLAG
-                        else:
+                    if sister_data_one != {} and sister_data_one[data_member_qc] not in flags_to_clean:
+                        row[data_member] = sister_data_one[data_member]
+                        row[data_member_qc] = SIST_FLAG
+                    elif sister_data_two != {} and sister_data_two[data_member_qc] not in flags_to_clean:
+                        row[data_member] = sister_data_two[data_member]
+                        row[data_member_qc] = SIST_FLAG
+                    else:
+                        if self.__action.action_type == actions.ActionType.DATA_CLEAN_DAILY_RAW:
                             hist_date = date(year=2000,
                                              month=row['Date'].month,
                                              day=row['Date'].day)
@@ -152,8 +160,16 @@ class MainDataService:
                                                                       hist_date)
                             row[data_member] = historical_data[hist_id][hist_data_member]
                             row[data_member_qc] = HIST_FLAG
-
-        elif self.__action.action_type == actions.ActionType.DATA_CLEAN_HOURLY_RAW:
-            pass
-        else:
-            raise TypeError('Invalid action type.')
+                        elif self.__action.action_type == actions.ActionType.DATA_CLEAN_HOURLY_RAW:
+                            hist_date = date(year=2000,
+                                             month=row['Date'].month,
+                                             day=row['Date'].day)
+                            hist_hour = time(hour=row['Hour'].hour,
+                                             minute=row['Hour'].minute)
+                            hist_id = utils.generate_data_primary_key(row['StationId'],
+                                                                      hist_date,
+                                                                      hist_hour)
+                            row[data_member] = historical_data[hist_id][data_member]
+                            row[data_member_qc] = HIST_FLAG
+            
+        print(raw_data)
