@@ -11,11 +11,15 @@ from requests import ConnectionError, HTTPError, Timeout
 # Object parsing
 import pydantic
 
+# Setup path environment for relative imports
+import os, sys
+p = os.path.abspath('.')
+sys.path.insert(1, p)
+
 # Shared objects
 from shared.message import actions
 from shared.raw_data.service import RawDataService
 from shared.core import config, utils
-
 
 def main(msg: func.ServiceBusMessage):
     logging.info(

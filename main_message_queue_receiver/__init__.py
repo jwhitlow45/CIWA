@@ -9,12 +9,16 @@ import traceback
 # Object parsing
 import pydantic
 
+# Setup path environment for relative imports
+import os, sys
+p = os.path.abspath('.')
+sys.path.insert(1, p)
+
 # Shared objects
 from shared.message import actions
 from shared.raw_data.service import RawDataService
 from shared.main_data.service import MainDataService
 from shared.core import config, utils
-
 
 def main(msg: func.ServiceBusMessage):
     logging.info(
